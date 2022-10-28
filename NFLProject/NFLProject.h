@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
+#include <qfontdatabase.h>
+#include <qfont.h>
 #include "ui_NFLProject.h"
 
 class NFLProject : public QMainWindow
