@@ -20,6 +20,15 @@
     <Filter Include="Header Files">
       <UniqueIdentifier>{32a1990c-98e5-47fd-a41c-65b5eae3dfac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Menus\Display">
+      <UniqueIdentifier>{de58029d-b9e9-4c25-8d8f-94f004e9dab1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menus\Maintenance">
+      <UniqueIdentifier>{9544ed5f-1a2c-4e1b-8336-5cc56b4b2a87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menus\Plan">
+      <UniqueIdentifier>{4ef40faf-80ab-4c97-a3d2-d1cd3d8083ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="Database.h">
       <Filter>Source Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Stadium.h">
+      <Filter>Source Files\Structs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
