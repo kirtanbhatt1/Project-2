@@ -88,8 +88,13 @@
     <QtRcc Include="NFLProject.qrc" />
     <QtUic Include="NFLProject.ui" />
     <QtMoc Include="NFLProject.h" />
+    <ClCompile Include="Database.cpp" />
     <ClCompile Include="NFLProject.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Team.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
