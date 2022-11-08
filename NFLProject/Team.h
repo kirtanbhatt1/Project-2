@@ -4,14 +4,13 @@
 
 class Team
 {
-public:
-
+private:
 	QString teamName;
 	QString conference;
 	QString division;
 	Stadium stadium;
 
-	
-
+public:
+	//Team(QString)
 
 };

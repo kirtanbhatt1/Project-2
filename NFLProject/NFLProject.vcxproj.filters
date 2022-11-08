@@ -40,6 +40,9 @@
     <ClCompile Include="Database.cpp">
       <Filter>Source Files\Database</Filter>
     </ClCompile>
+    <ClCompile Include="Stadium.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -52,11 +55,6 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="NFLProject.h">
-      <Filter>Source Files\Menus\Main</Filter>
-    </QtMoc>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Team.h">
       <Filter>Source Files\Structs</Filter>
     </ClInclude>
@@ -66,5 +64,10 @@
     <ClInclude Include="Stadium.h">
       <Filter>Source Files\Structs</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="NFLProject.h">
+      <Filter>Source Files\Menus\Main</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
