@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1202</width>
-    <height>875</height>
+    <width>1295</width>
+    <height>794</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,13 +32,16 @@
       <property name="styleSheet">
        <string notr="true"/>
       </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="page_main">
        <property name="styleSheet">
-        <string notr="true">background: #1A1F3D;</string>
+        <string notr="true">background: #EDF2F4;</string>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <layout class="QVBoxLayout" name="contents" stretch="0,0,0,0,0,0">
+         <layout class="QVBoxLayout" name="contents" stretch="0,0,0,0,0">
           <item>
            <spacer name="verticalSpacer_2">
             <property name="orientation">
@@ -51,73 +54,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="groupBox">
-            <property name="styleSheet">
-             <string notr="true">color: white</string>
-            </property>
-            <property name="title">
-             <string/>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_2">
-             <item>
-              <widget class="QLabel" name="Names">
-               <property name="font">
-                <font>
-                 <family>Futura</family>
-                 <pointsize>20</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Let's Play NFL Football!</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="header">
-               <property name="font">
-                <font>
-                 <family>Futura</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Scrum Master: Kirtan Bhatt</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_3">
-               <property name="font">
-                <font>
-                 <family>Futura</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Product Owner: Eric Cai</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_2">
-               <property name="font">
-                <font>
-                 <family>Futura</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Team Members: Nick Rock, Remo Rulloda</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
           </item>
           <item>
            <spacer name="verticalSpacer_4">
@@ -134,6 +70,22 @@
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>60</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item>
              <widget class="QLabel" name="label">
               <property name="maximumSize">
@@ -162,6 +114,109 @@
               <property name="wordWrap">
                <bool>false</bool>
               </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>70</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="maximumSize">
+               <size>
+                <width>16777000</width>
+                <height>16777000</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: black; background: white; border-radius: 12px; </string>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <property name="leftMargin">
+                <number>20</number>
+               </property>
+               <property name="topMargin">
+                <number>20</number>
+               </property>
+               <property name="rightMargin">
+                <number>20</number>
+               </property>
+               <property name="bottomMargin">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="title">
+                 <property name="font">
+                  <font>
+                   <family>Tw Cen MT Condensed Extra Bold</family>
+                   <pointsize>56</pointsize>
+                   <italic>true</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Let's Play NFL Football!</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="header">
+                 <property name="font">
+                  <font>
+                   <family>Futura</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Scrum Master: Kirtan Bhatt</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="font">
+                  <font>
+                   <family>Futura</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Product Owner: Eric Cai</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="font">
+                  <font>
+                   <family>Futura</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Team Members: Nick Rock, Remo Rulloda</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </item>
            </layout>
@@ -194,12 +249,28 @@
           </item>
          </layout>
         </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="page_other">
        <property name="styleSheet">
         <string notr="true">QWidget#page_other{
-	background: #1D2E40;
+	background: #EDF2F4;
 }</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout"/>
@@ -213,7 +284,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1202</width>
+     <width>1295</width>
      <height>22</height>
     </rect>
    </property>

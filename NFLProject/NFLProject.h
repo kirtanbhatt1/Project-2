@@ -1,9 +1,8 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-#include <qfontdatabase.h>
-#include <qfont.h>
 #include "ui_NFLProject.h"
+#include "DisplayTeams.h"
 
 class NFLProject : public QMainWindow
 {
@@ -11,8 +10,20 @@ class NFLProject : public QMainWindow
 
 public:
     NFLProject(QWidget *parent = nullptr);
+    void setPage(QWidget*);
+    void successfulLogin();
+    void promptLogin();
+    void returnMain();
     ~NFLProject();
+
+    // Menus
+    void showDisplayTeams();
+    void showDisplayStadiums();
+    
 
 private:
     Ui::NFLProjectClass ui;
+    QStackedWidget* switcher;
+    QWidget* currentPage = NULL;
+    bool isLoggedIn = false;
 };

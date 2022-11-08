@@ -29,6 +29,15 @@
     <Filter Include="Source Files\Menus\Plan">
       <UniqueIdentifier>{4ef40faf-80ab-4c97-a3d2-d1cd3d8083ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Menus\Display\DisplayTeams">
+      <UniqueIdentifier>{242509d0-b84b-480e-90e6-13617f0c1799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets">
+      <UniqueIdentifier>{0cc3b82a-d29f-427d-9d7c-0ab389dee39e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\TeamList">
+      <UniqueIdentifier>{c51ebb49-fe4a-4d01-bff5-3cdee055fb22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -43,6 +52,12 @@
     <ClCompile Include="Stadium.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="W_TeamsList.cpp">
+      <Filter>Source Files\Widgets\TeamList</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayTeams.cpp">
+      <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -52,6 +67,12 @@
   <ItemGroup>
     <QtUic Include="NFLProject.ui">
       <Filter>Source Files\Menus\Main</Filter>
+    </QtUic>
+    <QtUic Include="W_TeamsList.ui">
+      <Filter>Source Files\Widgets\TeamList</Filter>
+    </QtUic>
+    <QtUic Include="DisplayTeams.ui">
+      <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -64,10 +85,20 @@
     <ClInclude Include="Stadium.h">
       <Filter>Source Files\Structs</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NFLProject.h">
       <Filter>Source Files\Menus\Main</Filter>
     </QtMoc>
+    <QtMoc Include="W_TeamsList.h">
+      <Filter>Source Files\Widgets\TeamList</Filter>
+    </QtMoc>
+    <QtMoc Include="DisplayTeams.h">
+      <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NFLProject.rc" />
   </ItemGroup>
 </Project>

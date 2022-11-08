@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>W_TeamsListClass</class>
+ <widget class="QWidget" name="W_TeamsListClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>598</width>
+    <height>659</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>W_TeamsList</string>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>431</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="L_Name">
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_Stadium">
+      <property name="text">
+       <string>Stadium</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_Capacity">
+      <property name="text">
+       <string>Capacity</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_Location">
+      <property name="text">
+       <string>Location</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_RoofType">
+      <property name="text">
+       <string>Roof Type</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_Surface">
+      <property name="text">
+       <string>Surface</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_Conference">
+      <property name="text">
+       <string>Conference</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_Opened">
+      <property name="text">
+       <string>Opened</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="L_Division">
+      <property name="text">
+       <string>Division</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

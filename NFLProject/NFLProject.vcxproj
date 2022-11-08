@@ -35,7 +35,7 @@
     <QtBuildConfig>debug</QtBuildConfig>
     <QtPathBinaries>bin</QtPathBinaries>
     <QtPathLibraryExecutables>bin</QtPathLibraryExecutables>
-    <QtInstall>6.2.4</QtInstall>
+    <QtInstall>6.2.4_msvc2019_64</QtInstall>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>6.2.4_msvc2019_64</QtInstall>
@@ -87,18 +87,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DisplayTeams.cpp" />
     <ClCompile Include="Stadium.cpp" />
+    <ClCompile Include="W_TeamsList.cpp" />
     <QtRcc Include="NFLProject.qrc" />
+    <QtUic Include="DisplayTeams.ui" />
     <QtUic Include="NFLProject.ui" />
     <QtMoc Include="NFLProject.h" />
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="NFLProject.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="W_TeamsList.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <QtMoc Include="W_TeamsList.h" />
+    <QtMoc Include="DisplayTeams.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Stadium.h" />
     <ClInclude Include="Team.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NFLProject.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
