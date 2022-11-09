@@ -4,13 +4,10 @@
 
 class Team
 {
-private:
-	QString teamName;
-	QString conference;
-	QString division;
-	Stadium stadium;
-
 public:
-	//Team(QString)
+	QString teamName,  stadium,  capacity,  location,
+		 roofType,  surface,  conference,  opened,  division;
+
+
 
 };

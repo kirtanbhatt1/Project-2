@@ -1,8 +1,12 @@
 #pragma once
 #include "NFLProject.h"
-#include <map>
+#include "Map.h"
+#include "Team.h"
+#include "Stadium.h"
+#include "qvector.h"
 
 class Database
 {
-	//import Teams and Stadium information here using a map
+public:
+	static QVector<Team> getTeams();
 };

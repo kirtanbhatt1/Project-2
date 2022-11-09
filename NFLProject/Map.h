@@ -81,6 +81,6 @@ public:
 			map[i] = map[i + 1];
 		}
 	}
-	
-	
+
+
 };

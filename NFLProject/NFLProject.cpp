@@ -45,7 +45,7 @@ void NFLProject::showDisplayTeams()
 {
     DisplayTeams* displayTeams = new DisplayTeams(this);
     setPage(displayTeams);
-    displayTeams->createPopupMenu();
+    displayTeams->open();
 }
 
 void NFLProject::setPage(QWidget* page)

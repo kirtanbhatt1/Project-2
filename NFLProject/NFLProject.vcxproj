@@ -103,6 +103,7 @@
     <ClInclude Include="Database.h" />
     <QtMoc Include="W_TeamsList.h" />
     <QtMoc Include="DisplayTeams.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stadium.h" />
     <ClInclude Include="Team.h" />
