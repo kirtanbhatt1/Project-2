@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>598</width>
+    <width>996</width>
     <height>659</height>
    </rect>
   </property>
@@ -16,15 +16,20 @@
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>50</y>
+     <x>0</x>
+     <y>0</y>
      <width>431</width>
-     <height>551</height>
+     <height>531</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="L_Name">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Name</string>
       </property>
@@ -32,6 +37,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_Stadium">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Stadium</string>
       </property>
@@ -39,6 +49,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_Capacity">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Capacity</string>
       </property>
@@ -46,6 +61,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_Location">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Location</string>
       </property>
@@ -53,6 +73,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_RoofType">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Roof Type</string>
       </property>
@@ -60,6 +85,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_Surface">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Surface</string>
       </property>
@@ -67,6 +97,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_Conference">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Conference</string>
       </property>
@@ -74,6 +109,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_Opened">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Opened</string>
       </property>
@@ -81,6 +121,11 @@
     </item>
     <item>
      <widget class="QLabel" name="L_Division">
+      <property name="font">
+       <font>
+        <family>Lucida Bright</family>
+       </font>
+      </property>
       <property name="text">
        <string>Division</string>
       </property>

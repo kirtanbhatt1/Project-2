@@ -11,8 +11,8 @@ QVector<Team> Database::getTeams()
 	team.location = "Inglewood";
 	team.roofType = "Fixed";
 	team.surface = "Hellas Matrix Turf";
-	team.opened = "2020";
 	team.conference = "National Football Conference";
+	team.opened = "2020";
 	team.division = "NFC West";
 
 

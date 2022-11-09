@@ -13,7 +13,7 @@ void W_TeamsList::setup(QString teamName, QString stadium, QString capacity, QSt
 {
 	ui.L_Name->setText(teamName);
 	ui.L_Stadium->setText(stadium);
-	ui.L_Conference->setText(capacity);
+	ui.L_Capacity->setText(capacity);
 	ui.L_Location->setText(location);
 	ui.L_RoofType->setText(roofType);
 	ui.L_Surface->setText(surface);
@@ -23,3 +23,4 @@ void W_TeamsList::setup(QString teamName, QString stadium, QString capacity, QSt
 
 
 }
+
