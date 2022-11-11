@@ -16,7 +16,8 @@ void DisplayTeams::initializeList()
 	QVector<Team> teams = Database::getTeams();
 	for (int i = 0; i < teams.size(); i++)
 	{
-		ui.teamSelect->addItem(teams[i].teamName);
+		QString name = teams[i].getTeamName();
+		ui.teamSelect->addItem(name);
 	}
 }
 void DisplayTeams::open()
@@ -40,11 +41,12 @@ void DisplayTeams::displayAllTeams()
 	QVector<Team> allTeams = Database::getTeams();
 	for (int i = 0; i < allTeams.size(); i++)
 	{
-		if (allTeams[i].teamName == teamName)
+		if (allTeams[i].getTeamName() == teamName)
 		{
 			W_TeamsList* team = new W_TeamsList(this);
-			team->setup(teamName, allTeams[i].stadium, allTeams[i].capacity, allTeams[i].location, allTeams[i].roofType,
-				allTeams[i].surface, allTeams[i].conference, allTeams[i].opened, allTeams[i].division);
+			team->setup(teamName, allTeams[i].getStadium().getStadiumName(), allTeams[i].getStadium().getCapacity(), allTeams[i].getStadium().getLocation(), 
+				allTeams[i].getStadium().getRoofType(), allTeams[i].getStadium().getSurface(), allTeams[i].getConference(), allTeams[i].getStadium().getOpenedYear(),
+				allTeams[i].getDivision());
 			ui.vertical_food_layout->addWidget(team);
 			allWidgets.push_back(team);
 		}

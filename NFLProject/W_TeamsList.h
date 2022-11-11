@@ -10,8 +10,8 @@ class W_TeamsList : public QWidget
 public:
 	W_TeamsList(QWidget *parent = nullptr);
 	~W_TeamsList();
-	void setup(QString teamName, QString stadium, QString capacity, QString location,
-		QString roofType, QString surface, QString conference, QString opened, QString division);
+	void setup(QString teamName, QString stadium, int capacity, QString location,
+		QString roofType, QString surface, QString conference, int opened, QString division);
 
 
 private:

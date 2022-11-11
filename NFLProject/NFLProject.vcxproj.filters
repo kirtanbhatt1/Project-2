@@ -49,9 +49,6 @@
     <ClCompile Include="Database.cpp">
       <Filter>Source Files\Database</Filter>
     </ClCompile>
-    <ClCompile Include="Stadium.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="W_TeamsList.cpp">
       <Filter>Source Files\Widgets\TeamList</Filter>
     </ClCompile>
@@ -88,6 +85,9 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Map.h">
       <Filter>Source Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="Souvenir.h">
+      <Filter>Source Files\Structs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
