@@ -2,6 +2,12 @@
 
 #include <QWidget>
 #include "ui_W_TeamsList.h"
+//#include "NFLProject.h"
+//#include "Database.h"
+//#include "Map.h"
+//#include "Souvenir.h"
+//#include "Stadium.h"
+//#include "Team.h"
 
 class W_TeamsList : public QWidget
 {
@@ -10,7 +16,7 @@ class W_TeamsList : public QWidget
 public:
 	W_TeamsList(QWidget *parent = nullptr);
 	~W_TeamsList();
-	void setup(QString teamName, QString stadium, int capacity, QString location,
+	void setup(QString teamName, QString stadium, QString capacity, QString location,
 		QString roofType, QString surface, QString conference, int opened, QString division);
 
 

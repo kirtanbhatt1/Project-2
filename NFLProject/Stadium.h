@@ -7,7 +7,7 @@ class Stadium
 
 private:
 	QString stadiumName;
-	int capacity;
+	QString capacity;
 	QString location;
 	QString roofType;
 	QString surface;
@@ -18,10 +18,10 @@ private:
 public:
 	//default constructor
 	Stadium()
-		: stadiumName{ "" }, capacity{ 0 }, location{ "" }, roofType{ "" }, surface{ "" }, openedYear{ 0 } {}
+		: stadiumName{ "" }, capacity{ "" }, location{""}, roofType{""}, surface{""}, openedYear{0}, souvenirs{QVector<Souvenir>{}} {}
 
 	//overloaded constructor
-	Stadium(QString stadiumName, int capacity, QString location, 
+	Stadium(QString stadiumName, QString capacity, QString location, 
 		    QString roofType, QString surface, int openedYear, 
 		    QVector<Souvenir> allSouvenirs)
 			: stadiumName{ stadiumName }, capacity{ capacity }, 
@@ -37,8 +37,11 @@ public:
 		return stadiumName;
 	}
 
-	int getCapacity()
-	{
+	QVector<Souvenir> getSouvenirs() {
+		return souvenirs;
+	}
+
+	QString getCapacity() {
 		return capacity;
 	}
 
@@ -68,7 +71,7 @@ public:
 		this->stadiumName = stadiumName;
 	}
 
-	void setCapacity(int capacity)
+	void setCapacity(QString capacity)
 	{
 		this->capacity = capacity;
 	}
@@ -91,6 +94,10 @@ public:
 	void setOpenedYear(int openedYear)
 	{
 		this->openedYear = openedYear;
+	}
+
+	void setSouvenirs(QVector<Souvenir> souvenirs) {
+		this->souvenirs = souvenirs;
 	}
 };
 

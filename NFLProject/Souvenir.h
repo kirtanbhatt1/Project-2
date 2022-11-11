@@ -8,7 +8,10 @@ private:
 	double price;
 
 public:
-	//constructor
+
+	Souvenir() : name{ "" }, price{ 0 } {}
+
+	//default constructor
 	Souvenir(QString souvenirName, double souvenirPrice)
 		: name{ souvenirName }, price{ souvenirPrice } {}
 
