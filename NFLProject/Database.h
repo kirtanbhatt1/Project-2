@@ -1,6 +1,6 @@
 #pragma once
 #include "NFLProject.h"
-//#include "Map.h"
+#include "Map.h"
 #include "Team.h"
 #include "Stadium.h"
 #include "qvector.h"
@@ -13,7 +13,7 @@ class Database
 {
 public:
 	QSqlDatabase NFLDatabase;
-	//Map<QString, Team> teams;
+	Map teams;
 	Database();
 	~Database();
 	QVector<Team> getTeams();

@@ -1,86 +1,83 @@
 #pragma once
+#include "qvector.h"
+#include "Team.h"
 
-//class for indidivual Entry in Map
-template<typename K, typename V>
-class Entry
-{
-private:
-	K key;
-	V value;
-public:
-	Entry(K k, V v)
-		: key{ k }, value{ v } {}
-	K getKey()
-	{
-		return key;
-	}
-	V getValue()
-	{
-		return value;
-	}
-	void setValue(V v)
-	{
-		value = v;
-	}
-};
-
-// Map Class
-template<typename K, typename V>
 class Map
 {
 private:
-	int size;
-	int capacity = 100;
-	Entry<K, V> map = new Entry[capacity];
+    QVector<Team> map;
+
 public:
 
-	V get(K key)
-	{
-		for (int i = 0; i < size; i++)
-		{
-			if (map[i] != nullptr)
-			{
-				if (map[i].getKey() == key)
-				{
-					return map[i].getValue();
-				}
-			}
-		}
-		return nullptr;
-	}
-	void put(K k, V val)
-	{
-		for (int i = 0; i < size; i++)
-		{
-			if (map[i].getKey() == k)
-			{
-				map[i].setValue(val);
-			}
-		}
-	}
-	int getSize()
-	{
-		return size;
-	}
-	void remove(K key)
-	{
-		for (int i = 0; i < size; i++)
-		{
-			if (map[i].getKey() == key)
-			{
-				map[i] = nullptr;
-				size--;
-				contract(i);
-			}
-		}
-	}
-	void contract(int start)
-	{
-		for (int i = start; i < size; i++)
-		{
-			map[i] = map[i + 1];
-		}
-	}
+    Map();
+
+    int size()
+    {
+        return map.size();
+    }
+
+    bool empty()
+    {
+        return map.empty();
+    }
+
+    QVector<Team>::iterator find(QString key)
+    {
+        QVector<Team>::iterator searchIt = map.begin();
+
+        bool found = false;
+
+        while (searchIt != map.end() && !found)
+        {
+            if (searchIt->getTeamName() == key)
+            {
+                found = true;
+            }
+            else
+            {
+                searchIt++;
+            }
+        }
+
+        return searchIt;
+    }
+
+    QVector<Team>::iterator insert(QString key, Team value)
+    {
+
+        QVector<Team>::iterator foundIt = find(key);
+
+        if (foundIt == map.end())
+        {
+            map.push_back(value);
+
+            foundIt--;
+        }
+        else
+        {
+            *foundIt = value;
+        }
+
+        return foundIt;
+    }
+
+
+    Team operator[](const int index)
+    {
+        return map.at(index);
+    }
+
+
+    QVector<Team>::iterator begin()
+    {
+        return map.begin();
+    }
+
+
+    QVector<Team>::iterator end()
+    {
+        return map.end();
+    }
 
 
 };

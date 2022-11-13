@@ -89,6 +89,7 @@
   <ItemGroup>
     <ClCompile Include="DisplaySorted.cpp" />
     <ClCompile Include="DisplayTeams.cpp" />
+    <ClCompile Include="MapTest.cpp" />
     <ClCompile Include="W_SortedList.cpp" />
     <ClCompile Include="W_TeamsList.cpp" />
     <QtRcc Include="NFLProject.qrc" />
