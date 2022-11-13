@@ -88,6 +88,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DisplayTeams.cpp" />
+    <ClCompile Include="MapTest.cpp" />
     <ClCompile Include="W_TeamsList.cpp" />
     <QtRcc Include="NFLProject.qrc" />
     <QtUic Include="DisplayTeams.ui" />

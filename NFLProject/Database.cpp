@@ -3,7 +3,7 @@
 
 Database::Database(){
 	NFLDatabase = QSqlDatabase::addDatabase("QSQLITE");
-	NFLDatabase.setDatabaseName("C:/Users/nicho/Desktop/CS1D Proj2/Project-2/SQLite/SQLite/NFLDatabase.db");
+	NFLDatabase.setDatabaseName("C:/Users/knbha/source/repos/kirtanbhatt1/Project-2/SQLite/SQLite/NFLDatabase.db");
 	NFLDatabase.open();
 	if (NFLDatabase.open()) {
 		std::cout << "Database is open\n";

@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_NFLProject.h"
 #include "DisplayTeams.h"
+#include "Database.h"
 
 class NFLProject : public QMainWindow
 {
