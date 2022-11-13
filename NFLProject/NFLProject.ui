@@ -293,7 +293,7 @@
      <string>Display</string>
     </property>
     <addaction name="actionTeams"/>
-    <addaction name="actionStadiums"/>
+    <addaction name="actionSorted"/>
    </widget>
    <widget class="QMenu" name="menuPlan">
     <property name="title">
@@ -324,9 +324,9 @@
     <string>Teams</string>
    </property>
   </action>
-  <action name="actionStadiums">
+  <action name="actionSorted">
    <property name="text">
-    <string>Stadiums</string>
+    <string>Sorted </string>
    </property>
   </action>
   <action name="actionImport">

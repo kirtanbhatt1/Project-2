@@ -25,9 +25,12 @@ NFLProject::NFLProject(QWidget *parent)
     ui.menuBar->addMenu(ui.menuPlan);
     ui.menuBar->addMenu(ui.menuMaintenance);
 
+
     // Connections
     connect(homeAction, &QAction::triggered, this, &NFLProject::returnMain); // Return Main
     connect(ui.actionTeams, &QAction::triggered, this, &NFLProject::showDisplayTeams); // Display Cities
+    connect(ui.actionSorted, &QAction::triggered, this, &NFLProject::showDisplaySorted); // Display sorted
+    
 }
 
 void NFLProject::returnMain()
@@ -47,6 +50,14 @@ void NFLProject::showDisplayTeams()
     setPage(displayTeams);
     displayTeams->open();
 }
+
+
+void NFLProject::showDisplaySorted()
+{
+    DisplaySorted* displaySorted = new DisplaySorted(this);
+    setPage(displaySorted);
+}
+
 
 void NFLProject::setPage(QWidget* page)
 {

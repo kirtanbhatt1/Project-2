@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>W_TeamsListClass</class>
- <widget class="QWidget" name="W_TeamsListClass">
-  <property name="windowModality">
-   <enum>Qt::WindowModal</enum>
-  </property>
+ <class>W_SortedListClass</class>
+ <widget class="QWidget" name="W_SortedListClass">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>526</width>
-    <height>701</height>
+    <width>1451</width>
+    <height>158</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <family>Yu Gothic UI Light</family>
-    <pointsize>14</pointsize>
-   </font>
-  </property>
   <property name="windowTitle">
-   <string>W_TeamsList</string>
+   <string>W_SortedList</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetDefaultConstraint</enum>
-     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="L_Name">
        <property name="font">

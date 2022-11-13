@@ -38,6 +38,12 @@
     <Filter Include="Source Files\Widgets\TeamList">
       <UniqueIdentifier>{c51ebb49-fe4a-4d01-bff5-3cdee055fb22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Menus\Display\DisplaySorted">
+      <UniqueIdentifier>{22e47260-15d5-4b4c-b26c-1e4e13fa3bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\SortedList">
+      <UniqueIdentifier>{3bb088c6-6c4f-45ea-b6f3-7a149f0d5d93}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -55,6 +61,12 @@
     <ClCompile Include="DisplayTeams.cpp">
       <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
     </ClCompile>
+    <ClCompile Include="DisplaySorted.cpp">
+      <Filter>Source Files\Menus\Display\DisplaySorted</Filter>
+    </ClCompile>
+    <ClCompile Include="W_SortedList.cpp">
+      <Filter>Source Files\Widgets\SortedList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -70,6 +82,12 @@
     </QtUic>
     <QtUic Include="DisplayTeams.ui">
       <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
+    </QtUic>
+    <QtUic Include="DisplaySorted.ui">
+      <Filter>Source Files\Menus\Display\DisplaySorted</Filter>
+    </QtUic>
+    <QtUic Include="W_SortedList.ui">
+      <Filter>Source Files\Widgets\SortedList</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +117,12 @@
     </QtMoc>
     <QtMoc Include="DisplayTeams.h">
       <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
+    </QtMoc>
+    <QtMoc Include="DisplaySorted.h">
+      <Filter>Source Files\Menus\Display\DisplaySorted</Filter>
+    </QtMoc>
+    <QtMoc Include="W_SortedList.h">
+      <Filter>Source Files\Widgets\SortedList</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

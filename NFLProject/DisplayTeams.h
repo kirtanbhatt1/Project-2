@@ -17,7 +17,6 @@ public:
 	void displayAllTeams();
 	void clearLayout();
 
-
 private:
 	Ui::DisplayTeamsClass ui;
 	QVector<W_TeamsList*> allWidgets;

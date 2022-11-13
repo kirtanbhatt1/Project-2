@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_NFLProject.h"
 #include "DisplayTeams.h"
+#include "DisplaySorted.h"
 
 class NFLProject : public QMainWindow
 {
@@ -18,7 +19,7 @@ public:
 
     // Menus
     void showDisplayTeams();
-    void showDisplayStadiums();
+    void showDisplaySorted();
     
 
 private:

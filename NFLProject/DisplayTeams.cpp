@@ -13,6 +13,7 @@ DisplayTeams::DisplayTeams(QWidget *parent)
 
 DisplayTeams::~DisplayTeams()
 {}
+
 void DisplayTeams::initializeList()
 {
 	QVector<Team> teams = nfl_db.getTeams();
@@ -22,20 +23,23 @@ void DisplayTeams::initializeList()
 		ui.teamSelect->addItem(name);
 	}
 }
+
 void DisplayTeams::open()
 {
 	initializeList();
 	displayAllTeams();
 }
+
 void DisplayTeams::clearLayout()
 {
 	for (int i = 0; i < allWidgets.size(); i++)
 	{
-		ui.vertical_food_layout->layout()->removeWidget(allWidgets.at(i));
+		ui.vertical_details_layout->layout()->removeWidget(allWidgets.at(i));
 		delete allWidgets[i];
 	}
 	allWidgets.clear();
 }
+
 void DisplayTeams::displayAllTeams()
 {
 	clearLayout();
@@ -49,7 +53,7 @@ void DisplayTeams::displayAllTeams()
 			team->setup(teamName, allTeams[i].getStadium().getStadiumName(), allTeams[i].getStadium().getCapacity(), allTeams[i].getStadium().getLocation(),
 				allTeams[i].getStadium().getRoofType(), allTeams[i].getStadium().getSurface(), allTeams[i].getConference(), allTeams[i].getStadium().getOpenedYear(),
 				allTeams[i].getDivision());
-			ui.vertical_food_layout->addWidget(team);
+			ui.vertical_details_layout->addWidget(team);
 			allWidgets.push_back(team);
 		}
 	}

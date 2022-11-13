@@ -87,21 +87,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DisplaySorted.cpp" />
     <ClCompile Include="DisplayTeams.cpp" />
+    <ClCompile Include="W_SortedList.cpp" />
     <ClCompile Include="W_TeamsList.cpp" />
     <QtRcc Include="NFLProject.qrc" />
+    <QtUic Include="DisplaySorted.ui" />
     <QtUic Include="DisplayTeams.ui" />
     <QtUic Include="NFLProject.ui" />
     <QtMoc Include="NFLProject.h" />
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="NFLProject.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="W_SortedList.ui" />
     <QtUic Include="W_TeamsList.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <QtMoc Include="W_SortedList.h" />
     <QtMoc Include="W_TeamsList.h" />
     <QtMoc Include="DisplayTeams.h" />
+    <QtMoc Include="DisplaySorted.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Souvenir.h" />

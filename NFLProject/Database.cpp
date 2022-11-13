@@ -3,7 +3,7 @@
 
 Database::Database(){
 	NFLDatabase = QSqlDatabase::addDatabase("QSQLITE");
-	NFLDatabase.setDatabaseName("C:/Users/nicho/Desktop/CS1D Proj2/Project-2/SQLite/SQLite/NFLDatabase.db");
+	NFLDatabase.setDatabaseName("C:/Users/remos/Project-2/SQLite/SQLite/NFLDatabase.db");
 	NFLDatabase.open();
 	if (NFLDatabase.open()) {
 		std::cout << "Database is open\n";
@@ -54,30 +54,30 @@ QVector<Team> Database::getTeams()
 	return allTeams;
 }
 
-            ////read team souvenir
-            //while(!stream14.atEnd()){
-            //    SteamName = stream14.readLine();
-            //    qInfo() << "Teamname: " << SteamName;
+			////read team souvenir
+			//while(!stream14.atEnd()){
+			//    SteamName = stream14.readLine();
+			//    qInfo() << "Teamname: " << SteamName;
 
-            //    QFile Ss("C:/Users/Eric0/Desktop/Project 2/souvenir.txt");
-            //    QFile Sp("C:/Users/Eric0/Desktop/Project 2/souvenirPrice.txt");
-            //    Ss.open(QIODevice::OpenModeFlag::ReadOnly);
-            //    Sp.open(QIODevice::OpenModeFlag::ReadOnly);
-            //    QTextStream stream15(&Ss);
-            //    QTextStream stream16(&Sp);
+			//    QFile Ss("C:/Users/Eric0/Desktop/Project 2/souvenir.txt");
+			//    QFile Sp("C:/Users/Eric0/Desktop/Project 2/souvenirPrice.txt");
+			//    Ss.open(QIODevice::OpenModeFlag::ReadOnly);
+			//    Sp.open(QIODevice::OpenModeFlag::ReadOnly);
+			//    QTextStream stream15(&Ss);
+			//    QTextStream stream16(&Sp);
 
-            //    db->prepare("insert into teamSouvenir (teamName, Souvenir, souvenirPrice) values ('"+SteamName+"','""','""')");
-            //    db->exec();
+			//    db->prepare("insert into teamSouvenir (teamName, Souvenir, souvenirPrice) values ('"+SteamName+"','""','""')");
+			//    db->exec();
 
-            //    while(!stream15.atEnd()){
-            //        Ssouvenir = stream15.readLine();
-            //        Sprice = stream16.readLine();
-            //        qInfo() << Ssouvenir << " " << Sprice;
+			//    while(!stream15.atEnd()){
+			//        Ssouvenir = stream15.readLine();
+			//        Sprice = stream16.readLine();
+			//        qInfo() << Ssouvenir << " " << Sprice;
 
-            //        db->prepare("insert into teamSouvenir (teamName, Souvenir, souvenirPrice) values ('""','"+Ssouvenir+"','"+Sprice+"')");
-            //        db->exec();
+			//        db->prepare("insert into teamSouvenir (teamName, Souvenir, souvenirPrice) values ('""','"+Ssouvenir+"','"+Sprice+"')");
+			//        db->exec();
 
-            //        stream15.reset();
-            //        stream16.reset();
-            //    }
+			//        stream15.reset();
+			//        stream16.reset();
+			//    }
 			//}
