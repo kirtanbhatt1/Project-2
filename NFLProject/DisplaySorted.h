@@ -2,6 +2,7 @@
 
 #include <QMainWindow>
 #include "ui_DisplaySorted.h"
+#include "Database.h"
 
 class DisplaySorted : public QMainWindow
 {
@@ -10,6 +11,8 @@ class DisplaySorted : public QMainWindow
 public:
 	DisplaySorted(QWidget *parent = nullptr);
 	~DisplaySorted();
+
+
 
 private:
 	Ui::DisplaySortedClass ui;

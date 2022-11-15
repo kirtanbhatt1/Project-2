@@ -99,5 +99,7 @@ public:
 	void setSouvenirs(QVector<Souvenir> souvenirs) {
 		this->souvenirs = souvenirs;
 	}
+
+
 };
 

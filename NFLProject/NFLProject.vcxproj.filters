@@ -61,9 +61,6 @@
     <ClCompile Include="DisplayTeams.cpp">
       <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
     </ClCompile>
-    <ClCompile Include="MapTest.cpp">
-      <Filter>Source Files\Database</Filter>
-    </ClCompile>
     <ClCompile Include="DisplaySorted.cpp">
       <Filter>Source Files\Menus\Display\DisplaySorted</Filter>
     </ClCompile>

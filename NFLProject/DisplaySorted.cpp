@@ -8,3 +8,4 @@ DisplaySorted::DisplaySorted(QWidget *parent)
 
 DisplaySorted::~DisplaySorted()
 {}
+
