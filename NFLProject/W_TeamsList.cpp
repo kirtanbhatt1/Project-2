@@ -20,7 +20,5 @@ void W_TeamsList::setup(QString teamName, QString stadium, QString capacity, QSt
 	ui.L_Opened->setText(QString::number(opened));
 	ui.L_Division->setText(division);
 	ui.L_Conference->setText(conference);
-
-
 }
 

@@ -10,6 +10,8 @@ class W_SortedList : public QWidget
 public:
 	W_SortedList(QWidget *parent = nullptr);
 	~W_SortedList();
+	void setup(QString teamName, QString stadium, QString capacity, QString location,
+		QString roofType, QString surface, QString conference, int opened, QString division);
 
 private:
 	Ui::W_SortedListClass ui;
