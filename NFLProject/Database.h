@@ -13,8 +13,9 @@ class Database
 {
 public:
 	QSqlDatabase NFLDatabase;
-	Map teams;
+	//Map teams;
 	Database();
 	~Database();
 	QVector<Team> getTeams();
+	Map initializeMap();
 };
