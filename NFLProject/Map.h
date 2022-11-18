@@ -9,7 +9,9 @@ private:
 
 public:
 
-    Map();
+    Map()
+    {
+    }
 
     int size()
     {

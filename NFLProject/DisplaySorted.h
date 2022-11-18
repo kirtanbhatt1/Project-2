@@ -16,13 +16,8 @@ public:
 	DisplaySorted(QWidget *parent = nullptr);
 	~DisplaySorted();
 
-	void displayAllTeams();
-	// This function looks into the private vector after sorting and displays
-	// the values after using initializeTeamsList
+	void displayAllSortedTeams(QVector<Team> sortedTeams);
 
-	void initializeTeamsList();
-	// This function adds the teams db into a vector
-	
 	void sortAlphabetically();
 
 	void sortAmericanConferenceTeams();
@@ -39,8 +34,10 @@ public:
 
 	void sortByConference();
 
+	void clearLayout();
+
 private:
 	Ui::DisplaySortedClass ui;
 	QVector<Team> sortedTeams;
-
+	QVector<W_SortedList*> allWidgets;
 };
