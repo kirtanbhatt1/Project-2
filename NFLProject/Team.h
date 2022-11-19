@@ -54,4 +54,7 @@ public:
 	{
 		return stadium;
 	}
+	static bool compareConference(const Team& team1, const Team& team2) { return team1.teamConference < team2.teamConference; }
+	static bool compareStadium( Team& team1,  Team& team2) { return team1.stadium.getStadiumName() < team2.stadium.getStadiumName(); }
+
 };

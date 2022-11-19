@@ -1,4 +1,7 @@
 #include "NFLProject.h"
+#include "Database.h"
+
+Database db1;
 
 NFLProject::NFLProject(QWidget *parent)
     : QMainWindow(parent)
@@ -56,6 +59,7 @@ void NFLProject::showDisplaySorted()
 {
     DisplaySorted* displaySorted = new DisplaySorted(this);
     setPage(displaySorted);
+    displaySorted->displayAllSortedTeams(db1.getTeams());
 }
 
 

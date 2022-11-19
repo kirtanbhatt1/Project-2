@@ -89,11 +89,14 @@
   <ItemGroup>
     <ClCompile Include="DisplaySorted.cpp" />
     <ClCompile Include="DisplayTeams.cpp" />
+    <ClCompile Include="maintenance.cpp" />
     <ClCompile Include="W_SortedList.cpp" />
     <ClCompile Include="W_TeamsList.cpp" />
+    <ClCompile Include="W_TotalCount.cpp" />
     <QtRcc Include="NFLProject.qrc" />
     <QtUic Include="DisplaySorted.ui" />
     <QtUic Include="DisplayTeams.ui" />
+    <QtUic Include="maintenance.ui" />
     <QtUic Include="NFLProject.ui" />
     <QtMoc Include="NFLProject.h" />
     <ClCompile Include="Database.cpp" />
@@ -101,13 +104,16 @@
     <ClCompile Include="main.cpp" />
     <QtUic Include="W_SortedList.ui" />
     <QtUic Include="W_TeamsList.ui" />
+    <QtUic Include="W_TotalCount.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <QtMoc Include="W_TotalCount.h" />
     <QtMoc Include="W_SortedList.h" />
     <QtMoc Include="W_TeamsList.h" />
     <QtMoc Include="DisplayTeams.h" />
     <QtMoc Include="DisplaySorted.h" />
+    <QtMoc Include="maintenance.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Souvenir.h" />

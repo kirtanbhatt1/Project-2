@@ -44,6 +44,9 @@
     <Filter Include="Source Files\Widgets\SortedList">
       <UniqueIdentifier>{3bb088c6-6c4f-45ea-b6f3-7a149f0d5d93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Widgets\TotalCount">
+      <UniqueIdentifier>{8e8f19c8-bc6c-4096-867b-d6bd8a2bceb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -67,6 +70,12 @@
     <ClCompile Include="W_SortedList.cpp">
       <Filter>Source Files\Widgets\SortedList</Filter>
     </ClCompile>
+    <ClCompile Include="W_TotalCount.cpp">
+      <Filter>Source Files\Widgets\TotalCount</Filter>
+    </ClCompile>
+    <ClCompile Include="maintenance.cpp">
+      <Filter>Source Files\Menus\Maintenance</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -88,6 +97,12 @@
     </QtUic>
     <QtUic Include="W_SortedList.ui">
       <Filter>Source Files\Widgets\SortedList</Filter>
+    </QtUic>
+    <QtUic Include="W_TotalCount.ui">
+      <Filter>Source Files\Widgets\TotalCount</Filter>
+    </QtUic>
+    <QtUic Include="maintenance.ui">
+      <Filter>Source Files\Menus\Maintenance</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +138,12 @@
     </QtMoc>
     <QtMoc Include="W_SortedList.h">
       <Filter>Source Files\Widgets\SortedList</Filter>
+    </QtMoc>
+    <QtMoc Include="W_TotalCount.h">
+      <Filter>Source Files\Widgets\TotalCount</Filter>
+    </QtMoc>
+    <QtMoc Include="maintenance.h">
+      <Filter>Source Files\Menus\Maintenance</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

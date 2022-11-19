@@ -18,4 +18,5 @@ public:
 	~Database();
 	QVector<Team> getTeams();
 	Map initializeMap();
+	long getTotalCapacity(QVector<Team> teams);
 };
