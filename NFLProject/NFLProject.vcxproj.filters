@@ -44,6 +44,12 @@
     <Filter Include="Source Files\Widgets\SortedList">
       <UniqueIdentifier>{3bb088c6-6c4f-45ea-b6f3-7a149f0d5d93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Menus\Display\DisplaySouvenirs">
+      <UniqueIdentifier>{446a9e05-db17-4a27-a10a-4449b07cfc9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\SouvenirList">
+      <UniqueIdentifier>{fd7321e3-4fa2-446f-8de7-f72ff19436aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -67,6 +73,12 @@
     <ClCompile Include="W_SortedList.cpp">
       <Filter>Source Files\Widgets\SortedList</Filter>
     </ClCompile>
+    <ClCompile Include="DisplaySouvenirs.cpp">
+      <Filter>Source Files\Menus\Display\DisplaySouvenirs</Filter>
+    </ClCompile>
+    <ClCompile Include="W_SouvenirList.cpp">
+      <Filter>Source Files\Widgets\SouvenirList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -88,6 +100,12 @@
     </QtUic>
     <QtUic Include="W_SortedList.ui">
       <Filter>Source Files\Widgets\SortedList</Filter>
+    </QtUic>
+    <QtUic Include="DisplaySouvenirs.ui">
+      <Filter>Source Files\Menus\Display\DisplaySouvenirs</Filter>
+    </QtUic>
+    <QtUic Include="W_SouvenirList.ui">
+      <Filter>Source Files\Widgets\SouvenirList</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +141,12 @@
     </QtMoc>
     <QtMoc Include="W_SortedList.h">
       <Filter>Source Files\Widgets\SortedList</Filter>
+    </QtMoc>
+    <QtMoc Include="DisplaySouvenirs.h">
+      <Filter>Source Files\Menus\Display\DisplaySouvenirs</Filter>
+    </QtMoc>
+    <QtMoc Include="W_SouvenirList.h">
+      <Filter>Source Files\Widgets\SouvenirList</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,7 @@
 #include "ui_NFLProject.h"
 #include "DisplayTeams.h"
 #include "DisplaySorted.h"
+#include "DisplaySouvenirs.h"
 
 class NFLProject : public QMainWindow
 {
@@ -20,6 +21,7 @@ public:
     // Menus
     void showDisplayTeams();
     void showDisplaySorted();
+    void showDisplaySouvenirs();
     
 
 private:

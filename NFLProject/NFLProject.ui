@@ -294,6 +294,7 @@
     </property>
     <addaction name="actionTeams"/>
     <addaction name="actionSorted"/>
+    <addaction name="actionSouvenirs"/>
    </widget>
    <widget class="QMenu" name="menuPlan">
     <property name="title">
@@ -332,6 +333,11 @@
   <action name="actionImport">
    <property name="text">
     <string>Import</string>
+   </property>
+  </action>
+  <action name="actionSouvenirs">
+   <property name="text">
+    <string>Souvenirs</string>
    </property>
   </action>
  </widget>

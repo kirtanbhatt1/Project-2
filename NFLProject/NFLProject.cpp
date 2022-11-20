@@ -24,13 +24,13 @@ NFLProject::NFLProject(QWidget *parent)
     ui.menuBar->addMenu(ui.menuDisplay);
     ui.menuBar->addMenu(ui.menuPlan);
     ui.menuBar->addMenu(ui.menuMaintenance);
-
+ 
 
     // Connections
     connect(homeAction, &QAction::triggered, this, &NFLProject::returnMain); // Return Main
     connect(ui.actionTeams, &QAction::triggered, this, &NFLProject::showDisplayTeams); // Display Cities
     connect(ui.actionSorted, &QAction::triggered, this, &NFLProject::showDisplaySorted); // Display sorted
-    
+    connect(ui.actionSouvenirs, &QAction::triggered, this, &NFLProject::showDisplaySouvenirs); // Display souvenirs
 }
 
 void NFLProject::returnMain()
@@ -49,6 +49,14 @@ void NFLProject::showDisplayTeams()
     DisplayTeams* displayTeams = new DisplayTeams(this);
     setPage(displayTeams);
     displayTeams->open();
+}
+
+
+void NFLProject::showDisplaySouvenirs()
+{
+    DisplaySouvenirs* displaySouvenirs = new DisplaySouvenirs(this);
+    setPage(displaySouvenirs);
+    displaySouvenirs->open();
 }
 
 
