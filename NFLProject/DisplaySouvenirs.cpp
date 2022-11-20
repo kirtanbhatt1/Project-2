@@ -59,7 +59,7 @@ void DisplaySouvenirs::displayAllSouvenirs()
 				W_SouvenirList* souvenirItem = new W_SouvenirList(this);
 				souvenirItem->setup(allSouvenirs[j].getName(), allSouvenirs[j].getPrice());
 				ui.verticalLayout_2->addWidget(souvenirItem);
-				allwidgets.push_back(souveniritem);
+				allWidgets.push_back(souvenirItem);
 				
 			}
 		}
