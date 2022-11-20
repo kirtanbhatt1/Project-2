@@ -44,6 +44,9 @@
     <Filter Include="Source Files\Widgets\SortedList">
       <UniqueIdentifier>{3bb088c6-6c4f-45ea-b6f3-7a149f0d5d93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Widgets\TotalCount">
+      <UniqueIdentifier>{8e8f19c8-bc6c-4096-867b-d6bd8a2bceb4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\Menus\Display\DisplaySouvenirs">
       <UniqueIdentifier>{446a9e05-db17-4a27-a10a-4449b07cfc9d}</UniqueIdentifier>
     </Filter>
@@ -72,6 +75,12 @@
     </ClCompile>
     <ClCompile Include="W_SortedList.cpp">
       <Filter>Source Files\Widgets\SortedList</Filter>
+    </ClCompile>
+    <ClCompile Include="W_TotalCount.cpp">
+      <Filter>Source Files\Widgets\TotalCount</Filter>
+    </ClCompile>
+    <ClCompile Include="maintenance.cpp">
+      <Filter>Source Files\Menus\Maintenance</Filter>
     </ClCompile>
     <ClCompile Include="DisplaySouvenirs.cpp">
       <Filter>Source Files\Menus\Display\DisplaySouvenirs</Filter>
@@ -107,6 +116,12 @@
     <QtUic Include="W_SouvenirList.ui">
       <Filter>Source Files\Widgets\SouvenirList</Filter>
     </QtUic>
+    <QtUic Include="W_TotalCount.ui">
+      <Filter>Source Files\Widgets\TotalCount</Filter>
+    </QtUic>
+    <QtUic Include="maintenance.ui">
+      <Filter>Source Files\Menus\Maintenance</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Team.h">
@@ -141,6 +156,12 @@
     </QtMoc>
     <QtMoc Include="W_SortedList.h">
       <Filter>Source Files\Widgets\SortedList</Filter>
+    </QtMoc>
+    <QtMoc Include="W_TotalCount.h">
+      <Filter>Source Files\Widgets\TotalCount</Filter>
+    </QtMoc>
+    <QtMoc Include="maintenance.h">
+      <Filter>Source Files\Menus\Maintenance</Filter>
     </QtMoc>
     <QtMoc Include="DisplaySouvenirs.h">
       <Filter>Source Files\Menus\Display\DisplaySouvenirs</Filter>

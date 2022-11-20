@@ -42,6 +42,7 @@ public:
 	}
 
 	QString getCapacity() {
+		
 		return capacity;
 	}
 
@@ -99,7 +100,7 @@ public:
 	void setSouvenirs(QVector<Souvenir> souvenirs) {
 		this->souvenirs = souvenirs;
 	}
-
+	static bool compareStadiumName(const Stadium& stadium1, const Stadium& stadium2) { return stadium1.stadiumName < stadium2.stadiumName; }
 
 };
 

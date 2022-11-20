@@ -65,3 +65,15 @@ QVector<Team> Database::getTeams()
 	return teams;
 }
 
+long Database::getTotalCapacity(QVector<Team> teams)
+{
+	long totalCapacity = 0;
+
+	for (int i = 0; i < teams.size(); i++)
+	{
+		totalCapacity += teams[i].getStadium().getCapacity().toLong();
+		qDebug() << teams[i].getTeamName() << " has capacity: " << teams[i].getStadium().getCapacity();
+		qDebug() << "total Capacity: " << totalCapacity;
+	}
+	return totalCapacity;
+}
