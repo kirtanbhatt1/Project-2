@@ -1,6 +1,8 @@
 #include "DisplaySouvenirs.h"
 #include "Database.h"
 
+Database souvenirDB;
+
 DisplaySouvenirs::DisplaySouvenirs(QWidget *parent)
 	: QMainWindow(parent)
 {
@@ -20,9 +22,8 @@ void DisplaySouvenirs::open()
 
 void DisplaySouvenirs::initializeList()
 {
-	Database nfl_db;
 
-	QVector<Team> teams = nfl_db.getTeams();
+	QVector<Team> teams = souvenirDB.getTeams();
 
 	for (int i = 0; i < teams.size(); i++)
 	{
@@ -44,12 +45,13 @@ void DisplaySouvenirs::clearLayout()
 
 void DisplaySouvenirs::displayAllSouvenirs()
 {
-	Database nfl_db;
 	clearLayout();
 	QString teamName = ui.teamSelect->currentText();
-	QVector<Team> allTeams = nfl_db.getTeams();
+	QVector<Team> allTeams = souvenirDB.getTeams();
+	qDebug() << "SIZE: " << allTeams.size();
 	for (int i = 0; i < allTeams.size(); i++)
-	{
+	{	
+
 		QVector<Souvenir> allSouvenirs = allTeams[i].getStadium().getSouvenirs(); 
 
 		if (allTeams[i].getTeamName() == teamName)
