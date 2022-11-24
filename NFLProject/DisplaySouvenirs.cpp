@@ -24,7 +24,7 @@ void DisplaySouvenirs::initializeList()
 {
 
 	QVector<Team> teams = souvenirDB.getTeams();
-
+	ui.teamSelect->clear();
 	for (int i = 0; i < teams.size(); i++)
 	{
 		QString teamName = teams[i].getTeamName();
