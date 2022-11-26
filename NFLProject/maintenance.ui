@@ -36,6 +36,11 @@
       <height>31</height>
      </rect>
     </property>
+    <item>
+     <property name="text">
+      <string>San Diego Sailors</string>
+     </property>
+    </item>
    </widget>
    <widget class="QPushButton" name="addTeamButton">
     <property name="geometry">
@@ -106,16 +111,6 @@
       <y>120</y>
       <width>241</width>
       <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="souvenirPriceInput">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>240</y>
-      <width>241</width>
-      <height>31</height>
      </rect>
     </property>
    </widget>
@@ -194,16 +189,6 @@
      <string>Please Enter The New Name Of The New Souvenir</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="newSouvenirPriceInput">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>240</y>
-      <width>241</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
@@ -221,7 +206,7 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>280</y>
+      <y>310</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -279,16 +264,6 @@
      <string>Modify Team Capacity:</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="newTeamCapacityInput">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>570</y>
-      <width>121</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTextEdit" name="newLocationNameInput">
     <property name="geometry">
      <rect>
@@ -309,7 +284,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Modify Team Stadium:</string>
+     <string>Modify Team Location:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_13">
@@ -384,16 +359,6 @@
     </property>
     <property name="text">
      <string>Modify Year Opened:</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="newYearOpenedInput">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>650</y>
-      <width>121</width>
-      <height>22</height>
-     </rect>
     </property>
    </widget>
    <widget class="QComboBox" name="modifyConferenceCombo">
@@ -505,6 +470,46 @@
      <string>Click To Modify Team</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="souvenirPriceInput">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>230</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="newYearOpenedInput">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>650</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="newSouvenirPriceInput">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>250</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="newTeamCapacityInput">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>570</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -519,5 +524,54 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>teamSelectSouveirCombo</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>selectSouvenirCombo</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>237</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>teamSelectSouveirCombo</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>selectSouvenirCombo</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>216</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>selectSouvenirCombo</sender>
+   <signal>activated(int)</signal>
+   <receiver>Maintenance</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>513</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>438</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
