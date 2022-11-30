@@ -276,7 +276,11 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
              <item>
-              <layout class="QVBoxLayout" name="vertical_details_layout"/>
+              <layout class="QVBoxLayout" name="vertical_details_layout">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+              </layout>
              </item>
             </layout>
            </widget>

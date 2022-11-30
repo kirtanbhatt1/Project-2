@@ -87,15 +87,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DisplayDistances.cpp" />
     <ClCompile Include="DisplaySorted.cpp" />
     <ClCompile Include="DisplaySouvenirs.cpp" />
     <ClCompile Include="DisplayTeams.cpp" />
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="maintenance.cpp" />
+    <ClCompile Include="Plan.cpp" />
+    <ClCompile Include="W_DistanceList.cpp" />
     <ClCompile Include="W_SortedList.cpp" />
     <ClCompile Include="W_SouvenirList.cpp" />
     <ClCompile Include="W_TeamsList.cpp" />
     <ClCompile Include="W_TotalCount.cpp" />
     <QtRcc Include="NFLProject.qrc" />
+    <QtUic Include="DisplayDistances.ui" />
     <QtUic Include="DisplaySorted.ui" />
     <QtUic Include="DisplaySouvenirs.ui" />
     <QtUic Include="DisplayTeams.ui" />
@@ -105,6 +110,8 @@
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="NFLProject.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="Plan.ui" />
+    <QtUic Include="W_DistanceList.ui" />
     <QtUic Include="W_SortedList.ui" />
     <QtUic Include="W_SouvenirList.ui" />
     <QtUic Include="W_TeamsList.ui" />
@@ -112,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <QtMoc Include="W_DistanceList.h" />
     <QtMoc Include="W_TotalCount.h" />
     <QtMoc Include="W_SouvenirList.h" />
     <QtMoc Include="W_SortedList.h" />
@@ -120,7 +128,11 @@
     <QtMoc Include="DisplaySorted.h" />
     <QtMoc Include="DisplaySouvenirs.h" />
     <QtMoc Include="maintenance.h" />
+    <QtMoc Include="DisplayDistances.h" />
+    <ClInclude Include="Distance.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="Map.h" />
+    <QtMoc Include="Plan.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Souvenir.h" />
     <ClInclude Include="Stadium.h" />

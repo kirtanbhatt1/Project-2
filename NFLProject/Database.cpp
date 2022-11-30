@@ -22,8 +22,11 @@ Map Database::initializeMap()
 {
 	QSqlQuery* db = new QSqlQuery(NFLDatabase);
 	QSqlQuery* db2 = new QSqlQuery(NFLDatabase);
+	QSqlQuery* db3 = new QSqlQuery(NFLDatabase);
 	db->exec("SELECT * FROM teamInfo");
 	db2->exec("SELECT * FROM teamSouvenir");
+	db3->exec("SELECT * FROM teamDistance");
+
 	Map teamsMap;
 	//Team team("Los Angeles Rams", "National Football Conference", "NFC West", "SoFi Stadium", 70000, "Inglewood, CA", "Fixed", "Hellas Matrix Turf", 2020, souvenirs );
 	//allTeams.push_back(team);
@@ -42,11 +45,26 @@ Map Database::initializeMap()
 				souvenirs.push_back(*temp);
 		}
 
+		QVector<Distance> edges;
+		while (db3->next() && db3->value("teamName") != db->value("teamName")) {
+			//qInfo() << db->value("city");
+		}
+		while (db3->next() && db3->value("teamName") == "") {
+
+			QString startingStadiumName = db3->value("beginningStadium").toString();
+			QString endingStadiumName = db3->value("endingStadium").toString();
+			int distance = db3->value("Distance").toInt();
+			//qDebug() << "START: " << startingStadiumName << "END: " << endingStadiumName << "DISTANCE: " << distance;
+			Distance* temp = new Distance(startingStadiumName, endingStadiumName, distance);
+			edges.push_back(*temp);
+		}
+
 		// add team info to the vector
 		Team* currentTeam = new Team(db->value("teamName").toString(), db->value("conference").toString(), db->value("division").toString(), db->value("stadium").toString(), db->value("capacity").toString(),
-			db->value("location").toString(), db->value("rooftype").toString(), db->value("surface").toString(), db->value("opened").toInt(), souvenirs);
+			db->value("location").toString(), db->value("rooftype").toString(), db->value("surface").toString(), db->value("opened").toInt(), souvenirs, edges);
 		teamsMap.insert(currentTeam->getTeamName(), *currentTeam);
 		db2->seek(0);
+		db3->seek(0);
 	}
 
 	return teamsMap;

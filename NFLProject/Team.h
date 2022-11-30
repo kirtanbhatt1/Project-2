@@ -8,15 +8,16 @@ private:
 	QString teamName, teamConference, teamDivision;
 	Stadium stadium;
 
+
 public:
 	Team() : teamName{""}, teamConference{""}, teamDivision{""}, stadium{} {}
 
 	//compositional constructor for Team and Stadium together
 	Team(QString teamName, QString teamConference, QString teamDivision,
 		QString stadiumName, QString capacity, QString location, QString roofType,
-		QString surface, int openedYear, QVector<Souvenir> allSouvenirs)
+		QString surface, int openedYear, QVector<Souvenir> allSouvenirs, QVector<Distance> allEdges)
 		: teamName{ teamName }, teamConference{ teamConference }, teamDivision{ teamDivision },
-		stadium{ stadiumName, capacity, location, roofType, surface, openedYear, allSouvenirs } {}
+		stadium{ stadiumName, capacity, location, roofType, surface, openedYear, allSouvenirs, allEdges } {}
 	
 
 	//getters & setters for Team
@@ -47,6 +48,10 @@ public:
 
 	void setStadiumSouvenirs(QVector<Souvenir> souvenirs){
 		stadium.setSouvenirs(souvenirs);
+	}
+
+	void setStadiumEdges(QVector<Distance> edges) {
+		stadium.setEdges(edges);
 	}
 
 	//getter for Stadium

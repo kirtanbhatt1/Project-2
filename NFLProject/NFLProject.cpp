@@ -1,5 +1,6 @@
 #include "NFLProject.h"
 #include "Database.h"
+#include "DisplayDistances.h"
 
 Database db1;
 
@@ -34,6 +35,7 @@ NFLProject::NFLProject(QWidget *parent)
     connect(ui.actionTeams, &QAction::triggered, this, &NFLProject::showDisplayTeams); // Display Cities
     connect(ui.actionSorted, &QAction::triggered, this, &NFLProject::showDisplaySorted); // Display sorted
     connect(ui.actionSouvenirs, &QAction::triggered, this, &NFLProject::showDisplaySouvenirs); // Display souvenirs
+    connect(ui.actionDistances, &QAction::triggered, this, &NFLProject::showDisplayDistances); // Display distances
 }
 
 void NFLProject::returnMain()
@@ -61,7 +63,12 @@ void NFLProject::showDisplaySouvenirs()
     setPage(displaySouvenirs);
     displaySouvenirs->open();
 }
-
+void NFLProject::showDisplayDistances()
+{
+    DisplayDistances* displayDistances = new DisplayDistances(this);
+    setPage(displayDistances);
+    displayDistances->open();
+}
 
 void NFLProject::showDisplaySorted()
 {

@@ -3,6 +3,7 @@
 #include "Map.h"
 #include "Team.h"
 #include "Stadium.h"
+#include "Distance.h"
 #include "qvector.h"
 #include <iostream>
 #include <QSqlDatabase>
