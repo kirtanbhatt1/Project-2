@@ -1,6 +1,6 @@
 #include "Plan.h"
 
-Plan::Plan(QWidget *parent)
+Plan::Plan(QWidget* parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
@@ -26,4 +26,9 @@ void Plan::initializeEdges(QVector<Team> allCities)
 		}
 	}
 
+}
+
+void Plan::depthFirstSearch()
+{
+	//getGraph().DFS();
 }

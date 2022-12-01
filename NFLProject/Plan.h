@@ -10,12 +10,14 @@ class Plan : public QMainWindow
 	Q_OBJECT
 
 public:
-	Plan(QWidget *parent = nullptr);
+	Plan(QWidget* parent = nullptr);
 	~Plan();
 
 	void initializeEdges(QVector<Team> allCities);
 
 	Graph getGraph();
+
+	void depthFirstSearch();
 
 private:
 	Ui::PlanClass ui;
