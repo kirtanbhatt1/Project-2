@@ -17,11 +17,11 @@ void Graph::insertVertex(const QString& name)
 		vMap[name] = v;
 		return;
 	}
-	cout << "\nVertex already exists!";
+	//cout << "\nVertex already exists!";
 } // end insertVertex
 void Graph::sortEdges(Vertex* vertex)
 {
-	sort(vertex->adjacentEdges.begin(), vertex->adjacentEdges.end(),
+	std::sort(vertex->adjacentEdges.begin(), vertex->adjacentEdges.end(),
 		[](Edge* A, Edge* B) { return B->distance > A->distance; });
 } // end sortEdges
 void Graph::insertEdge(const QString& beginVal, const QString& endVal, int
@@ -62,7 +62,7 @@ void Graph::clear() {
 void Graph::BFS(Vertex*& start)
 {
 	start->visited = true;
-	queue<Vertex*> BFSqueue;
+	std::queue<Vertex*> BFSqueue;
 	BFSqueue.push(start);
 	while (!BFSqueue.empty())
 	{
@@ -100,7 +100,16 @@ void Graph::DFS(Vertex*& start)
 			if (!opposite->visited)
 			{
 				start->adjacentEdges.at(i)->status = DISCOVERY;
+				
+				//W_DFSList* dfsText = new W_DFSList(this);
+				//DisplayDFS* displayDFS = new DisplayDFS(this);
+
+				//dfsText->setup(start->name, opposite->name);
+
+				//displayDFS->ui.verticalLayout->addWidget(dfsText);
+				
 				//cout << start->name << " -> " << opposite->name << endl;
+
 				totalDistance += start->adjacentEdges.at(i)->distance;
 				DFS(opposite);
 			}

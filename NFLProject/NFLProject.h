@@ -23,6 +23,7 @@ public:
     void showDisplaySorted();
     void showDisplaySouvenirs();
     void showDisplayDistances();
+    void showDisplayDFS();
 
 private:
     Ui::NFLProjectClass ui;

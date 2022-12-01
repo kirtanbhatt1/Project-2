@@ -59,6 +59,18 @@
     <Filter Include="Source Files\Widgets\DistanceList">
       <UniqueIdentifier>{637b059f-426e-4709-8138-c353848f197f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Menus\Plan\Graph">
+      <UniqueIdentifier>{32aafe19-a0f4-4702-9c5f-9a8c88665486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menus\Plan\DisplayDFS">
+      <UniqueIdentifier>{77b917ac-f34c-4670-a879-5456da28b627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\DFSList">
+      <UniqueIdentifier>{85fbec63-8717-48a2-9eb9-ce24441addac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menus\Plan\PlanTrip">
+      <UniqueIdentifier>{3555ce19-a624-476e-83ad-f68c128fd865}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -94,17 +106,23 @@
     <ClCompile Include="W_SouvenirList.cpp">
       <Filter>Source Files\Widgets\SouvenirList</Filter>
     </ClCompile>
-    <ClCompile Include="Graph.cpp">
-      <Filter>Source Files\Menus\Plan</Filter>
-    </ClCompile>
     <ClCompile Include="DisplayDistances.cpp">
       <Filter>Source Files\Menus\Display\DisplayDistances</Filter>
     </ClCompile>
     <ClCompile Include="W_DistanceList.cpp">
       <Filter>Source Files\Widgets\DistanceList</Filter>
     </ClCompile>
-    <ClCompile Include="Plan.cpp">
-      <Filter>Source Files\Menus\Plan</Filter>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files\Menus\Plan\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayDFS.cpp">
+      <Filter>Source Files\Menus\Plan\DisplayDFS</Filter>
+    </ClCompile>
+    <ClCompile Include="W_DFSList.cpp">
+      <Filter>Source Files\Widgets\DFSList</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanTrip.cpp">
+      <Filter>Source Files\Menus\Plan\PlanTrip</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -146,8 +164,14 @@
     <QtUic Include="W_DistanceList.ui">
       <Filter>Source Files\Widgets\DistanceList</Filter>
     </QtUic>
-    <QtUic Include="Plan.ui">
-      <Filter>Source Files\Menus\Plan</Filter>
+    <QtUic Include="DisplayDFS.ui">
+      <Filter>Source Files\Menus\Plan\DisplayDFS</Filter>
+    </QtUic>
+    <QtUic Include="W_DFSList.ui">
+      <Filter>Source Files\Widgets\DFSList</Filter>
+    </QtUic>
+    <QtUic Include="PlanTrip.ui">
+      <Filter>Source Files\Menus\Plan\PlanTrip</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +195,7 @@
       <Filter>Source Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Graph.h">
-      <Filter>Source Files\Menus\Plan</Filter>
+      <Filter>Source Files\Menus\Plan\Graph</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -208,8 +232,14 @@
     <QtMoc Include="W_DistanceList.h">
       <Filter>Source Files\Widgets\DistanceList</Filter>
     </QtMoc>
-    <QtMoc Include="Plan.h">
-      <Filter>Source Files\Menus\Plan</Filter>
+    <QtMoc Include="DisplayDFS.h">
+      <Filter>Source Files\Menus\Plan\DisplayDFS</Filter>
+    </QtMoc>
+    <QtMoc Include="W_DFSList.h">
+      <Filter>Source Files\Widgets\DFSList</Filter>
+    </QtMoc>
+    <QtMoc Include="PlanTrip.h">
+      <Filter>Source Files\Menus\Plan\PlanTrip</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

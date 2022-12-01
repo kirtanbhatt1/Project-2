@@ -301,6 +301,7 @@
     <property name="title">
      <string>Plan</string>
     </property>
+    <addaction name="actionDFS"/>
    </widget>
    <widget class="QMenu" name="menuMaintenance">
     <property name="title">
@@ -344,6 +345,11 @@
   <action name="actionDistances">
    <property name="text">
     <string>Distances</string>
+   </property>
+  </action>
+  <action name="actionDFS">
+   <property name="text">
+    <string>DFS</string>
    </property>
   </action>
  </widget>

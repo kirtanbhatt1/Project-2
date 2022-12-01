@@ -6,9 +6,9 @@
 #include <queue>
 #include <QString>
 #include <utility>
-#include <vector>
+#include <QVector>
 
-using namespace std;
+
 enum edge_status { UNDISCOVERED, DISCOVERY, BACK, CROSS };
 struct Vertex;
 struct Edge
@@ -21,7 +21,7 @@ struct Edge
 };
 struct Vertex
 {
-	vector<Edge*> adjacentEdges;
+	QVector<Edge*> adjacentEdges;
 	QString name;
 	bool visited = false;
 	Vertex(QString s) : name(s) {}
@@ -29,7 +29,9 @@ struct Vertex
 class Graph
 {
 public:
-	typedef map<QString, Vertex*> vertexMap;
+	
+	typedef std::map<QString, Vertex*> vertexMap;
+	
 	void DFS(Vertex*&);
 	// Function to perform a Depth-First-Search on a graph 
 	void BFS(Vertex*&);
@@ -61,7 +63,7 @@ public:
 	// Postcondition: Returns the total distance traveled
 private:
 	vertexMap vMap;
-	vector<Edge*> allEdges;
+	QVector<Edge*> allEdges;
 	void sortEdges(Vertex* in_Vertex);
 	Vertex* oppositeVertex(Vertex* in_Vertex, Edge* in_edge);
 	int totalDistance = 0;

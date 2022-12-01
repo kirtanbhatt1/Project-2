@@ -1,25 +1,27 @@
 #pragma once
 
-#include <QMainWindow>
-#include "ui_Plan.h"
+#include <QWidget>
+#include "ui_PlanTrip.h"
 #include "NFLProject.h"
 #include "Graph.h"
 
-class Plan : public QMainWindow
+
+class PlanTrip : public QWidget
 {
 	Q_OBJECT
 
 public:
-	Plan(QWidget* parent = nullptr);
-	~Plan();
+	PlanTrip(QWidget *parent = nullptr);
+	~PlanTrip();
 
 	void initializeEdges(QVector<Team> allCities);
 
-	Graph getGraph();
+	Graph getGraphCities();
 
 	void depthFirstSearch();
 
+
 private:
-	Ui::PlanClass ui;
+	Ui::PlanTripClass ui;
 	Graph cities;
 };
