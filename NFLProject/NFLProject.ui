@@ -302,6 +302,9 @@
      <string>Plan</string>
     </property>
     <addaction name="actionDFS"/>
+    <addaction name="separator"/>
+    <addaction name="actionShortest_Trip"/>
+    <addaction name="actionCustom_Trip"/>
    </widget>
    <widget class="QMenu" name="menuMaintenance">
     <property name="title">
@@ -350,6 +353,16 @@
   <action name="actionDFS">
    <property name="text">
     <string>DFS</string>
+   </property>
+  </action>
+  <action name="actionShortest_Trip">
+   <property name="text">
+    <string>Shortest Trip</string>
+   </property>
+  </action>
+  <action name="actionCustom_Trip">
+   <property name="text">
+    <string>Custom Trip</string>
    </property>
   </action>
  </widget>

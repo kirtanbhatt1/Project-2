@@ -71,6 +71,12 @@
     <Filter Include="Source Files\Menus\Plan\PlanTrip">
       <UniqueIdentifier>{3555ce19-a624-476e-83ad-f68c128fd865}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Widgets\TeamDistanceList">
+      <UniqueIdentifier>{48369db6-b303-4c7a-9d72-c77f4533b6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\AddTeamSouvenirs">
+      <UniqueIdentifier>{2c7bfbee-7c80-4b4e-b8e0-fcc77c6d04c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -124,6 +130,9 @@
     <ClCompile Include="PlanTrip.cpp">
       <Filter>Source Files\Menus\Plan\PlanTrip</Filter>
     </ClCompile>
+    <ClCompile Include="W_TeamDistanceList.cpp">
+      <Filter>Source Files\Widgets\TeamDistanceList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -172,6 +181,9 @@
     </QtUic>
     <QtUic Include="PlanTrip.ui">
       <Filter>Source Files\Menus\Plan\PlanTrip</Filter>
+    </QtUic>
+    <QtUic Include="W_TeamDistanceList.ui">
+      <Filter>Source Files\Widgets\TeamDistanceList</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +252,9 @@
     </QtMoc>
     <QtMoc Include="PlanTrip.h">
       <Filter>Source Files\Menus\Plan\PlanTrip</Filter>
+    </QtMoc>
+    <QtMoc Include="W_TeamDistanceList.h">
+      <Filter>Source Files\Widgets\TeamDistanceList</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

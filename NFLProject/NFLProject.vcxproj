@@ -99,6 +99,7 @@
     <ClCompile Include="W_DistanceList.cpp" />
     <ClCompile Include="W_SortedList.cpp" />
     <ClCompile Include="W_SouvenirList.cpp" />
+    <ClCompile Include="W_TeamDistanceList.cpp" />
     <ClCompile Include="W_TeamsList.cpp" />
     <ClCompile Include="W_TotalCount.cpp" />
     <QtRcc Include="NFLProject.qrc" />
@@ -118,11 +119,13 @@
     <QtUic Include="W_DistanceList.ui" />
     <QtUic Include="W_SortedList.ui" />
     <QtUic Include="W_SouvenirList.ui" />
+    <QtUic Include="W_TeamDistanceList.ui" />
     <QtUic Include="W_TeamsList.ui" />
     <QtUic Include="W_TotalCount.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <QtMoc Include="W_TeamDistanceList.h" />
     <QtMoc Include="W_DFSList.h" />
     <QtMoc Include="W_DistanceList.h" />
     <QtMoc Include="W_TotalCount.h" />

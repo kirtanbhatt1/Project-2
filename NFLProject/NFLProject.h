@@ -24,10 +24,13 @@ public:
     void showDisplaySouvenirs();
     void showDisplayDistances();
     void showDisplayDFS();
+    void showShortestTrip();
+    void showCustomTrip();
 
 private:
     Ui::NFLProjectClass ui;
     QStackedWidget* switcher;
     QWidget* currentPage = NULL;
+    QString queued = "";
     bool isLoggedIn = false;
 };
