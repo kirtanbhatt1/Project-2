@@ -20,4 +20,6 @@ public:
 	QVector<Team> getTeams();
 	Map initializeMap();
 	long getTotalCapacity(QVector<Team> teams);
+	Team getTeam(QString teamName);
+	static QVector<Distance> getAllDistances();
 };

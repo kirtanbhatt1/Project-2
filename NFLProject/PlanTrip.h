@@ -35,7 +35,7 @@ private:
 
 	TripMode tripMode;
 
-	QVector<Team> teamData;
+	QVector<Team> teamsData;
 	QVector<Distance> distancesData;
 
 	// Both:
@@ -60,7 +60,7 @@ private:
 	QStringList remainingTeams;
 
 	// 2nd Menu:
-	// void switch2nd();
+	void switch2nd();
 	QStringList plannedTeams; // A list in order of cities to go to
 	QVector<W_AddTeamSouvenirs*> addedTeams;
 	void totalPriceUpdated(double price); // Signal response for when a city's price for foods is updated.

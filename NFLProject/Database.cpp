@@ -95,3 +95,43 @@ long Database::getTotalCapacity(QVector<Team> teams)
 	}
 	return totalCapacity;
 }
+
+Team Database::getTeam(QString teamName)
+{
+	Database database;
+
+	QVector<Team> teams = database.getTeams();
+	Team teamData;
+
+	for (int i = 0; i < teams.size(); i++)
+	{
+		if (teams[i].getTeamName() == teamName)
+		{
+			teamData = teams[i];
+		}
+	}
+	return teamData;
+}
+
+QVector<Distance> Database::getAllDistances()
+{
+	QVector<Distance> distances;
+	QSqlQuery query;
+	query.prepare("SELECT StartingCity, EndingCity, Kilometers FROM distances");
+
+	if (query.exec())
+	{
+		while (query.next())
+		{
+			Distance distance;
+			distance.getStartingStadium() = query.value(0).toString();
+			distance.getEndingStadium() = query.value(1).toString();
+			//distance.getDistance() = query.value(2);
+
+			qInfo() << query.value(2);
+
+			distances.push_back(distance);
+		}
+	}
+	return distances;
+}
