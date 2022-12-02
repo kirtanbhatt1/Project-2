@@ -77,6 +77,15 @@
     <Filter Include="Source Files\Widgets\AddTeamSouvenirs">
       <UniqueIdentifier>{2c7bfbee-7c80-4b4e-b8e0-fcc77c6d04c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Widgets\AddTeamSouvenirs\W_NewSouvenir">
+      <UniqueIdentifier>{998043e7-ebb3-4604-9859-a4df161a00d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\AddTeamSouvenirs\W_SelectSouvenir">
+      <UniqueIdentifier>{cb344d3f-ff2b-4c8d-b305-e5577ce3f989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\TeamToggle">
+      <UniqueIdentifier>{4b8336a4-dbd7-4bb3-ba36-c0c6540de797}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -133,6 +142,18 @@
     <ClCompile Include="W_TeamDistanceList.cpp">
       <Filter>Source Files\Widgets\TeamDistanceList</Filter>
     </ClCompile>
+    <ClCompile Include="W_AddTeamSouvenirs.cpp">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs</Filter>
+    </ClCompile>
+    <ClCompile Include="W_NewSouvenir.cpp">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs\W_NewSouvenir</Filter>
+    </ClCompile>
+    <ClCompile Include="W_SelectSouvenir.cpp">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs\W_SelectSouvenir</Filter>
+    </ClCompile>
+    <ClCompile Include="TeamToggle.cpp">
+      <Filter>Source Files\Widgets\TeamToggle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -184,6 +205,18 @@
     </QtUic>
     <QtUic Include="W_TeamDistanceList.ui">
       <Filter>Source Files\Widgets\TeamDistanceList</Filter>
+    </QtUic>
+    <QtUic Include="W_AddTeamSouvenirs.ui">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs</Filter>
+    </QtUic>
+    <QtUic Include="W_NewSouvenir.ui">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs\W_NewSouvenir</Filter>
+    </QtUic>
+    <QtUic Include="W_SelectSouvenir.ui">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs\W_SelectSouvenir</Filter>
+    </QtUic>
+    <QtUic Include="TeamToggle.ui">
+      <Filter>Source Files\Widgets\TeamToggle</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -255,6 +288,18 @@
     </QtMoc>
     <QtMoc Include="W_TeamDistanceList.h">
       <Filter>Source Files\Widgets\TeamDistanceList</Filter>
+    </QtMoc>
+    <QtMoc Include="W_AddTeamSouvenirs.h">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs</Filter>
+    </QtMoc>
+    <QtMoc Include="W_NewSouvenir.h">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs\W_NewSouvenir</Filter>
+    </QtMoc>
+    <QtMoc Include="W_SelectSouvenir.h">
+      <Filter>Source Files\Widgets\AddTeamSouvenirs\W_SelectSouvenir</Filter>
+    </QtMoc>
+    <QtMoc Include="TeamToggle.h">
+      <Filter>Source Files\Widgets\TeamToggle</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

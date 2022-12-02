@@ -95,8 +95,12 @@
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="maintenance.cpp" />
     <ClCompile Include="PlanTrip.cpp" />
+    <ClCompile Include="TeamToggle.cpp" />
+    <ClCompile Include="W_AddTeamSouvenirs.cpp" />
     <ClCompile Include="W_DFSList.cpp" />
     <ClCompile Include="W_DistanceList.cpp" />
+    <ClCompile Include="W_NewSouvenir.cpp" />
+    <ClCompile Include="W_SelectSouvenir.cpp" />
     <ClCompile Include="W_SortedList.cpp" />
     <ClCompile Include="W_SouvenirList.cpp" />
     <ClCompile Include="W_TeamDistanceList.cpp" />
@@ -115,8 +119,12 @@
     <ClCompile Include="NFLProject.cpp" />
     <ClCompile Include="main.cpp" />
     <QtUic Include="PlanTrip.ui" />
+    <QtUic Include="TeamToggle.ui" />
+    <QtUic Include="W_AddTeamSouvenirs.ui" />
     <QtUic Include="W_DFSList.ui" />
     <QtUic Include="W_DistanceList.ui" />
+    <QtUic Include="W_NewSouvenir.ui" />
+    <QtUic Include="W_SelectSouvenir.ui" />
     <QtUic Include="W_SortedList.ui" />
     <QtUic Include="W_SouvenirList.ui" />
     <QtUic Include="W_TeamDistanceList.ui" />
@@ -125,6 +133,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <QtMoc Include="TeamToggle.h" />
+    <QtMoc Include="W_SelectSouvenir.h" />
+    <QtMoc Include="W_NewSouvenir.h" />
+    <QtMoc Include="W_AddTeamSouvenirs.h" />
     <QtMoc Include="W_TeamDistanceList.h" />
     <QtMoc Include="W_DFSList.h" />
     <QtMoc Include="W_DistanceList.h" />

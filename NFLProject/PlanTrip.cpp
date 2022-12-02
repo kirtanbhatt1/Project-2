@@ -6,13 +6,9 @@ PlanTrip::PlanTrip(QWidget *parent)
 	ui.setupUi(this);
 
 
-	QObject::connect(ui.B_CustomNext, &QPushButton::clicked, this, &PlanTrip::switch2nd);
-	QObject::connect(ui.B_ShortestNext, &QPushButton::clicked, this, &PlanTrip::switch2nd);
+	//QObject::connect(ui.B_CustomNext, &QPushButton::clicked, this, &PlanTrip::switch2nd);
+	//QObject::connect(ui.B_ShortestNext, &QPushButton::clicked, this, &PlanTrip::switch2nd);
 	QObject::connect(ui.B_Back, &QPushButton::clicked, this, &PlanTrip::triggerBack);
-
-
-
-
 
 }
 
@@ -142,14 +138,27 @@ void PlanTrip::beginPlan()
 	//}
 }
 
+void PlanTrip::totalPriceUpdated(double price)
+{
+	// Loop through cities to get their price and number of purchases.
+	double total = 0;
+	int count = 0;
+	for (W_AddTeamSouvenirs* addedTeam : addedTeams) {
+		total += addedTeam->getTotal();
+		count += addedTeam->numOfPurchases();
+	}
+	ui.L_TotalCost->setText("$" + QString::number(total, 'f', 2));
+	ui.L_NumberPurchasedSouvenirs->setText(QString::number(count));
+}
+
 
 void PlanTrip::triggerBack()
 {
 	ui.page_switcher->setCurrentIndex(0);
 	for (int i = 0; i < addedTeams.length(); i++) {
-		ui.SA_TeamList->layout()->removeWidget(addedCities[i]);
-		delete addedCities[i];
+		ui.SA_TeamList->layout()->removeWidget(addedTeams[i]);
+		delete addedTeams[i];
 	}
-	addedCities.clear();
+	addedTeams.clear();
 	totalPriceUpdated(0);
 }

@@ -5,6 +5,8 @@
 #include "NFLProject.h"
 #include "Graph.h"
 #include "W_TeamDistanceList.h"
+#include "W_AddTeamSouvenirs.h"
+#include "TeamToggle.h"
 
 enum TripMode 
 {
@@ -37,8 +39,8 @@ private:
 	QVector<Distance> distancesData;
 
 	// Both:
-	void selectNumberOfCities(int value);
-	void citySelected(int index);
+	void selectNumberOfTeams(int value);
+	void teamSelected(int index);
 	QString startingTeam = "";
 	QVector<W_TeamDistanceList*> w_teamsList;
 	void beginPlan();
@@ -49,19 +51,19 @@ private:
 	void addToTeamList(QString team, double distance);
 	int numberOfTeams = 0;
 
-	//// Custom Plan
-	//QVector<CityToggle*> w_CityToggles;
-	//void addToCustomCityList(QString city, double distance);
-	//QStringList selectedCities;
-	//void cityToggled(bool value, QString city);
-	//void calculateCustomPlan(QString startingCity, QVector<Distance>& distances);
-	//QStringList remainingCities;
+	// Custom Plan
+	QVector<TeamToggle*> w_TeamToggles;
+	void addToCustomTeamList(QString team, double distance);
+	QStringList selectedTeams;
+	void teamToggled(bool value, QString team);
+	void calculateCustomPlan(QString startingTeam, QVector<Distance>& distances);
+	QStringList remainingTeams;
 
 	// 2nd Menu:
 	// void switch2nd();
 	QStringList plannedTeams; // A list in order of cities to go to
-	//QVector<W_AddTeamSouvenirs*> addedCities;
-	//void totalPriceUpdated(double price); // Signal response for when a city's price for foods is updated.
+	QVector<W_AddTeamSouvenirs*> addedTeams;
+	void totalPriceUpdated(double price); // Signal response for when a city's price for foods is updated.
 	void triggerBack();
 
 };

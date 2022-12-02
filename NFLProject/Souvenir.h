@@ -1,5 +1,6 @@
 #pragma once
 #include "NFLProject.h"
+#include <QtCore>
 
 class Souvenir
 {
@@ -8,6 +9,8 @@ private:
 	double price;
 
 public:
+
+	int amount;
 
 	Souvenir() : name{ "" }, price{ 0 } {}
 
@@ -38,4 +41,8 @@ public:
 		return price;
 	}
 
+	double getTotal()
+	{
+		return price * amount;
+	}
 };
