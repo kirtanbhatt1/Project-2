@@ -154,6 +154,9 @@
     <ClCompile Include="TeamToggle.cpp">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
     </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -218,6 +221,7 @@
     <QtUic Include="TeamToggle.ui">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
     </QtUic>
+    <QtUic Include="login.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Team.h">
@@ -301,6 +305,7 @@
     <QtMoc Include="TeamToggle.h">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
     </QtMoc>
+    <QtMoc Include="login.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="NFLProject.rc" />

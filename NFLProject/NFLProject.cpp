@@ -2,6 +2,7 @@
 #include "Database.h"
 #include "DisplayDistances.h"
 #include "DisplayDFS.h"
+#include "login.h"
 
 Database db1;
 
@@ -40,6 +41,7 @@ NFLProject::NFLProject(QWidget *parent)
     //connect(ui.actionDFS, &QAction::triggered, this, &NFLProject::showDisplayDFS); // Display DFS Search
     connect(ui.actionShortest_Trip, &QAction::triggered, this, &NFLProject::showShortestTrip); // Shortest Trip
     connect(ui.actionCustom_Trip, &QAction::triggered, this, &NFLProject::showCustomTrip); // Custom Trip
+    connect(ui.actionImport, &QAction::triggered, this, &NFLProject::showMaintenance); // Maintenance Page
 }
 
 void NFLProject::returnMain()
@@ -118,6 +120,11 @@ void NFLProject::setPage(QWidget* page)
     currentPage = page;
 }
 
+//actionImport
+void NFLProject::showMaintenance() {
+    Login * login = new Login;
+    setPage(login);
+}
 
 NFLProject::~NFLProject()
 {}

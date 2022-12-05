@@ -1,5 +1,9 @@
 #include "login.h"
 #include "ui_login.h"
+#include "NFLProject.h"
+#include "Database.h"
+#include "DisplayDistances.h"
+#include "DisplayDFS.h"
 #include <QMessageBox>
 
 Login::Login(QWidget *parent) :
@@ -21,8 +25,9 @@ void Login::on_pushButton_login_clicked()
 
     if (username == "admin" && password == "password") {
         hide();
-        maintenance = new Maintenance(this);
+        Maintenance * maintenance = new Maintenance(this);
         maintenance->show();
+        //w.setPage(maintenance);
         qInfo() << "You entered correct user and password";
     }
     else {

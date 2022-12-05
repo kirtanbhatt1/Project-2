@@ -26,6 +26,7 @@ public:
     void showDisplayDFS();
     void showShortestTrip();
     void showCustomTrip();
+    void showMaintenance();
 
 private:
     Ui::NFLProjectClass ui;
