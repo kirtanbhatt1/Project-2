@@ -22,4 +22,8 @@ public:
 	long getTotalCapacity(QVector<Team> teams);
 	Team getTeam(QString teamName);
 	static QVector<Distance> getAllDistances();
+
+	QVector<Stadium> getAllStadiums();
+
+	QVector<Distance> distances;
 };

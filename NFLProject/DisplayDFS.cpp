@@ -12,6 +12,6 @@ DisplayDFS::~DisplayDFS()
 void showDFS()
 {
 	PlanTrip plan;
-	plan.depthFirstSearch();
+	//plan.depthFirstSearch();
 
 }

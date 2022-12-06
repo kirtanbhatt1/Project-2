@@ -9,7 +9,7 @@ W_TeamDistanceList::W_TeamDistanceList(QWidget *parent)
 W_TeamDistanceList::~W_TeamDistanceList()
 {}
 
-void W_TeamDistanceList::setup(QString team, long distance)
+void W_TeamDistanceList::setup(QString team, double distance)
 {
 	ui.L_TeamName->setText(team);
 	ui.L_Distance->setText(QString::number(distance) + "km");
@@ -20,7 +20,7 @@ void W_TeamDistanceList::setup(QString team, long distance)
 void W_TeamDistanceList::setup(QString startingTeam)
 {
 	ui.L_TeamName->setText(startingTeam);
-	ui.L_Distance->setText("Starting City");
+	ui.L_Distance->setText("Distance");
 	this->team = startingTeam;
 	this->distance = -1;
 }

@@ -5,6 +5,7 @@
 Database::Database(){
 	NFLDatabase = QSqlDatabase::addDatabase("QSQLITE");
 	NFLDatabase.setDatabaseName("C:/Users/remos/Project-2/SQLite/SQLite/NFLDatabase.db");
+	// "C:/Users/remos/Project-2/SQLite/SQLite/NFLDatabase.db"
 	NFLDatabase.open();
 	if (NFLDatabase.open()) {
 		std::cout << "Database is open\n";
@@ -57,9 +58,10 @@ Map Database::initializeMap()
 			//qDebug() << "START: " << startingStadiumName << "END: " << endingStadiumName << "DISTANCE: " << distance;
 			Distance* temp = new Distance(startingStadiumName, endingStadiumName, distance);
 			edges.push_back(*temp);
+			distances.push_back(*temp);
 		}
 
-		// add team info to the vector
+		// Add team info to the vector
 		Team* currentTeam = new Team(db->value("teamName").toString(), db->value("conference").toString(), db->value("division").toString(), db->value("stadium").toString(), db->value("capacity").toString(),
 			db->value("location").toString(), db->value("rooftype").toString(), db->value("surface").toString(), db->value("opened").toInt(), souvenirs, edges);
 		teamsMap.insert(currentTeam->getTeamName(), *currentTeam);
@@ -112,26 +114,71 @@ Team Database::getTeam(QString teamName)
 	}
 	return teamData;
 }
+//
+//QVector<Distance> Database::getAllDistances()
+//{
+//	QSqlQuery* db = new QSqlQuery(NFLDatabase);
+//	QSqlQuery* db2 = new QSqlQuery(NFLDatabase);
+//	QSqlQuery* db3 = new QSqlQuery(NFLDatabase);
+//	db->exec("SELECT * FROM teamInfo");
+//	db2->exec("SELECT * FROM teamSouvenir");
+//	db3->exec("SELECT * FROM teamDistance");
+//
+//	QVector<Distance> distances;
+//
+//	while (db->next()) {
+//	
+//		while (db3->next() && db3->value("teamName") != db->value("teamName")) {
+//			//qInfo() << db->value("city");
+//			}
+//
+//		while (db3->next() && db3->value("teamName") == "") {
+//
+//				QString startingStadiumName = db3->value("beginningStadium").toString();
+//				QString endingStadiumName = db3->value("endingStadium").toString();
+//				int distance = db3->value("Distance").toInt();
+//				//qDebug() << "START: " << startingStadiumName << "END: " << endingStadiumName << "DISTANCE: " << distance;
+//				Distance* temp = new Distance(startingStadiumName, endingStadiumName, distance);
+//				distances.push_back(*temp);
+//			}
+//
+//		db3->seek(0);
+//	}
+//
+//	return distances;
+	// QVector<Distance> distances;
+	// QSqlQuery query;
+	// query.prepare("SELECT StartingCity, EndingCity, Kilometers FROM distances");
 
-QVector<Distance> Database::getAllDistances()
+	// if (query.exec())
+	// {
+	// 	while (query.next())
+	// 	{
+	// 		Distance distance;     
+	// 		distance.getStartingStadium() = query.value(0).toString();
+	// 		distance.getEndingStadium() = query.value(1).toString();
+	// 		//distance.getDistance() = query.value(2);
+
+	// 		qInfo() << query.value(2);
+
+	// 		distances.push_back(distance);
+	// 	}
+	// }
+	// return distances;
+//}
+
+QVector<Stadium> Database::getAllStadiums()
 {
-	QVector<Distance> distances;
-	QSqlQuery query;
-	query.prepare("SELECT StartingCity, EndingCity, Kilometers FROM distances");
+	QVector<Stadium> stadiums;
+	QVector<Team> teams = getTeams();
 
-	if (query.exec())
+	for (int i = 0; i < teams.size(); i++)
 	{
-		while (query.next())
+		if (teams[i].getTeamName() == "Los Angeles Rams" || teams[i].getTeamName() == "New York Jets")
 		{
-			Distance distance;
-			distance.getStartingStadium() = query.value(0).toString();
-			distance.getEndingStadium() = query.value(1).toString();
-			//distance.getDistance() = query.value(2);
-
-			qInfo() << query.value(2);
-
-			distances.push_back(distance);
+			continue;
 		}
+		stadiums.push_back(teams[i].getStadium());
 	}
-	return distances;
+	return stadiums;
 }

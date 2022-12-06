@@ -35,9 +35,6 @@
     <Filter Include="Source Files\Widgets">
       <UniqueIdentifier>{0cc3b82a-d29f-427d-9d7c-0ab389dee39e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Widgets\TeamList">
-      <UniqueIdentifier>{c51ebb49-fe4a-4d01-bff5-3cdee055fb22}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Menus\Display\DisplaySorted">
       <UniqueIdentifier>{22e47260-15d5-4b4c-b26c-1e4e13fa3bf4}</UniqueIdentifier>
     </Filter>
@@ -86,6 +83,9 @@
     <Filter Include="Source Files\Widgets\TeamToggle">
       <UniqueIdentifier>{4b8336a4-dbd7-4bb3-ba36-c0c6540de797}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Widgets\TeamsList">
+      <UniqueIdentifier>{c51ebb49-fe4a-4d01-bff5-3cdee055fb22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,7 +98,7 @@
       <Filter>Source Files\Database</Filter>
     </ClCompile>
     <ClCompile Include="W_TeamsList.cpp">
-      <Filter>Source Files\Widgets\TeamList</Filter>
+      <Filter>Source Files\Widgets\TeamsList</Filter>
     </ClCompile>
     <ClCompile Include="DisplayTeams.cpp">
       <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
@@ -165,7 +165,7 @@
       <Filter>Source Files\Menus\Main</Filter>
     </QtUic>
     <QtUic Include="W_TeamsList.ui">
-      <Filter>Source Files\Widgets\TeamList</Filter>
+      <Filter>Source Files\Widgets\TeamsList</Filter>
     </QtUic>
     <QtUic Include="DisplayTeams.ui">
       <Filter>Source Files\Menus\Display\DisplayTeams</Filter>
@@ -248,7 +248,7 @@
       <Filter>Source Files\Menus\Main</Filter>
     </QtMoc>
     <QtMoc Include="W_TeamsList.h">
-      <Filter>Source Files\Widgets\TeamList</Filter>
+      <Filter>Source Files\Widgets\TeamsList</Filter>
     </QtMoc>
     <QtMoc Include="DisplayTeams.h">
       <Filter>Source Files\Menus\Display\DisplayTeams</Filter>

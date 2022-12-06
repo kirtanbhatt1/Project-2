@@ -1,37 +1,44 @@
 #include "PlanTrip.h"
 
+Database database;
+
 PlanTrip::PlanTrip(QWidget *parent)
 	: QWidget(parent)
 {
-	Database database;
-
 	ui.setupUi(this);
-	ui.page_switcher->setCurrentIndex(0);
+	ui.page_switcher->setCurrentIndex(1);
 	ui.C_PlanTeams->setAlignment(Qt::AlignTop);
 	ui.C_PlanCustom->setAlignment(Qt::AlignTop);
 	ui.SA_TeamList->setAlignment(Qt::AlignTop);
 
-	// Get cities data to use for methods
-	teamsData = database.getTeams();
-	distancesData = Database::getAllDistances();
+	// Get teams data to use for methods
+	stadiumsData = database.getAllStadiums();
+	distancesData = database.distances;
 
 	ui.ScrollContents_TeamsList->setAlignment(Qt::AlignTop);
 	ui.S_NumOfTeams->setMinimum(0);
-	if (teamsData.length() > 0) 
+	if (stadiumsData.length() > 0) 
 	{
 		// Setup UI
-		ui.S_NumOfTeams->setMaximum(teamsData.length() - 1);
-		ui.S_NumOfTeams->setValue(teamsData.length() - 1);
-		ui.L_NumOfTeams->setText(QString::number(teamsData.length() - 1));
-		numberOfTeams = teamsData.length() - 1;
-		startingTeam = teamsData[0].getTeamName();
+		ui.S_NumOfTeams->setMaximum((stadiumsData.length() - 1));
+		ui.S_NumOfTeams->setValue((stadiumsData.length() - 1));
+		ui.L_NumOfTeams->setText(QString::number(stadiumsData.length() - 1));
+		numberOfTeams = stadiumsData.length() - 1;
 
-		for (int i = 0; i < teamsData.length(); i++) {
-			ui.CB_SelectTeam->addItem(teamsData[i].getTeamName());
-			ui.CB_CustomStartingTeam->addItem(teamsData[i].getTeamName());
+		//change get team name to get stadium name
+		//startingTeam = stadiumsData[0].getTeamName();
+		startingTeam = stadiumsData[0].getStadiumName();
+
+		for (int i = 0; i < stadiumsData.length(); i++) 
+		{
+			//ui.CB_SelectTeam->addItem(stadiumsData[i].getTeamName());
+			//ui.CB_CustomStartingTeam->addItem(stadiumsData[i].getTeamName());
+			
+			ui.CB_SelectTeam->addItem(stadiumsData[i].getStadiumName());
+			ui.CB_CustomStartingTeam->addItem(stadiumsData[i].getStadiumName());
 		}
-		if (teamsData.length() > 0) ui.CB_SelectTeam->setCurrentIndex(0);
-		if (teamsData.length() > 0) ui.CB_CustomStartingTeam->setCurrentIndex(0);
+		if (stadiumsData.length() > 0) ui.CB_SelectTeam->setCurrentIndex(0);
+		if (stadiumsData.length() > 0) ui.CB_CustomStartingTeam->setCurrentIndex(0);
 	}
 
 	// Connections
@@ -49,7 +56,8 @@ PlanTrip::~PlanTrip()
 void PlanTrip::open(TripMode mode)
 {
 	tripMode = mode;
-	switch (mode) {
+	switch (mode) 
+	{
 	case shortest:
 		ui.teamsInput_switcher->setCurrentIndex(0);
 		beginPlan();
@@ -61,33 +69,36 @@ void PlanTrip::open(TripMode mode)
 	}
 }
 
-Graph PlanTrip::getGraphCities()
-{
-	return cities;
-}
+// Graph PlanTrip::getGraphCities()
+// {
+// 	return cities;
+// }
 
-void PlanTrip::initializeEdges(QVector<Team> allCities)
-{
-	for (int i = 0; i < allCities.size(); i++)
-	{
-		getGraphCities().insertVertex(allCities[i].getStadium().getStadiumName());
+// void PlanTrip::initializeEdges(QVector<Team> allCities)
+// {
+// 	for (int i = 0; i < allCities.size(); i++)
+// 	{
+// 		getGraphCities().insertVertex(allCities[i].getStadiumName());
 
-		for (int j = 0; allCities[i].getStadium().getAllEdges().size(); j++)
-		{
-			getGraphCities().insertEdge(allCities[j].getStadium().getAllEdges()[j].getStartingStadium(), allCities[j].getStadium().getAllEdges()[j].getEndingStadium(), allCities[j].getStadium().getAllEdges()[j].getDistance());
-		}
-	}
+// 		for (int j = 0; allCities[i].getAllEdges().size(); j++)
+// 		{
+// 			getGraphCities().insertEdge(allCities[j].getAllEdges()[j].getStartingStadium(), allCities[j].getAllEdges()[j].getEndingStadium(), allCities[j].getAllEdges()[j].getDistance());
+// 		}
+// 	}
 
-}
+// }
 
-void PlanTrip::depthFirstSearch()
-{
-	getGraphCities().DFS(getGraphCities().getVertex("U.S. Bank Stadium"));
+// void PlanTrip::depthFirstSearch()
+// {
+// 	getGraphCities().DFS(getGraphCities().getVertex("U.S. Bank Stadium"));
 
-}
+// }
 
 void PlanTrip::beginPlan()
 {
+//Database database;
+//	database.initializeMap();
+
 	totalDistance = 0;
 	plannedTeams.clear();
 
@@ -110,8 +121,8 @@ void PlanTrip::beginPlan()
 		plannedTeams.push_back(startingTeam);
 	
 	   // May have to repopulate the distances data
-		distancesData = Database::getAllDistances();
-
+		distancesData = database.distances;
+		
 		// Begin recursive search:
 		calculateShortestPlan(startingTeam, numberOfTeams);
 		ui.L_TotalDistanceShort->setText(QString::number(totalDistance) + "km");
@@ -120,7 +131,8 @@ void PlanTrip::beginPlan()
 	else if (tripMode == custom) 
 	{
 		// Clear data:
-		for (int i = 0; i < w_teamsList.length(); i++) {
+		for (int i = 0; i < w_teamsList.length(); i++) 
+		{
 			ui.C_PlanCustom->layout()->removeWidget(w_teamsList.at(i));
 			delete w_teamsList[i];
 		}
@@ -132,41 +144,56 @@ void PlanTrip::beginPlan()
 		}
 		w_TeamToggles.clear();
 
-		// Populate CityToggles box (All cities except for the starting city)
-		for (int i = 0; i < teamsData.length(); i++) 
+		// Populate TeamToggles box (All teams except for the starting team)
+		for (int i = 0; i < stadiumsData.length(); i++) 
 		{
-			if (teamsData[i].getTeamName() == startingTeam) continue;
+			//changed get team name to get stadium name
+			//if (stadiumsData[i].getTeamName() == startingTeam) continue;
+			if (stadiumsData[i].getStadiumName() == startingTeam) continue;
+			
 			TeamToggle* w_toggleTeam = new TeamToggle(this);
-			w_toggleTeam->setup(selectedTeams.contains(teamsData[i].getTeamName()), teamsData[i].getTeamName());
+			//w_toggleTeam->setup(selectedTeams.contains(stadiumsData[i].getTeamName()), stadiumsData[i].getTeamName());
+			w_toggleTeam->setup(selectedTeams.contains(stadiumsData[i].getStadiumName()), stadiumsData[i].getStadiumName() );
+			
 			QObject::connect(w_toggleTeam, &TeamToggle::stateChanged, this, &PlanTrip::teamToggled);
 			w_TeamToggles.push_back(w_toggleTeam);
 			ui.C_PlanTeams->layout()->addWidget(w_toggleTeam);
 		}
 
-		// Add starting city
+		// Add starting team
 		W_TeamDistanceList* w_team = new W_TeamDistanceList(this);
 		w_team->setup(startingTeam);
 		w_teamsList.push_back(w_team);
 		ui.C_PlanCustom->layout()->addWidget(w_team);
 		plannedTeams.push_back(startingTeam);
 
-		//// Repopulate the data for recursive function
-		distancesData = Database::getAllDistances();
+		// Repopulate the data for recursive function
+		distancesData = database.distances;
+		//for (int i = 0; i < distancesData.size(); i++)
+		//{
+		//	qInfo() << "RECURSIVE FUNCTION DISTANCES DATA INDEX " << i << distancesData[i].getStartingStadium(); 
+		//}
 
-		// Adds the selected city so its in the list of selected cities
+		// Adds the selected team so its in the list of selected team
 		selectedTeams.push_back(startingTeam);
 		selectedTeams.removeDuplicates();
 
-		// Remove distance data that is not of the list of selected cities.
+		// Remove distance data that is not of the list of selected teams.
 		for (int i = 0; i < distancesData.length(); i++) 
 		{
+			//needs fixing
 			if (!selectedTeams.contains(distancesData[i].getStartingStadium()) || !selectedTeams.contains(distancesData[i].getEndingStadium())) {
 				distancesData.removeAt(i);
 				i--;
 			}
 		}
+		
+		for (Distance distance : distancesData)
+		{
+			qInfo() << distance.getDistance();
+		}
 
-		// Recursively populate plan cities list (should only show cities that are toggled on)
+		// Recursively populate plan teams list (should only show teams that are toggled on)
 		calculateCustomPlan(startingTeam, distancesData);
 		ui.L_TotalDistanceCustom->setText(QString::number(totalDistance) + "km");
 	}
@@ -174,34 +201,47 @@ void PlanTrip::beginPlan()
 
 void PlanTrip::calculateShortestPlan(QString startingTeam, int teamsLeft)
 {
-	//qDebug() << "Calculating for " << startingTeam << " with " << teamsLeft << " teams left.";
-	// Calculates the shortest distance from the starting city recursively and adds it to the display.
+	// Calculates the shortest distance from the starting team recursively and adds it to the display.
 	if (teamsLeft <= 0) return;
 	double shortestDistance = 999999;
 	QString nearestTeam = "";
 
-	for (int i = 0; i < distancesData.length(); i++) {
-		// Look through the distances to find distances related to the city.. and 
-		if (distancesData[i].getStartingStadium() == startingTeam || distancesData[i].getEndingStadium() == startingTeam) {
-			if (distancesData[i].getDistance() < shortestDistance) {
+	for (int i = 0; i < distancesData.length(); i++) 
+	{
+		// Look through the distances to find distances related to the team and 
+		
+		//needs fixing
+		if (distancesData[i].getStartingStadium() == startingTeam || distancesData[i].getEndingStadium() == startingTeam) 
+		{
+			if (distancesData[i].getDistance() < shortestDistance) 
+			{
 				shortestDistance = distancesData[i].getDistance();
 
-				// Choose which city
+				// Choose which team
 				if (distancesData[i].getStartingStadium() != startingTeam)
+				{
 					nearestTeam = distancesData[i].getStartingStadium();
-				else nearestTeam = distancesData[i].getEndingStadium();
+					qDebug() << "IF Statement on line 221 is hitting.";
+				}
+				else 
+				{
+					nearestTeam = distancesData[i].getEndingStadium();
+					qDebug() << "ELSE Statement on line 221 is hitting.";
+				}
 			}
 			// Remove distanceData so it isn't searched for again
 			distancesData.removeAt(i);
 			i--;
 		}
 	}
-	if (nearestTeam.isEmpty()) {
-		qDebug() << "Could not find shortest city!";
+	//
+	if (nearestTeam.isEmpty()) 
+	{
+		qDebug() << "Could not find shortest team!";
 		return;
 	}
-	addToTeamList(nearestTeam, shortestDistance);
 
+	addToTeamList(nearestTeam, shortestDistance);
 	calculateShortestPlan(nearestTeam, --teamsLeft);
 }
 
@@ -209,7 +249,7 @@ void PlanTrip::calculateShortestPlan(QString startingTeam, int teamsLeft)
 
 void PlanTrip::addToTeamList(QString team, double distance)
 {
-	//qDebug() << "Adding city: " << city << " with distance " << distance;
+	//qDebug() << "Adding team: " << team << " with distance " << distance;
 	W_TeamDistanceList* teamList = new W_TeamDistanceList(this);
 	teamList->setup(team, distance);
 	ui.ScrollContents_TeamsList->layout()->addWidget(teamList);
@@ -230,17 +270,20 @@ void PlanTrip::selectNumberOfTeams(int value)
 void PlanTrip::teamSelected(int index)
 {
 	// Called when the combo box value changes
-	// Remove the previous selected city
-	if (tripMode == custom) {
-		for (int i = 0; i < selectedTeams.length(); i++) {
-			if (selectedTeams.at(i) == startingTeam) {
+	// Remove the previous selected team
+	if (tripMode == custom) 
+	{
+		for (int i = 0; i < selectedTeams.length(); i++) 
+		{
+			if (selectedTeams.at(i) == startingTeam) 
+			{
 				selectedTeams.removeAt(i);
 				break;
 			}
 		}
 	}
 
-	startingTeam = teamsData[index].getTeamName();
+	startingTeam = stadiumsData[index].getStadiumName();
 	beginPlan();
 }
 
@@ -256,45 +299,67 @@ void PlanTrip::addToCustomTeamList(QString team, double distance)
 
 void PlanTrip::calculateCustomPlan(QString startingTeam, QVector<Distance>& distances)
 {
-	//qDebug() << "Calculating for " << startingTeam << " with " << distances.length() << " cities left.";
+//	Database database;
+	//database.initializeMap();
+
+	for (int i = 0; i < distancesData.size(); i++)
+	{
+		qInfo() << distancesData[i].getDistance();
+	}
+
+	//qDebug() << "Calculating for " << startingTeam << " with " << distances.length() << " teams left.";
 	if (distances.length() == 0) return;
 	double shortestDistance = 999999;
 	QString nearestTeam = "";
 
-	for (int i = 0; i < distances.length(); i++) {
-		// Look through the distances to find distances related to the city..
-		if (distances[i].getStartingStadium() == startingTeam || distances[i].getEndingStadium() == startingTeam) {
-			if (distances[i].getDistance() < shortestDistance) {
+	for (int i = 0; i < distances.length(); i++) 
+	{
+		// Look through the distances to find distances related to the team.
+		if (distances[i].getStartingStadium() == startingTeam || distances[i].getEndingStadium() == startingTeam) 
+		{
+			if (distances[i].getDistance() < shortestDistance) 
+			{
+				qInfo() << distances[i].getDistance();
 				shortestDistance = distances[i].getDistance();
 
-				// Choose which city
+				// Choose which team
 				if (distances[i].getStartingStadium() != startingTeam)
+				{
 					nearestTeam = distances[i].getStartingStadium();
-				else nearestTeam = distances[i].getEndingStadium();
+				}
+				else
+				{
+					nearestTeam = distances[i].getEndingStadium();
+				}
 			}
-			// Remove distanceData so it isn't searched for again
-			distances.removeAt(i);
+			// Remove distance data so it isn't searched for again
+			 distances.removeAt(i);
 			i--;
 		}
 	}
-	if (nearestTeam.isEmpty()) {
-		qDebug() << "Could not find shortest city!";
+	if (nearestTeam.isEmpty()) 
+	{
+		qDebug() << "Could not find shortest team!";
 		return;
 	}
 	addToCustomTeamList(nearestTeam, shortestDistance);
 	calculateCustomPlan(nearestTeam, distances);
 }
 
-// Adds or removes to the list of selected cities for the custom menu
+// Adds or removes to the list of selected teams for the custom menu
 void PlanTrip::teamToggled(bool value, QString team)
 {
-	if (value) {
+	if (value) 
+	{
 		selectedTeams.push_back(team);
 		selectedTeams.removeDuplicates();
 	}
-	else {
-		for (int i = 0; i < selectedTeams.length(); i++) {
-			if (selectedTeams.at(i) == team) {
+	else 
+	{
+		for (int i = 0; i < selectedTeams.length(); i++) 
+		{
+			if (selectedTeams.at(i) == team) 
+			{
 				selectedTeams.removeAt(i);
 				break;
 			}
@@ -305,16 +370,16 @@ void PlanTrip::teamToggled(bool value, QString team)
 }
 
 
-// When menu is switched..
+// When menu is switched.
 void PlanTrip::switch2nd()
 {
-	// Check if theres atleast 1 other city
-	Database database;
+	// Check if theres atleast 1 other team
+
 
 	QVector<Team> teams = database.getTeams();
 
-	ui.page_switcher->setCurrentIndex(1);
-	// Fill scroll box with cities & their foods
+	ui.page_switcher->setCurrentIndex(0);
+	// Fill scroll box with teams & their foods
 	for (QString teamName : plannedTeams) 
 	{
 		W_AddTeamSouvenirs* teamWidget = new W_AddTeamSouvenirs(this);
@@ -330,10 +395,11 @@ void PlanTrip::switch2nd()
 
 void PlanTrip::totalPriceUpdated(double price)
 {
-	// Loop through cities to get their price and number of purchases.
+	// Loop through teams to get their price and number of purchases.
 	double total = 0;
 	int count = 0;
-	for (W_AddTeamSouvenirs* addedTeam : addedTeams) {
+	for (W_AddTeamSouvenirs* addedTeam : addedTeams) 
+	{
 		total += addedTeam->getTotal();
 		count += addedTeam->numOfPurchases();
 	}
@@ -344,8 +410,9 @@ void PlanTrip::totalPriceUpdated(double price)
 
 void PlanTrip::triggerBack()
 {
-	ui.page_switcher->setCurrentIndex(0);
-	for (int i = 0; i < addedTeams.length(); i++) {
+	ui.page_switcher->setCurrentIndex(1);
+	for (int i = 0; i < addedTeams.length(); i++) 
+	{
 		ui.SA_TeamList->layout()->removeWidget(addedTeams[i]);
 		delete addedTeams[i];
 	}
