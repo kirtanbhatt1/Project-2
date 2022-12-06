@@ -4,7 +4,7 @@
 
 Database::Database(){
 	NFLDatabase = QSqlDatabase::addDatabase("QSQLITE");
-	NFLDatabase.setDatabaseName("C:/Users/remos/Project-2/SQLite/SQLite/NFLDatabase.db");
+	NFLDatabase.setDatabaseName("C:/Users/knbha/source/repos/kirtanbhatt1/Project-2/SQLite/SQLite/NFLDatabase.db");
 	NFLDatabase.open();
 	if (NFLDatabase.open()) {
 		std::cout << "Database is open\n";
@@ -57,6 +57,10 @@ Map Database::initializeMap()
 			//qDebug() << "START: " << startingStadiumName << "END: " << endingStadiumName << "DISTANCE: " << distance;
 			Distance* temp = new Distance(startingStadiumName, endingStadiumName, distance);
 			edges.push_back(*temp);
+			distances.push_back(*temp);
+			
+		
+
 		}
 
 		// add team info to the vector

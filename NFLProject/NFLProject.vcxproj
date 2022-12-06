@@ -87,6 +87,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DisplayBFS.cpp" />
     <ClCompile Include="DisplayDFS.cpp" />
     <ClCompile Include="DisplayDistances.cpp" />
     <ClCompile Include="DisplaySorted.cpp" />
@@ -97,6 +98,7 @@
     <ClCompile Include="PlanTrip.cpp" />
     <ClCompile Include="TeamToggle.cpp" />
     <ClCompile Include="W_AddTeamSouvenirs.cpp" />
+    <ClCompile Include="W_BFSList.cpp" />
     <ClCompile Include="W_DFSList.cpp" />
     <ClCompile Include="W_DistanceList.cpp" />
     <ClCompile Include="W_NewSouvenir.cpp" />
@@ -107,6 +109,7 @@
     <ClCompile Include="W_TeamsList.cpp" />
     <ClCompile Include="W_TotalCount.cpp" />
     <QtRcc Include="NFLProject.qrc" />
+    <QtUic Include="DisplayBFS.ui" />
     <QtUic Include="DisplayDFS.ui" />
     <QtUic Include="DisplayDistances.ui" />
     <QtUic Include="DisplaySorted.ui" />
@@ -121,6 +124,7 @@
     <QtUic Include="PlanTrip.ui" />
     <QtUic Include="TeamToggle.ui" />
     <QtUic Include="W_AddTeamSouvenirs.ui" />
+    <QtUic Include="W_BFSList.ui" />
     <QtUic Include="W_DFSList.ui" />
     <QtUic Include="W_DistanceList.ui" />
     <QtUic Include="W_NewSouvenir.ui" />
@@ -133,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h" />
+    <QtMoc Include="W_BFSList.h" />
     <QtMoc Include="TeamToggle.h" />
     <QtMoc Include="W_SelectSouvenir.h" />
     <QtMoc Include="W_NewSouvenir.h" />
@@ -150,6 +155,7 @@
     <QtMoc Include="maintenance.h" />
     <QtMoc Include="DisplayDistances.h" />
     <QtMoc Include="DisplayDFS.h" />
+    <QtMoc Include="DisplayBFS.h" />
     <ClInclude Include="Distance.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="Map.h" />

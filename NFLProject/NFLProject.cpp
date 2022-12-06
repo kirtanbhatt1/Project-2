@@ -2,6 +2,7 @@
 #include "Database.h"
 #include "DisplayDistances.h"
 #include "DisplayDFS.h"
+#include "DisplayBFS.h"
 
 Database db1;
 
@@ -37,9 +38,11 @@ NFLProject::NFLProject(QWidget *parent)
     connect(ui.actionSorted, &QAction::triggered, this, &NFLProject::showDisplaySorted); // Display sorted
     connect(ui.actionSouvenirs, &QAction::triggered, this, &NFLProject::showDisplaySouvenirs); // Display souvenirs
     connect(ui.actionDistances, &QAction::triggered, this, &NFLProject::showDisplayDistances); // Display distances
-    //connect(ui.actionDFS, &QAction::triggered, this, &NFLProject::showDisplayDFS); // Display DFS Search
+    connect(ui.actionDFS, &QAction::triggered, this, &NFLProject::showDisplayDFS); // Display DFS Search
+    connect(ui.actionBFS, &QAction::triggered, this, &NFLProject::showDisplayBFS); // Display DFS Search
     connect(ui.actionShortest_Trip, &QAction::triggered, this, &NFLProject::showShortestTrip); // Shortest Trip
     connect(ui.actionCustom_Trip, &QAction::triggered, this, &NFLProject::showCustomTrip); // Custom Trip
+   
 }
 
 void NFLProject::returnMain()
@@ -85,7 +88,15 @@ void NFLProject::showDisplayDFS()
 {
     DisplayDFS* displayDFS = new DisplayDFS(this);
     setPage(displayDFS);
-    //displayDFS->showDFS();
+  //  displayDFS->showDFS();
+
+}
+
+void NFLProject::showDisplayBFS()
+{
+    DisplayBFS* displayBFS = new DisplayBFS(this);
+    setPage(displayBFS);
+  //  displayBFS->showBFS();
 
 }
 

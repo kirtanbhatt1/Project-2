@@ -67,7 +67,9 @@ void Graph::BFS(Vertex*& start)
 	while (!BFSqueue.empty())
 	{
 		start = BFSqueue.front();
-		//cout << start->name << endl;
+
+		bfsVertices.push_back(start->name);
+
 		BFSqueue.pop();
 		for (int i = 0; i < start->adjacentEdges.size(); ++i)
 		{
@@ -101,14 +103,17 @@ void Graph::DFS(Vertex*& start)
 			{
 				start->adjacentEdges.at(i)->status = DISCOVERY;
 				
-				//W_DFSList* dfsText = new W_DFSList(this);
-				//DisplayDFS* displayDFS = new DisplayDFS(this);
+				QString startStadium = start->name;
+				QString endStadium = opposite->name;
+				int distanceBetween = 0;
 
-				//dfsText->setup(start->name, opposite->name);
+				Distance temp;
 
-				//displayDFS->ui.verticalLayout->addWidget(dfsText);
-				
-				//cout << start->name << " -> " << opposite->name << endl;
+				temp.setStartingStadium(startStadium);
+				temp.setEndingStadium(endStadium);
+				temp.setDistance(0);
+
+				allEdgeDistances.push_back(temp);
 
 				totalDistance += start->adjacentEdges.at(i)->distance;
 				DFS(opposite);

@@ -23,9 +23,9 @@ public:
 	PlanTrip(QWidget *parent = nullptr);
 	~PlanTrip();
 
-	void initializeEdges(QVector<Team> allCities);
-	Graph getGraphCities();
-	void depthFirstSearch();
+	//void initializeEdges(QVector<Team> allCities);
+	//Graph getGraphCities();
+	//void depthFirstSearch();
 	void open(TripMode mode);
 
 

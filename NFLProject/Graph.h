@@ -7,6 +7,7 @@
 #include <QString>
 #include <utility>
 #include <QVector>
+#include "Database.h"
 
 
 enum edge_status { UNDISCOVERED, DISCOVERY, BACK, CROSS };
@@ -31,6 +32,9 @@ class Graph
 public:
 	
 	typedef std::map<QString, Vertex*> vertexMap;
+	
+	QVector<Distance> allEdgeDistances;
+	QVector<QString> bfsVertices;
 	
 	void DFS(Vertex*&);
 	// Function to perform a Depth-First-Search on a graph 

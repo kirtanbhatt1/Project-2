@@ -14,6 +14,9 @@ class Database
 {
 public:
 	QSqlDatabase NFLDatabase;
+
+	QVector<Distance> distances;
+
 	//Map teams;
 	Database();
 	~Database();
@@ -22,4 +25,5 @@ public:
 	long getTotalCapacity(QVector<Team> teams);
 	Team getTeam(QString teamName);
 	static QVector<Distance> getAllDistances();
+
 };

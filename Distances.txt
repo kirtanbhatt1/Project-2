@@ -1,0 +1,56 @@
+State Farm Stadium  AT&T Stadium  870
+State Farm Stadium  Levi's Stadium  650
+State Farm Stadium  NRG Stadium  1115
+State Farm Stadium  Empower Field at Mile High  580
+State Farm Stadium  SoFi Stadium  372
+Mercedes-Benz Stadium  AT&T Stadium  740 
+Mercedes-Benz Stadium  Bank of America Stadium  225 
+Mercedes-Benz Stadium  Hard Rock Stadium  600 
+Mercedes-Benz Stadium  Caesars Superdome  425 
+Mercedes-Benz Stadium  Paycor Stadium  375 
+M&T Bank Stadium  FedExField  90 
+M&T Bank Stadium  Lincoln Financial Field  80 
+Highmark Stadium  Ford Field  210 
+Highmark Stadium  Gillette Stadium  429 
+Highmark Stadium  Acrisure Stadium  225 
+Highmark Stadium  Lambeau Field  430 
+Highmark Stadium  Lumen Field  2070 
+Bank of America Stadium  TIAA Bank Field  342 
+Bank of America Stadium  FedExField  340 
+Bank of America Stadium  Acrisure Stadium  365 
+Soldier Field  Arrowhead Stadium  415 
+Soldier Field  Lambeau Field  80 
+Soldier Field  Lucas Oil Stadium  50 
+Paycor Stadium  FirstEnergy Stadium  225 
+Paycor Stadium  Acrisure Stadium  260 
+Paycor Stadium  Lucas Oil Stadium  250 
+Paycor Stadium  Nissan Stadium  240 
+AT&T Stadium  Arrowhead Stadium  460 
+AT&T Stadium  NRG Stadium  230 
+AT&T Stadium  Empower Field at Mile High  650 
+Empower Field at Mile High  Arrowhead Stadium  560 
+Empower Field at Mile High  Levi's Stadium  930 
+Empower Field at Mile High  SoFi Stadium  1015 
+Ford Field  FirstEnergy Stadium  90 
+Ford Field  Lucas Oil Stadium  240 
+Lambeau Field  U.S. Bank Stadium  300 
+NRG Stadium  Hard Rock Stadium  965 
+NRG Stadium  Caesars Superdome  320 
+NRG Stadium  Nissan Stadium  670 
+TIAA Bank Field  Raymond James Stadium  170 
+TIAA Bank Field  Hard Rock Stadium  315 
+Arrowhead Stadium  Nissan Stadium  470 
+Allegiant Stadium  Lumen Field  680 
+Allegiant Stadium  Levi's Stadium  25 
+Allegiant Stadium  SoFi Stadium  250 
+SoFi Stadium  Levi's Stadium  200 
+SoFi Stadium  U.S. Bank Stadium  1500 
+Hard Rock Stadium  Gillette Stadium  1255 
+Hard Rock Stadium  Raymond James Stadium  210 
+U.S. Bank Stadium  Lumen Field  1390 
+U.S. Bank Stadium  Nissan Stadium  700 
+Gillette Stadium  MetLife Stadium  195 
+Caesars Superdome  Raymond James Stadium  480 
+MetLife Stadium  Lincoln Financial Field  50 
+Acrisure Stadium  FirstEnergy Stadium  115 
+Acrisure Stadium  Lincoln Financial Field  315

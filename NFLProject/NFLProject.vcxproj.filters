@@ -86,6 +86,12 @@
     <Filter Include="Source Files\Widgets\TeamToggle">
       <UniqueIdentifier>{4b8336a4-dbd7-4bb3-ba36-c0c6540de797}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Menus\Plan\DisplayBFS">
+      <UniqueIdentifier>{65ef9bc4-f382-4ecd-a94c-313171346e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Widgets\BFSList">
+      <UniqueIdentifier>{e2288f0c-595f-453c-9e3e-39073a87489f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -154,6 +160,12 @@
     <ClCompile Include="TeamToggle.cpp">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
     </ClCompile>
+    <ClCompile Include="DisplayBFS.cpp">
+      <Filter>Source Files\Menus\Plan\DisplayBFS</Filter>
+    </ClCompile>
+    <ClCompile Include="W_BFSList.cpp">
+      <Filter>Source Files\Widgets\BFSList</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -217,6 +229,12 @@
     </QtUic>
     <QtUic Include="TeamToggle.ui">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
+    </QtUic>
+    <QtUic Include="DisplayBFS.ui">
+      <Filter>Source Files\Menus\Plan\DisplayBFS</Filter>
+    </QtUic>
+    <QtUic Include="W_BFSList.ui">
+      <Filter>Source Files\Widgets\BFSList</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +318,12 @@
     </QtMoc>
     <QtMoc Include="TeamToggle.h">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
+    </QtMoc>
+    <QtMoc Include="DisplayBFS.h">
+      <Filter>Source Files\Menus\Plan\DisplayBFS</Filter>
+    </QtMoc>
+    <QtMoc Include="W_BFSList.h">
+      <Filter>Source Files\Widgets\BFSList</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
