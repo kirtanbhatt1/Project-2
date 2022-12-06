@@ -28,6 +28,7 @@ public:
     void showDisplayBFS();
     void showShortestTrip();
     void showCustomTrip();
+    void showMaintenance();
 
 private:
     Ui::NFLProjectClass ui;

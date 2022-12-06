@@ -94,6 +94,7 @@
     <ClCompile Include="DisplaySouvenirs.cpp" />
     <ClCompile Include="DisplayTeams.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="login.cpp" />
     <ClCompile Include="maintenance.cpp" />
     <ClCompile Include="PlanTrip.cpp" />
     <ClCompile Include="TeamToggle.cpp" />
@@ -115,6 +116,7 @@
     <QtUic Include="DisplaySorted.ui" />
     <QtUic Include="DisplaySouvenirs.ui" />
     <QtUic Include="DisplayTeams.ui" />
+    <QtUic Include="login.ui" />
     <QtUic Include="maintenance.ui" />
     <QtUic Include="NFLProject.ui" />
     <QtMoc Include="NFLProject.h" />
@@ -158,6 +160,7 @@
     <QtMoc Include="DisplayBFS.h" />
     <ClInclude Include="Distance.h" />
     <ClInclude Include="Graph.h" />
+    <QtMoc Include="login.h" />
     <ClInclude Include="Map.h" />
     <QtMoc Include="PlanTrip.h" />
     <ClInclude Include="resource.h" />

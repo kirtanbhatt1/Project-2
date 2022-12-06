@@ -35,6 +35,8 @@ private slots:
 
     void on_changeTeamInfoButton_clicked();
 
+    void refresh();
+
 private:
     Ui::Maintenance *ui;
 };

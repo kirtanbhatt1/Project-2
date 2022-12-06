@@ -160,6 +160,9 @@
     <ClCompile Include="TeamToggle.cpp">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
     </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="DisplayBFS.cpp">
       <Filter>Source Files\Menus\Plan\DisplayBFS</Filter>
     </ClCompile>
@@ -229,12 +232,6 @@
     </QtUic>
     <QtUic Include="TeamToggle.ui">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
-    </QtUic>
-    <QtUic Include="DisplayBFS.ui">
-      <Filter>Source Files\Menus\Plan\DisplayBFS</Filter>
-    </QtUic>
-    <QtUic Include="W_BFSList.ui">
-      <Filter>Source Files\Widgets\BFSList</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
@@ -318,12 +315,6 @@
     </QtMoc>
     <QtMoc Include="TeamToggle.h">
       <Filter>Source Files\Widgets\TeamToggle</Filter>
-    </QtMoc>
-    <QtMoc Include="DisplayBFS.h">
-      <Filter>Source Files\Menus\Plan\DisplayBFS</Filter>
-    </QtMoc>
-    <QtMoc Include="W_BFSList.h">
-      <Filter>Source Files\Widgets\BFSList</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
