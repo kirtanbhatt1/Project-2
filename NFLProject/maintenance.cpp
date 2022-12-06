@@ -15,7 +15,7 @@ Maintenance::Maintenance(QWidget *parent)
 
 
     NFLDatabase = QSqlDatabase::addDatabase("QSQLITE");
-    NFLDatabase.setDatabaseName("C:/Users/Eric0/Desktop/NFLDatabase.db");
+    NFLDatabase.setDatabaseName("C:/Users/knbha/source/repos/kirtanbhatt1/Project-2/SQLite/SQLite/NFLDatabase.db");
     NFLDatabase.open();
     if (NFLDatabase.open()) {
         std::cout << "Database is open\n";
@@ -97,30 +97,33 @@ void Maintenance::on_changePriceButton_clicked()
 
 void Maintenance::on_addSouvenirButton_clicked()
 {
-    QSqlQuery * db = new QSqlQuery(NFLDatabase);
+    QSqlQuery* db = new QSqlQuery(NFLDatabase);
     db->prepare("SELECT teamName,Souvenir,souvenirPrice FROM newFoods");
     db->exec();
     QString team = ui->teamSelectSouveirCombo->currentText();
     QString newSou = ui->newSouvenirNameInput->toPlainText();
     QString newPrice = ui->newSouvenirPriceInput->toPlainText();
     int check = 0;
-    for(int i = 0; i < newPrice.length(); i++){
-        if(newPrice[i].isDigit()){
-            check ++;
-        }else if (newPrice[i] == '.'){
-            check ++;
+    for (int i = 0; i < newPrice.length(); i++) {
+        if (newPrice[i].isDigit()) {
+            check++;
+        }
+        else if (newPrice[i] == '.') {
+            check++;
         }
     }
-    if(check == newPrice.length()){
-        db->prepare("insert into teamSouvenir (teamName,Souvenir,souvenirPrice) values ('"+team+"','""','""' )");
+    if (check == newPrice.length()) {
+        db->prepare("insert into teamSouvenir (teamName,Souvenir,souvenirPrice) values ('" + team + "','""','""' )");
         db->exec();
-        db->prepare("insert into teamSouvenir (teamName,Souvenir,souvenirPrice) values ('""','"+newSou+"','"+newPrice+"' )");
+        db->prepare("insert into teamSouvenir (teamName,Souvenir,souvenirPrice) values ('""','" + newSou + "','" + newPrice + "' )");
         db->exec();
         Maintenance::refresh();
         ui->selectSouvenirCombo->update();
-    }else{
+    }
+    else {
         qInfo() << "please enter a number";
     }
+   // refresh();
 
 }
 
@@ -144,6 +147,7 @@ void Maintenance::on_deleteSouvenirButton_clicked()
     //db->seek(0);
     db->prepare("DELETE FROM teamSouvenir WHERE ID = '"+id+"'");
     db->exec();
+   // refresh();
 }
 
 
