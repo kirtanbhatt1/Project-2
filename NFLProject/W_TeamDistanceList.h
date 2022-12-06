@@ -10,11 +10,11 @@ class W_TeamDistanceList : public QWidget
 public:
 	W_TeamDistanceList(QWidget *parent = nullptr);
 	~W_TeamDistanceList();
-	void setup(QString team, long distance);
+	void setup(QString team, double distance);
 	void setup(QString startingTeam);
 
 	QString team;
-	long distance;
+	double distance;
 
 private:
 	Ui::W_TeamDistanceListClass ui;

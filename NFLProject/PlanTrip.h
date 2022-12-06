@@ -7,6 +7,7 @@
 #include "W_TeamDistanceList.h"
 #include "W_AddTeamSouvenirs.h"
 #include "TeamToggle.h"
+#include "Database.h"
 
 enum TripMode 
 {
@@ -35,7 +36,7 @@ private:
 
 	TripMode tripMode;
 
-	QVector<Team> teamsData;
+	QVector<Stadium> stadiumsData;
 	QVector<Distance> distancesData;
 
 	// Both:
@@ -61,7 +62,7 @@ private:
 
 	// 2nd Menu:
 	void switch2nd();
-	QStringList plannedTeams; // A list in order of cities to go to
+	QStringList plannedTeams; // A list in order of teams to go to
 	QVector<W_AddTeamSouvenirs*> addedTeams;
 	void totalPriceUpdated(double price); // Signal response for when a city's price for foods is updated.
 	void triggerBack();

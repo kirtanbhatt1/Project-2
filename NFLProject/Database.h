@@ -26,4 +26,5 @@ public:
 	Team getTeam(QString teamName);
 	static QVector<Distance> getAllDistances();
 
+	QVector<Stadium> getAllStadiums();
 };

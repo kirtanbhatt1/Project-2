@@ -268,7 +268,7 @@
                 <x>0</x>
                 <y>0</y>
                 <width>450</width>
-                <height>455</height>
+                <height>30</height>
                </rect>
               </property>
               <property name="minimumSize">
@@ -396,7 +396,7 @@ background-color: red;</string>
           <string notr="true"/>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="ShortestTrip">
           <property name="font">
@@ -758,10 +758,10 @@ QLabel {
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border-radius: 20px;
-background-color: red;
+                  <string notr="true">background-color: green;
 padding: 10px 20px 10px 20px;
-color: white;</string>
+color: white;
+border-radius: 20px;</string>
                  </property>
                  <property name="text">
                   <string>Next -&gt;</string>
@@ -1008,6 +1008,9 @@ padding-right: 20px;</string>
                      <height>300</height>
                     </size>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;</string>
+                   </property>
                    <property name="widgetResizable">
                     <bool>true</bool>
                    </property>
@@ -1016,13 +1019,14 @@ padding-right: 20px;</string>
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>298</width>
-                      <height>298</height>
+                      <width>300</width>
+                      <height>338</height>
                      </rect>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QWidget#C_PlanCitiesContainer{
 	background: white;
+	border-radius: 20%;
 }
 </string>
                     </property>
@@ -1150,6 +1154,9 @@ QLabel {
                      <height>300</height>
                     </size>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;</string>
+                   </property>
                    <property name="widgetResizable">
                     <bool>true</bool>
                    </property>
@@ -1158,12 +1165,12 @@ QLabel {
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>298</width>
-                      <height>298</height>
+                      <width>300</width>
+                      <height>300</height>
                      </rect>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background: white;</string>
+                     <string notr="true">background: white; border-radius: 20%;</string>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_9">
                      <property name="leftMargin">
@@ -1214,7 +1221,9 @@ QLabel {
                  </property>
                  <property name="styleSheet">
                   <string notr="true">border-radius: 20%;
-padding: 10px 20px 10px 20px;</string>
+padding: 10px 20px 10px 20px;
+background-color: green;
+color: white;</string>
                  </property>
                  <property name="text">
                   <string>Next -&gt;</string>
