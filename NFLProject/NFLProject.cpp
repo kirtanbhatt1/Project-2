@@ -44,7 +44,7 @@ NFLProject::NFLProject(QWidget *parent)
     connect(ui.actionBFS, &QAction::triggered, this, &NFLProject::showDisplayBFS); // Display BFS Search
     connect(ui.actionShortest_Trip, &QAction::triggered, this, &NFLProject::showShortestTrip); // Shortest Trip
     connect(ui.actionCustom_Trip, &QAction::triggered, this, &NFLProject::showCustomTrip); // Custom Trip
-    connect(ui.actionImport, &QAction::triggered, this, &NFLProject::showMaintenance); // Maintenance Page
+    connect(ui.actionModify, &QAction::triggered, this, &NFLProject::showMaintenance); // Maintenance Page
 
 }
 

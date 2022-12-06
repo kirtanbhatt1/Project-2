@@ -311,7 +311,7 @@
     <property name="title">
      <string>Maintenance</string>
     </property>
-    <addaction name="actionImport"/>
+    <addaction name="actionModify"/>
    </widget>
    <addaction name="menuDisplay"/>
    <addaction name="menuPlan"/>
@@ -336,9 +336,9 @@
     <string>Sorted </string>
    </property>
   </action>
-  <action name="actionImport">
+  <action name="actionModify">
    <property name="text">
-    <string>Import</string>
+    <string>Modify</string>
    </property>
   </action>
   <action name="actionSouvenirs">

@@ -165,3 +165,19 @@ QVector<Distance> Database::getAllDistances()
 	}
 	return distances;
 }
+
+QVector<Stadium> Database::getAllStadiums()
+{
+    QVector<Stadium> stadiums;
+    QVector<Team> teams = getTeams();
+
+    for (int i = 0; i < teams.size(); i++)
+    {
+        if (teams[i].getTeamName() == "Los Angeles Rams" || teams[i].getTeamName() == "New York Jets")
+        {
+            continue;
+        }
+        stadiums.push_back(teams[i].getStadium());
+    }
+    return stadiums;
+}
