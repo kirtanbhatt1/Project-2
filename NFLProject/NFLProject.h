@@ -6,6 +6,7 @@
 #include "DisplaySorted.h"
 #include "DisplaySouvenirs.h"
 
+
 class NFLProject : public QMainWindow
 {
     Q_OBJECT
@@ -24,8 +25,10 @@ public:
     void showDisplaySouvenirs();
     void showDisplayDistances();
     void showDisplayDFS();
+    void showDisplayBFS();
     void showShortestTrip();
     void showCustomTrip();
+    void showMaintenance();
 
 private:
     Ui::NFLProjectClass ui;

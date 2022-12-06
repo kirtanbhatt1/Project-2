@@ -1,18 +1,19 @@
-#include "DisplayDFS.h"
+#include "DisplayBFS.h"
 
-Database dfsDb;
+Database bfsDb;
 
-DisplayDFS::DisplayDFS(QWidget *parent)
+DisplayBFS::DisplayBFS(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	
-	QObject::connect(ui.importPushButton, &QPushButton::clicked, this, &DisplayDFS::showDFS);
+	QObject::connect(ui.importPushButton, &QPushButton::clicked, this, &DisplayBFS::showBFS);
+
 }
 
-DisplayDFS::~DisplayDFS()
+DisplayBFS::~DisplayBFS()
 {}
-void DisplayDFS::clearLayout()
+
+void DisplayBFS::clearLayout()
 {
 	for (int i = 0; i < allWidgets.size(); i++)
 	{
@@ -20,22 +21,27 @@ void DisplayDFS::clearLayout()
 		delete allWidgets[i];
 	}
 	allWidgets.clear();
-}
-void DisplayDFS::showDFS()
-{
-	
-	clearLayout();
 
-	QVector<Team> allTeams = dfsDb.getTeams();
+	for (int i = 0; i < allCountWidgets.size(); i++)
+	{
+		ui.verticalLayout_2->layout()->removeWidget(allCountWidgets.at(i));
+		delete allCountWidgets[i];
+	}
+	allCountWidgets.clear();
+}
+
+void DisplayBFS::showBFS()
+{
+	clearLayout();
+	QVector<Team> allTeams = bfsDb.getTeams();
 
 	Graph cities;
 
-		
 	for (int i = 0; i < allTeams.size(); i++)
 	{
 		cities.insertVertex(allTeams[i].getStadium().getStadiumName());
 	}
-			
+
 	//prompting user for file input 
 	QString fileName = QFileDialog::getOpenFileName(this,
 		tr("Open Text File"), "/home", tr("TXT Files (*.txt)"));
@@ -80,20 +86,26 @@ void DisplayDFS::showDFS()
 			continue;
 		}
 	}
-		
 
-	cities.DFS(cities.getVertex("U.S. Bank Stadium"));
-	
-	for (int i = 0; i < cities.allEdgeDistances.size(); i++)
+
+	cities.BFS(cities.getVertex("SoFi Stadium"));
+
+	for (int i = 0; i < cities.bfsVertices.size(); i++)
 	{
-		W_DFSList* dfsText = new W_DFSList(this);
-	
-		dfsText->setup(cities.allEdgeDistances[i].getStartingStadium(), cities.allEdgeDistances[i].getEndingStadium());
-	
-		ui.verticalLayout_2->addWidget(dfsText);
-		allWidgets.push_back(dfsText);
+		W_BFSList* bfsText = new W_BFSList(this);
+
+		bfsText->setup(cities.bfsVertices[i]);
+
+		ui.verticalLayout_2->addWidget(bfsText);
+		allWidgets.push_back(bfsText);
 	}
-		
+
+	W_TotalCount* totalDistanceWidget = new W_TotalCount(this);
+	totalDistanceWidget->setup(cities.returnTotalDistance());
+	totalDistanceWidget->setLabelText("Total Distance:");
+	ui.verticalLayout_2->addWidget(totalDistanceWidget);
+	allCountWidgets.push_back(totalDistanceWidget);
+
 	cities.clear();
-		
+
 }

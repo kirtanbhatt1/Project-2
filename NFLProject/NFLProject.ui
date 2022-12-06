@@ -302,6 +302,7 @@
      <string>Plan</string>
     </property>
     <addaction name="actionDFS"/>
+    <addaction name="actionBFS"/>
     <addaction name="separator"/>
     <addaction name="actionShortest_Trip"/>
     <addaction name="actionCustom_Trip"/>
@@ -363,6 +364,11 @@
   <action name="actionCustom_Trip">
    <property name="text">
     <string>Custom Trip</string>
+   </property>
+  </action>
+  <action name="actionBFS">
+   <property name="text">
+    <string>BFS</string>
    </property>
   </action>
  </widget>

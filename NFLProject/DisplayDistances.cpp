@@ -49,6 +49,7 @@ void DisplayDistances::displayAllDistances()
 	QString teamName = ui.teamSelect->currentText();
 	QVector<Team> allTeams = distanceDB.getTeams();
 	qDebug() << "SIZE: " << allTeams.size();
+	
 	for (int i = 0; i < allTeams.size(); i++)
 	{
 
