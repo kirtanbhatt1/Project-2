@@ -1,0 +1,32 @@
+\hypertarget{_w___new_souvenir_8h_source}{}\doxysection{W\+\_\+\+New\+Souvenir.\+h}
+\label{_w___new_souvenir_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/W\_NewSouvenir.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/W\_NewSouvenir.h}}
+\mbox{\hyperlink{_w___new_souvenir_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_W\_NewSouvenir.h"{}}}
+\DoxyCodeLine{5 \textcolor{comment}{//\#include "{}Souvenir.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_database_8h}{Database.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_w___new_souvenir}{W\_NewSouvenir}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     Q\_OBJECT}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_w___new_souvenir_adbda103cb934ad4e0564b9310f681aa9}{W\_NewSouvenir}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_w___new_souvenir_a2318db8ab98452a3579ec980aaf61123}{\string~W\_NewSouvenir}}();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___new_souvenir_a59735396d1ec026aed35bf437ae9d026}{setup}}(\mbox{\hyperlink{class_souvenir}{Souvenir}} \mbox{\hyperlink{class_w___new_souvenir_a88b75150330b1ce954c80807005bdaed}{souvenir}});}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_souvenir}{Souvenir}} \mbox{\hyperlink{class_w___new_souvenir_a88b75150330b1ce954c80807005bdaed}{souvenir}};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 signals:}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___new_souvenir_a437f0d6d2cbc74d9e6ab7216e5eaa8b9}{updated}}(\mbox{\hyperlink{class_souvenir}{Souvenir}} \mbox{\hyperlink{class_w___new_souvenir_a88b75150330b1ce954c80807005bdaed}{souvenir}}); \textcolor{comment}{// Called when the food amount changes}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___new_souvenir_a9f2a18bcf65f573acd3588ccae96af41}{remove}}(QString souvenirName);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     Ui::W\_NewSouvenirClass ui;}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} editSouvenirAmount(\textcolor{keywordtype}{int} amount);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} removeThis();}
+\DoxyCodeLine{26 \};}
+
+\end{DoxyCode}

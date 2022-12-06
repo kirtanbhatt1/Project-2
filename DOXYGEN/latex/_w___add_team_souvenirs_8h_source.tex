@@ -1,0 +1,48 @@
+\hypertarget{_w___add_team_souvenirs_8h_source}{}\doxysection{W\+\_\+\+Add\+Team\+Souvenirs.\+h}
+\label{_w___add_team_souvenirs_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/W\_AddTeamSouvenirs.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/W\_AddTeamSouvenirs.h}}
+\mbox{\hyperlink{_w___add_team_souvenirs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_W\_AddTeamSouvenirs.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_database_8h}{Database.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_team_8h}{Team.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_w___new_souvenir_8h}{W\_NewSouvenir.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_w___select_souvenir_8h}{W\_SelectSouvenir.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_w___add_team_souvenirs}{W\_AddTeamSouvenirs}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     Q\_OBJECT}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_w___add_team_souvenirs_a17637bfdf9435de43770123c614323a3}{W\_AddTeamSouvenirs}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_w___add_team_souvenirs_ac5d70d8d915f0db9876105bc7b2a44c1}{\string~W\_AddTeamSouvenirs}}();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___add_team_souvenirs_ae40172a90cff41322f29f39af366ae34}{setup}}(\mbox{\hyperlink{class_team}{Team}} team);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_w___add_team_souvenirs_a56ffa92b92ee8d20251bba45d9aa576e}{getTotal}}();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_w___add_team_souvenirs_a7a492e5266d8d2eac72f1ff7a6bdf567}{numOfPurchases}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 signals: }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___add_team_souvenirs_a7390fc6854794b7a727d0cd967e467dd}{priceUpdated}}(\textcolor{keywordtype}{double} price);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     Ui::W\_AddTeamSouvenirsClass ui;}
+\DoxyCodeLine{27     QVector<Souvenir> availableSouvenirs;}
+\DoxyCodeLine{28     QStack<Souvenir> addedSouvenirs; \textcolor{comment}{// List of souvenirs planned to buy, with populated price \& amount}}
+\DoxyCodeLine{29     QString teamName;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{double} total = 0;}
+\DoxyCodeLine{31     QVector<W\_NewSouvenir*> souvenirWidgets;}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_w___select_souvenir}{W\_SelectSouvenir}}* selectSouvenirWidget;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} hasSelectSouvenir = \textcolor{keyword}{false};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} updateTotal();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} triggerAddSouvenir(\mbox{\hyperlink{class_souvenir}{Souvenir}} souvenir);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} populateSouvenirs();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} addSouvenirToList(\mbox{\hyperlink{class_souvenir}{Souvenir}} souvenir);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} removeSouvenirFromList(QString souvenirName); \textcolor{comment}{// Called from signal}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} onUpdate(\mbox{\hyperlink{class_souvenir}{Souvenir}} souvenir); \textcolor{comment}{// Called from signal}}
+\DoxyCodeLine{42 \};}
+
+\end{DoxyCode}

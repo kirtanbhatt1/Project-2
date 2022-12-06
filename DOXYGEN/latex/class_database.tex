@@ -1,0 +1,182 @@
+\hypertarget{class_database}{}\doxysection{Database Class Reference}
+\label{class_database}\index{Database@{Database}}
+
+
+{\ttfamily \#include $<$Database.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_database_a4703c80e6969d33565ea340f768fdadf}{Database}} ()
+\item 
+\mbox{\hyperlink{class_database_a84d399a2ad58d69daab9b05330e1316d}{$\sim$\+Database}} ()
+\item 
+QVector$<$ \mbox{\hyperlink{class_team}{Team}} $>$ \mbox{\hyperlink{class_database_a16418cad99e3f8d6c691fe9c68ca28f6}{get\+Teams}} ()
+\item 
+\mbox{\hyperlink{class_map}{Map}} \mbox{\hyperlink{class_database_a6326fa60e7f0c1ec0979160395243ec1}{initialize\+Map}} ()
+\item 
+long \mbox{\hyperlink{class_database_a4095b8ceb6580a2be44400229111f020}{get\+Total\+Capacity}} (QVector$<$ \mbox{\hyperlink{class_team}{Team}} $>$ teams)
+\item 
+\mbox{\hyperlink{class_team}{Team}} \mbox{\hyperlink{class_database_a7d07cdc6111130993599873fba21b01b}{get\+Team}} (QString team\+Name)
+\item 
+QVector$<$ \mbox{\hyperlink{class_stadium}{Stadium}} $>$ \mbox{\hyperlink{class_database_a550c36e84c46a621720b39af9d6746ab}{get\+All\+Stadiums}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static QVector$<$ \mbox{\hyperlink{class_distance}{Distance}} $>$ \mbox{\hyperlink{class_database_a421f30e359daa070ad2aa0d4958c08c0}{get\+All\+Distances}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QSql\+Database \mbox{\hyperlink{class_database_a43a2f93330a82dcbdf7a46c63002885d}{NFLDatabase}}
+\item 
+QVector$<$ \mbox{\hyperlink{class_distance}{Distance}} $>$ \mbox{\hyperlink{class_database_abf280bbe188e79a73fc834ced9cc10ba}{distances}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_database_a4703c80e6969d33565ea340f768fdadf}\label{class_database_a4703c80e6969d33565ea340f768fdadf}} 
+\index{Database@{Database}!Database@{Database}}
+\index{Database@{Database}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{Database()}{Database()}}
+{\footnotesize\ttfamily Database\+::\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_database_a84d399a2ad58d69daab9b05330e1316d}\label{class_database_a84d399a2ad58d69daab9b05330e1316d}} 
+\index{Database@{Database}!````~Database@{$\sim$Database}}
+\index{````~Database@{$\sim$Database}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{$\sim$Database()}{~Database()}}
+{\footnotesize\ttfamily Database\+::$\sim$\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_database_a421f30e359daa070ad2aa0d4958c08c0}\label{class_database_a421f30e359daa070ad2aa0d4958c08c0}} 
+\index{Database@{Database}!getAllDistances@{getAllDistances}}
+\index{getAllDistances@{getAllDistances}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{getAllDistances()}{getAllDistances()}}
+{\footnotesize\ttfamily QVector$<$ \mbox{\hyperlink{class_distance}{Distance}} $>$ Database\+::get\+All\+Distances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a421f30e359daa070ad2aa0d4958c08c0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_database_a550c36e84c46a621720b39af9d6746ab}\label{class_database_a550c36e84c46a621720b39af9d6746ab}} 
+\index{Database@{Database}!getAllStadiums@{getAllStadiums}}
+\index{getAllStadiums@{getAllStadiums}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{getAllStadiums()}{getAllStadiums()}}
+{\footnotesize\ttfamily QVector$<$ \mbox{\hyperlink{class_stadium}{Stadium}} $>$ Database\+::get\+All\+Stadiums (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a550c36e84c46a621720b39af9d6746ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_database_a550c36e84c46a621720b39af9d6746ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_database_a7d07cdc6111130993599873fba21b01b}\label{class_database_a7d07cdc6111130993599873fba21b01b}} 
+\index{Database@{Database}!getTeam@{getTeam}}
+\index{getTeam@{getTeam}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{getTeam()}{getTeam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_team}{Team}} Database\+::get\+Team (\begin{DoxyParamCaption}\item[{QString}]{team\+Name }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a7d07cdc6111130993599873fba21b01b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_database_a16418cad99e3f8d6c691fe9c68ca28f6}\label{class_database_a16418cad99e3f8d6c691fe9c68ca28f6}} 
+\index{Database@{Database}!getTeams@{getTeams}}
+\index{getTeams@{getTeams}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{getTeams()}{getTeams()}}
+{\footnotesize\ttfamily QVector$<$ \mbox{\hyperlink{class_team}{Team}} $>$ Database\+::get\+Teams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a16418cad99e3f8d6c691fe9c68ca28f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a16418cad99e3f8d6c691fe9c68ca28f6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_database_a4095b8ceb6580a2be44400229111f020}\label{class_database_a4095b8ceb6580a2be44400229111f020}} 
+\index{Database@{Database}!getTotalCapacity@{getTotalCapacity}}
+\index{getTotalCapacity@{getTotalCapacity}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{getTotalCapacity()}{getTotalCapacity()}}
+{\footnotesize\ttfamily long Database\+::get\+Total\+Capacity (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_team}{Team}} $>$}]{teams }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a4095b8ceb6580a2be44400229111f020_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_database_a6326fa60e7f0c1ec0979160395243ec1}\label{class_database_a6326fa60e7f0c1ec0979160395243ec1}} 
+\index{Database@{Database}!initializeMap@{initializeMap}}
+\index{initializeMap@{initializeMap}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{initializeMap()}{initializeMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_map}{Map}} Database\+::initialize\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a6326fa60e7f0c1ec0979160395243ec1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_database_a6326fa60e7f0c1ec0979160395243ec1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_database_abf280bbe188e79a73fc834ced9cc10ba}\label{class_database_abf280bbe188e79a73fc834ced9cc10ba}} 
+\index{Database@{Database}!distances@{distances}}
+\index{distances@{distances}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{distances}{distances}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_distance}{Distance}}$>$ Database\+::distances}
+
+\mbox{\Hypertarget{class_database_a43a2f93330a82dcbdf7a46c63002885d}\label{class_database_a43a2f93330a82dcbdf7a46c63002885d}} 
+\index{Database@{Database}!NFLDatabase@{NFLDatabase}}
+\index{NFLDatabase@{NFLDatabase}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{NFLDatabase}{NFLDatabase}}
+{\footnotesize\ttfamily QSql\+Database Database\+::\+NFLDatabase}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nicho/\+Desktop/\+CS1\+D Proj2/\+Project-\/2/\+Project-\/2/\+NFLProject/\mbox{\hyperlink{_database_8h}{Database.\+h}}\item 
+C\+:/\+Users/nicho/\+Desktop/\+CS1\+D Proj2/\+Project-\/2/\+Project-\/2/\+NFLProject/\mbox{\hyperlink{_database_8cpp}{Database.\+cpp}}\end{DoxyCompactItemize}

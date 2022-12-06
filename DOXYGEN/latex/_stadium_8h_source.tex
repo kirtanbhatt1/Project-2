@@ -1,0 +1,125 @@
+\hypertarget{_stadium_8h_source}{}\doxysection{Stadium.\+h}
+\label{_stadium_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Stadium.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Stadium.h}}
+\mbox{\hyperlink{_stadium_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_f_l_project_8h}{NFLProject.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_souvenir_8h}{Souvenir.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_distance_8h}{Distance.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_stadium}{Stadium}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     QString stadiumName;}
+\DoxyCodeLine{11     QString capacity;}
+\DoxyCodeLine{12     QString location;}
+\DoxyCodeLine{13     QString roofType;}
+\DoxyCodeLine{14     QString surface;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} openedYear;}
+\DoxyCodeLine{16     \textcolor{comment}{//vector to contain each stadium's different souvenirs (haven't put to use yet)}}
+\DoxyCodeLine{17     QVector<Souvenir> souvenirs;}
+\DoxyCodeLine{18     QVector<Distance> edges;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \textcolor{comment}{//default constructor}}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_stadium_a590fc521914438820bf5ab2f27d2d749}{Stadium}}()}
+\DoxyCodeLine{23         : stadiumName\{ \textcolor{stringliteral}{"{}"{}} \}, capacity\{ \textcolor{stringliteral}{"{}"{}} \}, location\{ \textcolor{stringliteral}{"{}"{}} \}, }
+\DoxyCodeLine{24           roofType\{ \textcolor{stringliteral}{"{}"{}} \}, surface\{ \textcolor{stringliteral}{"{}"{}} \}, openedYear\{ 0 \}, }
+\DoxyCodeLine{25           souvenirs\{ QVector<\mbox{\hyperlink{class_souvenir}{Souvenir}}>\{\} \}, edges\{QVector<Distance>\{\} \} \{\}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{//overloaded constructor}}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_stadium_afd791888a06d26b82c1d63d8c989afe4}{Stadium}}(QString stadiumName, QString capacity, QString location, }
+\DoxyCodeLine{29             QString roofType, QString surface, \textcolor{keywordtype}{int} openedYear, }
+\DoxyCodeLine{30             QVector<Souvenir> allSouvenirs, QVector<Distance> allEdges)}
+\DoxyCodeLine{31             : stadiumName\{ stadiumName \}, capacity\{ capacity \}, }
+\DoxyCodeLine{32               location\{ location \}, roofType\{ roofType \}, surface\{ surface \}, }
+\DoxyCodeLine{33         openedYear\{ openedYear \}, souvenirs\{ allSouvenirs \}, edges\{ allEdges \} \{\}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{//destructor}}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_stadium_ae5a1abfdd058d44e72d1ae5582a7b240}{\string~Stadium}}() \{\}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{//getters}}
+\DoxyCodeLine{39     QString \mbox{\hyperlink{class_stadium_afe4fd68f22adc559e3cbc37d8819bbc9}{getStadiumName}}()}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} stadiumName;}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     QVector<Souvenir> \mbox{\hyperlink{class_stadium_a0ae9ea25b707f99173b67663b1c167e5}{getSouvenirs}}() \{}
+\DoxyCodeLine{45         \textcolor{keywordflow}{return} souvenirs;}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     QString \mbox{\hyperlink{class_stadium_abaad2e0753b1853f5e276d75d3feba9b}{getCapacity}}() \{}
+\DoxyCodeLine{49         }
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} capacity;}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     QString \mbox{\hyperlink{class_stadium_ad60160f160cf0c5a150ddfc06ba4e53b}{getLocation}}()}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         \textcolor{keywordflow}{return} location;}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     QString \mbox{\hyperlink{class_stadium_ad9100b7fea2c620cae268df7415c63f1}{getRoofType}}()}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} roofType;}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     QString \mbox{\hyperlink{class_stadium_ac56373b507ad706d90aadb9c2a0705e9}{getSurface}}()}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} surface;}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_stadium_a933807bd6837b91b3af5bc4b7f0c03a2}{getOpenedYear}}()}
+\DoxyCodeLine{69     \{}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} openedYear;}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     QVector<Distance> \mbox{\hyperlink{class_stadium_a73fd8c4dc75e59046fc0397680adef0e}{getAllEdges}}()}
+\DoxyCodeLine{74     \{}
+\DoxyCodeLine{75         \textcolor{keywordflow}{return} edges;}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{comment}{//setters}}
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_aa8dd2605a5843354d785d5d1d6c2259f}{setStadiumName}}(QString stadiumName)}
+\DoxyCodeLine{80     \{}
+\DoxyCodeLine{81         this-\/>stadiumName = stadiumName;}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_a7fa1b75687a7ee49e815e84973300edf}{setCapacity}}(QString capacity)}
+\DoxyCodeLine{85     \{}
+\DoxyCodeLine{86         this-\/>capacity = capacity;}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_a585c371e28d435f194218df329fdfc3e}{setLocation}}(QString location)}
+\DoxyCodeLine{90     \{}
+\DoxyCodeLine{91         this-\/>location = location;}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_a9b87c5064fb68c5723918a814e18fc0d}{setRoofType}}(QString roofType)}
+\DoxyCodeLine{95     \{}
+\DoxyCodeLine{96         this-\/>roofType = roofType;}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_a20c389e8557c5c4d8f59553324fe6fe5}{setSurface}}(QString surface)}
+\DoxyCodeLine{100     \{}
+\DoxyCodeLine{101         this-\/>surface = surface;}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_aacd0ddd5953c922d55bda3a79d88399a}{setOpenedYear}}(\textcolor{keywordtype}{int} openedYear)}
+\DoxyCodeLine{105     \{}
+\DoxyCodeLine{106         this-\/>openedYear = openedYear;}
+\DoxyCodeLine{107     \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_a090a21cce0f12799cec44fcf03fb500e}{setSouvenirs}}(QVector<Souvenir> souvenirs) \{}
+\DoxyCodeLine{110         this-\/>souvenirs = souvenirs;}
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_stadium_a1c686d8c0cd2924d0b7d25bd2a420d42}{setEdges}}(QVector<Distance> edges) \{}
+\DoxyCodeLine{114         this-\/>edges = edges;}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_stadium_a5c5137dc349943689786d2720a29fc5c}{compareStadiumName}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_stadium}{Stadium}}\& stadium1, \textcolor{keyword}{const} \mbox{\hyperlink{class_stadium}{Stadium}}\& stadium2) \{ \textcolor{keywordflow}{return} stadium1.stadiumName < stadium2.stadiumName; \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \};}
+\DoxyCodeLine{119 }
+
+\end{DoxyCode}

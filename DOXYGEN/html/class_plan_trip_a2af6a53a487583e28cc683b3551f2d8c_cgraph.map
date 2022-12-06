@@ -1,0 +1,10 @@
+<map id="PlanTrip::PlanTrip" name="PlanTrip::PlanTrip">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,129,83"/>
+<area shape="rect" id="node2" href="$class_database.html#a550c36e84c46a621720b39af9d6746ab" title=" " alt="" coords="177,56,351,83"/>
+<area shape="rect" id="node3" href="$class_database.html#a16418cad99e3f8d6c691fe9c68ca28f6" title=" " alt="" coords="399,56,541,83"/>
+<area shape="rect" id="node4" href="$class_database.html#a6326fa60e7f0c1ec0979160395243ec1" title=" " alt="" coords="589,31,747,57"/>
+<area shape="rect" id="node8" href="$class_map.html#ae6f0c68f1cbf5bc2bd36b66539195685" title=" " alt="" coords="629,81,707,108"/>
+<area shape="rect" id="node5" href="$class_team.html#a36148ba356032791f4789a493e1ee149" title=" " alt="" coords="795,5,941,32"/>
+<area shape="rect" id="node6" href="$class_map.html#aa12e22f98e9c0ce406c6eb5b0cce7d35" title=" " alt="" coords="825,56,911,83"/>
+<area shape="rect" id="node7" href="$class_map.html#a8ba9d7a8d0e7a65ba624519da150d992" title=" " alt="" coords="989,56,1064,83"/>
+</map>

@@ -1,0 +1,45 @@
+\hypertarget{_n_f_l_project_8h_source}{}\doxysection{NFLProject.\+h}
+\label{_n_f_l_project_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/NFLProject.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/NFLProject.h}}
+\mbox{\hyperlink{_n_f_l_project_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QtWidgets/QMainWindow>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_NFLProject.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_display_teams_8h}{DisplayTeams.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_display_sorted_8h}{DisplaySorted.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_display_souvenirs_8h}{DisplaySouvenirs.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_n_f_l_project}{NFLProject}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     Q\_OBJECT}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_n_f_l_project_ad6a5493b57f99e2a44eace782608de4c}{NFLProject}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_a2c1880aa0e9447a607cc80ad20378a84}{setPage}}(QWidget*);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_ab678f8571e00995c06290ca0ed5542a7}{successfulLogin}}();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_adc2f2ec28b2267482882fb35e92d6284}{promptLogin}}();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_ac4b9b87f03d05653df1d478945dfce4f}{returnMain}}();}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_n_f_l_project_ac1afaba6bd67f776e314862474c350a7}{\string~NFLProject}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// Menus}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_ac21a643e90802e24cf8e0829dc3c0cb6}{showDisplayTeams}}();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_af121526cc428a0bd4308d43d19091ea2}{showDisplaySorted}}();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_a899e5dd37d59829d467b26c05e1d0a27}{showDisplaySouvenirs}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_a72ba912f5643af8140f5eebc4745790e}{showDisplayDistances}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_ac92815170189d3cc9d83572a6d1f9d10}{showDisplayDFS}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_af4384f53d4a45a20ff36fffc404cc2ea}{showDisplayBFS}}();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_a5921fe89371e94beac809f2af30eecdc}{showShortestTrip}}();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_ab8eebb5481bc7a511bf3a784d9de1565}{showCustomTrip}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_f_l_project_ac49bc527c36621d2ea2f3a5eca07a46c}{showMaintenance}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34     Ui::NFLProjectClass ui;}
+\DoxyCodeLine{35     QStackedWidget* switcher;}
+\DoxyCodeLine{36     QWidget* currentPage = NULL;}
+\DoxyCodeLine{37     QString queued = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} isLoggedIn = \textcolor{keyword}{false};}
+\DoxyCodeLine{39 \};}
+
+\end{DoxyCode}

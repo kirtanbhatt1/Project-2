@@ -1,0 +1,51 @@
+\hypertarget{_distance_8h_source}{}\doxysection{Distance.\+h}
+\label{_distance_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Distance.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Distance.h}}
+\mbox{\hyperlink{_distance_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_f_l_project_8h}{NFLProject.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_souvenir_8h}{Souvenir.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_distance}{Distance}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{private}:}
+\DoxyCodeLine{9     QString startingStadium;}
+\DoxyCodeLine{10     QString endingStadium;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} distance;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_distance_a10c71cb57a2a8f5c66b2e91f63e3595a}{Distance}}()}
+\DoxyCodeLine{15         : startingStadium(\textcolor{stringliteral}{"{}"{}}), endingStadium(\textcolor{stringliteral}{"{} "{}}), distance(0) \{\}}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_distance_a387ced3aaac82cf51d4c7cb8bc551aea}{Distance}}(QString startingStadium, QString endingStadium, \textcolor{keywordtype}{int} distance)}
+\DoxyCodeLine{17         : startingStadium\{startingStadium\}, endingStadium\{ endingStadium \}, distance\{ distance \} \{\}}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_distance_a933d4ecca7e420ac53945e36d64e9500}{\string~Distance}}() \{\}}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_distance_afe84b35fcc6c3532e0e175d616de87c0}{setStartingStadium}}(QString stadiumName)}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         startingStadium = stadiumName;}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_distance_a42cae9578215739d1fc7f50fb2023172}{setEndingStadium}}(QString stadiumName)}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         endingStadium = stadiumName;}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_distance_a9609e01a9c4b5619b134f03facdeed1e}{setDistance}}(\textcolor{keywordtype}{int} dist)}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         distance = dist;}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{32     QString \mbox{\hyperlink{class_distance_ab6f4f322495a9ae4e62b0ae39266bf81}{getStartingStadium}}()}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} startingStadium;}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     QString \mbox{\hyperlink{class_distance_a857d1a80324fe3c286cf511807ff851a}{getEndingStadium}}()}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         \textcolor{keywordflow}{return} endingStadium;}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_distance_ac6419d38798168f0f6ae63bf04eb719f}{getDistance}}()}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{return} distance;}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45 \};}
+
+\end{DoxyCode}

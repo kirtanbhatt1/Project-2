@@ -1,0 +1,80 @@
+\hypertarget{_graph_8h_source}{}\doxysection{Graph.\+h}
+\label{_graph_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Graph.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Graph.h}}
+\mbox{\hyperlink{_graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_database_8h}{Database.h}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{enum} \mbox{\hyperlink{_graph_8h_a06bb61e726222024ade1c1f981b991da}{edge\_status}} \{ \mbox{\hyperlink{_graph_8h_a06bb61e726222024ade1c1f981b991daa89e0d84af1976ae132f06bb1d0c8312e}{UNDISCOVERED}}, \mbox{\hyperlink{_graph_8h_a06bb61e726222024ade1c1f981b991daa05eb094889c0adc67ccc19ea72284315}{DISCOVERY}}, \mbox{\hyperlink{_graph_8h_a06bb61e726222024ade1c1f981b991daac921ff2cfc571c1d19b0485d7f6926ee}{BACK}}, \mbox{\hyperlink{_graph_8h_a06bb61e726222024ade1c1f981b991daad699bdf1731bd839b56c299536ba1d9d}{CROSS}} \};}
+\DoxyCodeLine{14 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_vertex}{Vertex}};}
+\DoxyCodeLine{15 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_edge}{Edge}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \mbox{\hyperlink{struct_vertex}{Vertex}}* \mbox{\hyperlink{struct_edge_a10bf35e51846e2cc652c5ec47ddcfd0c}{end1}};}
+\DoxyCodeLine{18     \mbox{\hyperlink{struct_vertex}{Vertex}}* \mbox{\hyperlink{struct_edge_aa393726e8225b27fd46a5b64eb7b8dc0}{end2}};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_edge_a71ad75a484ef29c26d9071f380257314}{distance}};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_edge_aa4e2883518a2e2bd15cf8f1272e83327}{visited}};}
+\DoxyCodeLine{21     \mbox{\hyperlink{_graph_8h_a06bb61e726222024ade1c1f981b991da}{edge\_status}} \mbox{\hyperlink{struct_edge_a09ca78443496cec0d6aeb6fe7f88d2b4}{status}};}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_vertex}{Vertex}}}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     QVector<Edge*> \mbox{\hyperlink{struct_vertex_a4ce1b127802e18029f778f6cbaa40d62}{adjacentEdges}};}
+\DoxyCodeLine{26     QString \mbox{\hyperlink{struct_vertex_a0d4b1d039f3ed52f6cfbdcbb96678138}{name}};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_vertex_aaef9f7de91b4b8f1752d391a1aae9c2e}{visited}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{28     \mbox{\hyperlink{struct_vertex_a5a4e4a9227091bb8b0655b2a722b8e01}{Vertex}}(QString s) : \mbox{\hyperlink{struct_vertex_a0d4b1d039f3ed52f6cfbdcbb96678138}{name}}(s) \{\}}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keyword}{typedef} std::map<QString, Vertex*> \mbox{\hyperlink{class_graph_a54bdfca3ba00bc674610ca2a63745667}{vertexMap}};}
+\DoxyCodeLine{35     }
+\DoxyCodeLine{36     QVector<Distance> \mbox{\hyperlink{class_graph_a961b65aae4932d9a2cffc6640432e304}{allEdgeDistances}};}
+\DoxyCodeLine{37     QVector<QString> \mbox{\hyperlink{class_graph_ae82203f29c173709697d99a1d5d13228}{bfsVertices}};}
+\DoxyCodeLine{38     }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ac17218e7f2650729f33c64d9ce7a9724}{DFS}}(\mbox{\hyperlink{struct_vertex}{Vertex}}*\&);}
+\DoxyCodeLine{40     \textcolor{comment}{// Function to perform a Depth-\/First-\/Search on a graph }}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_acc6ecf39a809b21524ba0112c3d0610f}{BFS}}(\mbox{\hyperlink{struct_vertex}{Vertex}}*\&);}
+\DoxyCodeLine{42     \textcolor{comment}{// Function to perform a Breadth-\/first Search on the graph}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a8bf3a4f493e919dd61d8bdb12ade54cd}{insertVertex}}(\textcolor{keyword}{const} QString\&);}
+\DoxyCodeLine{44     \textcolor{comment}{// Function to insert the vertex into the graph}}
+\DoxyCodeLine{45     \textcolor{comment}{// }}
+\DoxyCodeLine{46     \textcolor{comment}{// Postcondition: Inserts vertex with QString into the graph}}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a52b3cf7a5dc220146b25c7b2f9d6c057}{insertEdge}}(\textcolor{keyword}{const} QString\& from, \textcolor{keyword}{const} QString\& to, \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{48     \textcolor{comment}{// Function to insert the edge into the graph}}
+\DoxyCodeLine{49 \textcolor{comment}{// }}
+\DoxyCodeLine{50 \textcolor{comment}{// Postcondition: Inserts edge with starting and ending locations }}
+\DoxyCodeLine{51 \textcolor{comment}{// with cost into the graph}}
+\DoxyCodeLine{52     \mbox{\hyperlink{struct_vertex}{Vertex}}*\& \mbox{\hyperlink{class_graph_aef97b2ee3950610de9ea382cf0cc8a1c}{getVertex}}(\textcolor{keyword}{const} QString\&);}
+\DoxyCodeLine{53     \textcolor{comment}{// Function to return the reference of the vertex with the name QString}}
+\DoxyCodeLine{54     \textcolor{comment}{// }}
+\DoxyCodeLine{55     \textcolor{comment}{// Postcondition: Returns the vertex }}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a2a9ca9e323a9d4badf9581819decfb4a}{edgeType}}();}
+\DoxyCodeLine{57     \textcolor{comment}{// Function to return the type of edge}}
+\DoxyCodeLine{58     \textcolor{comment}{// }}
+\DoxyCodeLine{59     \textcolor{comment}{// Postcondition: Returns type of edge (Undiscovered, Discovery, Back)}}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ac6192a41101102ca8aa6acca607c84f3}{clear}}();}
+\DoxyCodeLine{61     \textcolor{comment}{// Function to clear the graph}}
+\DoxyCodeLine{62     \textcolor{comment}{//}}
+\DoxyCodeLine{63     \textcolor{comment}{// Postcondition: The graph is cleared}}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a4cacf350ddb01bcd0057dddbf2799c89}{returnTotalDistance}}();}
+\DoxyCodeLine{65     \textcolor{comment}{// Function to return the total distance}}
+\DoxyCodeLine{66     \textcolor{comment}{// }}
+\DoxyCodeLine{67     \textcolor{comment}{// Postcondition: Returns the total distance traveled}}
+\DoxyCodeLine{68 \textcolor{keyword}{private}:}
+\DoxyCodeLine{69     \mbox{\hyperlink{class_graph_a54bdfca3ba00bc674610ca2a63745667}{vertexMap}} vMap;}
+\DoxyCodeLine{70     QVector<Edge*> allEdges;}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} sortEdges(\mbox{\hyperlink{struct_vertex}{Vertex}}* in\_Vertex);}
+\DoxyCodeLine{72     \mbox{\hyperlink{struct_vertex}{Vertex}}* oppositeVertex(\mbox{\hyperlink{struct_vertex}{Vertex}}* in\_Vertex, \mbox{\hyperlink{struct_edge}{Edge}}* in\_edge);}
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} totalDistance = 0;}
+\DoxyCodeLine{74 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,29 @@
+\hypertarget{_display_teams_8h_source}{}\doxysection{Display\+Teams.\+h}
+\label{_display_teams_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/DisplayTeams.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/DisplayTeams.h}}
+\mbox{\hyperlink{_display_teams_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_DisplayTeams.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_w___teams_list_8h}{W\_TeamsList.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_display_teams}{DisplayTeams}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     Q\_OBJECT}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_display_teams_a0b0495babd6f3c3797d799aaa94e6374}{DisplayTeams}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_display_teams_aa220afeb5d44b6f122eb02ceeb95f848}{\string~DisplayTeams}}();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_teams_a17cf5aba78febfa519db3247ab1b71f7}{initializeList}}();}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_teams_a03beb672ab3c8659abeb568303d17328}{open}}();}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_teams_ab36bbb63f753c1a85affe19c402cedf3}{displayAllTeams}}();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_teams_a9c60530ab333b411a08c06d39deb67c3}{clearLayout}}();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     Ui::DisplayTeamsClass ui;}
+\DoxyCodeLine{22     QVector<W\_TeamsList*> allWidgets;}
+\DoxyCodeLine{23 \};}
+
+\end{DoxyCode}

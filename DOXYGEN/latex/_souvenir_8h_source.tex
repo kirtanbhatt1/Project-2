@@ -1,0 +1,54 @@
+\hypertarget{_souvenir_8h_source}{}\doxysection{Souvenir.\+h}
+\label{_souvenir_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Souvenir.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Souvenir.h}}
+\mbox{\hyperlink{_souvenir_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_f_l_project_8h}{NFLProject.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QtCore>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_souvenir}{Souvenir}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{private}:}
+\DoxyCodeLine{8     QString name;}
+\DoxyCodeLine{9     \textcolor{keywordtype}{double} price;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_souvenir_ae3873ee0d6cfcec96b762ec5f1c79f31}{amount}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{class_souvenir_a1c80e600047ec0e9cc064cf78c79b630}{Souvenir}}() : name\{ \textcolor{stringliteral}{"{}"{}} \}, price\{ 0 \} \{\}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{//default constructor}}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_souvenir_a42d742ea75ba2332ed1e68908d3d9faf}{Souvenir}}(QString souvenirName, \textcolor{keywordtype}{double} souvenirPrice)}
+\DoxyCodeLine{19         : name\{ souvenirName \}, price\{ souvenirPrice \} \{\}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{//destructor }}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_souvenir_ab65358c1194ede77807d924287bc5685}{\string~Souvenir}}() \{\}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{comment}{// getters \& setters}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_souvenir_a93f301067365d196aaf14acf9e03dc48}{setSouvenirName}}(QString souvenirName)}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         name = souvenirName;}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_souvenir_abe7ae5600364f3ec5cee6d6b715a7357}{setPrice}}(\textcolor{keywordtype}{double} souvenirPrice)}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         price = souvenirPrice;}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     QString \mbox{\hyperlink{class_souvenir_acdfe838ebcf9839c888d872ca6a75782}{getName}}()}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{return} name;}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_souvenir_a1cb4a0a435a8343fb4a6519e534e6a69}{getPrice}}()}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} price;}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_souvenir_a0dd46b8d2c1c1c71dc366b03b4bd079e}{getTotal}}()}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} price * \mbox{\hyperlink{class_souvenir_ae3873ee0d6cfcec96b762ec5f1c79f31}{amount}};}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,31 @@
+\hypertarget{_w___select_souvenir_8h_source}{}\doxysection{W\+\_\+\+Select\+Souvenir.\+h}
+\label{_w___select_souvenir_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/W\_SelectSouvenir.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/W\_SelectSouvenir.h}}
+\mbox{\hyperlink{_w___select_souvenir_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_W\_SelectSouvenir.h"{}}}
+\DoxyCodeLine{5 \textcolor{comment}{//\#include "{}Souvenir.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_database_8h}{Database.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_w___select_souvenir}{W\_SelectSouvenir}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     Q\_OBJECT}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_w___select_souvenir_a5a259f55f110594bf931afa044f72515}{W\_SelectSouvenir}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_w___select_souvenir_ae82602dcc3e799242a9eed542f5078a2}{\string~W\_SelectSouvenir}}();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___select_souvenir_a2375aae9a860c4fbbd4bcc370ee38dcd}{setup}}(QVector<Souvenir>\& souvenir);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___select_souvenir_aa8e43ff5a1dec23b1a426f66858d8665}{addNew}}(\mbox{\hyperlink{class_souvenir}{Souvenir}} souvenir);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 signals:}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_w___select_souvenir_a823753118f5459965910a4ae35b5488b}{add}}(\mbox{\hyperlink{class_souvenir}{Souvenir}} souvenir);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     Ui::W\_SelectSouvenirClass ui;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} addSouvenir();}
+\DoxyCodeLine{24     QVector<Souvenir> souvenirs;}
+\DoxyCodeLine{25 \};}
+
+\end{DoxyCode}

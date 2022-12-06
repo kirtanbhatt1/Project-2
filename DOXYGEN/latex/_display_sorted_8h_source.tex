@@ -1,0 +1,59 @@
+\hypertarget{_display_sorted_8h_source}{}\doxysection{Display\+Sorted.\+h}
+\label{_display_sorted_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/DisplaySorted.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/DisplaySorted.h}}
+\mbox{\hyperlink{_display_sorted_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_DisplaySorted.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_w___sorted_list_8h}{W\_SortedList.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_w___total_count_8h}{W\_TotalCount.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_database_8h}{Database.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_team_8h}{Team.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QCheckbox>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_display_sorted}{DisplaySorted}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     Q\_OBJECT}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_display_sorted_a812ef59dc0975e44da7fab259202cc26}{DisplaySorted}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_display_sorted_ad8d479681d176da58c51dfba08692220}{\string~DisplaySorted}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a3253a215e631353de43f70aa0264d510}{displayAllSortedTeams}}(QVector<Team> sortedTeams);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a68a0bee9879fe28a7a71bb46804b7c39}{sortAlphabetically}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a07be721159d76b8ccd20895436c4fdaa}{sortAmericanConferenceTeams}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_add90a50048b10ede1afb5d133c7edb10}{sortNationalFootballTeams}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a3ef2643f553c5d4e4cbc25d2d2b4d087}{sortNFCNorthTeams}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a525c0375c7be456f1d06b41479871754}{sortOpenRoofType}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a56b1224459c4d4f42895ff4eff8e2085}{sortByDate}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_ad37ef7a38423307686277e19fafc6155}{sortStadiumName}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a14649f47481da782aa1b16ff9de5ac9e}{sortByCapacity}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a201846bc6f1503f83be00b89e3402d59}{sortByConference}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a286029eb236eda4a015a85a810f41f96}{clearLayout}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_display_sorted_a64d779a644d85fef763dd6d044722fc9}{clearCount}}();}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_display_sorted_a1cf2b081907a12534fd092131142337b}{removeDuplicateStadiums}}( QVector<Team>\& vec, \textcolor{keywordtype}{int} totalCount);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{long} \mbox{\hyperlink{class_display_sorted_a2593f38d38eacb4bee8429c86fa13089}{removeDuplicateCapacity}}(QVector<Team>\& vec, \textcolor{keywordtype}{long} totalCapacity);}
+\DoxyCodeLine{47     }
+\DoxyCodeLine{48 \textcolor{keyword}{private}:}
+\DoxyCodeLine{49     Ui::DisplaySortedClass ui;}
+\DoxyCodeLine{50     QVector<Team> sortedTeams;}
+\DoxyCodeLine{51     QVector<W\_SortedList*> allWidgets;}
+\DoxyCodeLine{52     QVector<W\_TotalCount*> allCountWidgets;}
+\DoxyCodeLine{53 \};}
+
+\end{DoxyCode}

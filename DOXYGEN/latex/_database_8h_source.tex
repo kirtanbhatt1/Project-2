@@ -1,0 +1,36 @@
+\hypertarget{_database_8h_source}{}\doxysection{Database.\+h}
+\label{_database_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Database.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Database.h}}
+\mbox{\hyperlink{_database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_f_l_project_8h}{NFLProject.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_map_8h}{Map.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_team_8h}{Team.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stadium_8h}{Stadium.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_distance_8h}{Distance.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}qvector.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QSqlDatabase>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QSqlQuery>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QDebug>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_database}{Database}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     QSqlDatabase \mbox{\hyperlink{class_database_a43a2f93330a82dcbdf7a46c63002885d}{NFLDatabase}};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     QVector<Distance> \mbox{\hyperlink{class_database_abf280bbe188e79a73fc834ced9cc10ba}{distances}};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{comment}{//Map teams;}}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_database_a4703c80e6969d33565ea340f768fdadf}{Database}}();}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_database_a84d399a2ad58d69daab9b05330e1316d}{\string~Database}}();}
+\DoxyCodeLine{23     QVector<Team> \mbox{\hyperlink{class_database_a16418cad99e3f8d6c691fe9c68ca28f6}{getTeams}}();}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_map}{Map}} \mbox{\hyperlink{class_database_a6326fa60e7f0c1ec0979160395243ec1}{initializeMap}}();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{long} \mbox{\hyperlink{class_database_a4095b8ceb6580a2be44400229111f020}{getTotalCapacity}}(QVector<Team> teams);}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_team}{Team}} \mbox{\hyperlink{class_database_a7d07cdc6111130993599873fba21b01b}{getTeam}}(QString teamName);}
+\DoxyCodeLine{27     \textcolor{keyword}{static} QVector<Distance> \mbox{\hyperlink{class_database_a421f30e359daa070ad2aa0d4958c08c0}{getAllDistances}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     QVector<Stadium> \mbox{\hyperlink{class_database_a550c36e84c46a621720b39af9d6746ab}{getAllStadiums}}();}
+\DoxyCodeLine{30 \};}
+
+\end{DoxyCode}

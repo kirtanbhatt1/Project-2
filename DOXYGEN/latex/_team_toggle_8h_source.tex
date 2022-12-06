@@ -1,0 +1,30 @@
+\hypertarget{_team_toggle_8h_source}{}\doxysection{Team\+Toggle.\+h}
+\label{_team_toggle_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/TeamToggle.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/TeamToggle.h}}
+\mbox{\hyperlink{_team_toggle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_TeamToggle.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_team_toggle}{TeamToggle}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8     Q\_OBJECT}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_team_toggle_a323da7125a8cf6e1d105236b19c70292}{TeamToggle}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_team_toggle_adce1b8519a30e0915cf1ab4afcb577ed}{\string~TeamToggle}}();}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_toggle_a5d9710c1f462fd75766a70bd3e0d5195}{setup}}(\textcolor{keywordtype}{bool} state, QString team);}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_toggle_a939cd2707a2d04379a7ef8f76a0454cd}{toggle}}();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_team_toggle_a5753a6917b9d28064f4dfdf1dd58c147}{currentState}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_toggle_a3e060c10ab1db440dde349ff421e0c22}{setImage}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 signals:}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_toggle_a110b79f00413b53fa949c874f3f16aad}{stateChanged}}(\textcolor{keywordtype}{bool} value, QString team);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     Ui::TeamToggleClass ui;}
+\DoxyCodeLine{23     QString team;}
+\DoxyCodeLine{24 \};}
+
+\end{DoxyCode}

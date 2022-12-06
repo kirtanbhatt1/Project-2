@@ -1,0 +1,182 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ QString, \mbox{\hyperlink{struct_vertex}{Vertex}} $\ast$ $>$ \mbox{\hyperlink{class_graph_a54bdfca3ba00bc674610ca2a63745667}{vertex\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graph_ac17218e7f2650729f33c64d9ce7a9724}{DFS}} (\mbox{\hyperlink{struct_vertex}{Vertex}} $\ast$\&)
+\item 
+void \mbox{\hyperlink{class_graph_acc6ecf39a809b21524ba0112c3d0610f}{BFS}} (\mbox{\hyperlink{struct_vertex}{Vertex}} $\ast$\&)
+\item 
+void \mbox{\hyperlink{class_graph_a8bf3a4f493e919dd61d8bdb12ade54cd}{insert\+Vertex}} (const QString \&)
+\item 
+void \mbox{\hyperlink{class_graph_a52b3cf7a5dc220146b25c7b2f9d6c057}{insert\+Edge}} (const QString \&from, const QString \&to, int cost)
+\item 
+\mbox{\hyperlink{struct_vertex}{Vertex}} $\ast$\& \mbox{\hyperlink{class_graph_aef97b2ee3950610de9ea382cf0cc8a1c}{get\+Vertex}} (const QString \&)
+\item 
+void \mbox{\hyperlink{class_graph_a2a9ca9e323a9d4badf9581819decfb4a}{edge\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_graph_ac6192a41101102ca8aa6acca607c84f3}{clear}} ()
+\item 
+int \mbox{\hyperlink{class_graph_a4cacf350ddb01bcd0057dddbf2799c89}{return\+Total\+Distance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ \mbox{\hyperlink{class_distance}{Distance}} $>$ \mbox{\hyperlink{class_graph_a961b65aae4932d9a2cffc6640432e304}{all\+Edge\+Distances}}
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_graph_ae82203f29c173709697d99a1d5d13228}{bfs\+Vertices}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_graph_a54bdfca3ba00bc674610ca2a63745667}\label{class_graph_a54bdfca3ba00bc674610ca2a63745667}} 
+\index{Graph@{Graph}!vertexMap@{vertexMap}}
+\index{vertexMap@{vertexMap}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{vertexMap}{vertexMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$QString, \mbox{\hyperlink{struct_vertex}{Vertex}}$\ast$$>$ \mbox{\hyperlink{class_graph_a54bdfca3ba00bc674610ca2a63745667}{Graph\+::vertex\+Map}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_acc6ecf39a809b21524ba0112c3d0610f}\label{class_graph_acc6ecf39a809b21524ba0112c3d0610f}} 
+\index{Graph@{Graph}!BFS@{BFS}}
+\index{BFS@{BFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}}
+{\footnotesize\ttfamily void Graph\+::\+BFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vertex}{Vertex}} $\ast$\&}]{start }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_acc6ecf39a809b21524ba0112c3d0610f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_graph_ac6192a41101102ca8aa6acca607c84f3}\label{class_graph_ac6192a41101102ca8aa6acca607c84f3}} 
+\index{Graph@{Graph}!clear@{clear}}
+\index{clear@{clear}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Graph\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_ac6192a41101102ca8aa6acca607c84f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_graph_ac17218e7f2650729f33c64d9ce7a9724}\label{class_graph_ac17218e7f2650729f33c64d9ce7a9724}} 
+\index{Graph@{Graph}!DFS@{DFS}}
+\index{DFS@{DFS}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{DFS()}{DFS()}}
+{\footnotesize\ttfamily void Graph\+::\+DFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vertex}{Vertex}} $\ast$\&}]{start }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_graph_ac17218e7f2650729f33c64d9ce7a9724_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_ac17218e7f2650729f33c64d9ce7a9724_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_graph_a2a9ca9e323a9d4badf9581819decfb4a}\label{class_graph_a2a9ca9e323a9d4badf9581819decfb4a}} 
+\index{Graph@{Graph}!edgeType@{edgeType}}
+\index{edgeType@{edgeType}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{edgeType()}{edgeType()}}
+{\footnotesize\ttfamily void Graph\+::edge\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_graph_aef97b2ee3950610de9ea382cf0cc8a1c}\label{class_graph_aef97b2ee3950610de9ea382cf0cc8a1c}} 
+\index{Graph@{Graph}!getVertex@{getVertex}}
+\index{getVertex@{getVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertex()}{getVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vertex}{Vertex}} $\ast$\& Graph\+::get\+Vertex (\begin{DoxyParamCaption}\item[{const QString \&}]{name }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_aef97b2ee3950610de9ea382cf0cc8a1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_graph_a52b3cf7a5dc220146b25c7b2f9d6c057}\label{class_graph_a52b3cf7a5dc220146b25c7b2f9d6c057}} 
+\index{Graph@{Graph}!insertEdge@{insertEdge}}
+\index{insertEdge@{insertEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{insertEdge()}{insertEdge()}}
+{\footnotesize\ttfamily void Graph\+::insert\+Edge (\begin{DoxyParamCaption}\item[{const QString \&}]{from,  }\item[{const QString \&}]{to,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a52b3cf7a5dc220146b25c7b2f9d6c057_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_graph_a8bf3a4f493e919dd61d8bdb12ade54cd}\label{class_graph_a8bf3a4f493e919dd61d8bdb12ade54cd}} 
+\index{Graph@{Graph}!insertVertex@{insertVertex}}
+\index{insertVertex@{insertVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{insertVertex()}{insertVertex()}}
+{\footnotesize\ttfamily void Graph\+::insert\+Vertex (\begin{DoxyParamCaption}\item[{const QString \&}]{name }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a8bf3a4f493e919dd61d8bdb12ade54cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_graph_a4cacf350ddb01bcd0057dddbf2799c89}\label{class_graph_a4cacf350ddb01bcd0057dddbf2799c89}} 
+\index{Graph@{Graph}!returnTotalDistance@{returnTotalDistance}}
+\index{returnTotalDistance@{returnTotalDistance}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{returnTotalDistance()}{returnTotalDistance()}}
+{\footnotesize\ttfamily int Graph\+::return\+Total\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_graph_a4cacf350ddb01bcd0057dddbf2799c89_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_graph_a961b65aae4932d9a2cffc6640432e304}\label{class_graph_a961b65aae4932d9a2cffc6640432e304}} 
+\index{Graph@{Graph}!allEdgeDistances@{allEdgeDistances}}
+\index{allEdgeDistances@{allEdgeDistances}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{allEdgeDistances}{allEdgeDistances}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_distance}{Distance}}$>$ Graph\+::all\+Edge\+Distances}
+
+\mbox{\Hypertarget{class_graph_ae82203f29c173709697d99a1d5d13228}\label{class_graph_ae82203f29c173709697d99a1d5d13228}} 
+\index{Graph@{Graph}!bfsVertices@{bfsVertices}}
+\index{bfsVertices@{bfsVertices}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfsVertices}{bfsVertices}}
+{\footnotesize\ttfamily QVector$<$QString$>$ Graph\+::bfs\+Vertices}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nicho/\+Desktop/\+CS1\+D Proj2/\+Project-\/2/\+Project-\/2/\+NFLProject/\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+C\+:/\+Users/nicho/\+Desktop/\+CS1\+D Proj2/\+Project-\/2/\+Project-\/2/\+NFLProject/\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

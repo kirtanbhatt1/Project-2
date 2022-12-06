@@ -1,0 +1,71 @@
+\hypertarget{_team_8h_source}{}\doxysection{Team.\+h}
+\label{_team_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Team.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/Team.h}}
+\mbox{\hyperlink{_team_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_f_l_project_8h}{NFLProject.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_stadium_8h}{Stadium.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_team}{Team}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{private}:}
+\DoxyCodeLine{8     QString teamName, teamConference, teamDivision;}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_stadium}{Stadium}} stadium;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_team_aada295895b747960576b69d8c87a54ba}{Team}}() : teamName\{\textcolor{stringliteral}{"{}"{}}\}, teamConference\{\textcolor{stringliteral}{"{}"{}}\}, teamDivision\{\textcolor{stringliteral}{"{}"{}}\}, stadium\{\} \{\}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{comment}{//compositional constructor for Team and Stadium together}}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_team_ae3c3c3473d82e479e7eb55afa1347254}{Team}}(QString teamName, QString teamConference, QString teamDivision,}
+\DoxyCodeLine{17         QString stadiumName, QString capacity, QString location, QString roofType,}
+\DoxyCodeLine{18         QString surface, \textcolor{keywordtype}{int} openedYear, QVector<Souvenir> allSouvenirs, QVector<Distance> allEdges)}
+\DoxyCodeLine{19         : teamName\{ teamName \}, teamConference\{ teamConference \}, teamDivision\{ teamDivision \},}
+\DoxyCodeLine{20         stadium\{ stadiumName, capacity, location, roofType, surface, openedYear, allSouvenirs, allEdges \} \{\}}
+\DoxyCodeLine{21     }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{//getters \& setters for Team}}
+\DoxyCodeLine{24     QString \mbox{\hyperlink{class_team_a36148ba356032791f4789a493e1ee149}{getTeamName}}()}
+\DoxyCodeLine{25     \{}
+\DoxyCodeLine{26         \textcolor{keywordflow}{return} teamName;}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     QString \mbox{\hyperlink{class_team_aee82464b76c594ec3d609e4184f0a00d}{getConference}}()}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} teamConference;}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32     QString \mbox{\hyperlink{class_team_ae3f97b1c4f141d9d79308cbdb8f2f5f0}{getDivision}}()}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} teamDivision;}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_adf1ea0739053ebf1e463df8e51e42545}{setTeamName}}(QString name)}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38         teamName = name;}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_a74c75fc6cc0e0bcb1da240ea912a83d9}{setConference}}(QString conference)}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         teamConference = conference;}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_a75dbba77fee76572285fc0a961831fa4}{setDivision}}(QString division)}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         teamDivision = division;}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_adeb77c5a34fcf9a48bdb6561a7b7ce1e}{setStadiumSouvenirs}}(QVector<Souvenir> souvenirs)\{}
+\DoxyCodeLine{50         stadium.\mbox{\hyperlink{class_stadium_a090a21cce0f12799cec44fcf03fb500e}{setSouvenirs}}(souvenirs);}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_team_aefdb60ae320997bea936714b7db1320f}{setStadiumEdges}}(QVector<Distance> edges) \{}
+\DoxyCodeLine{54         stadium.\mbox{\hyperlink{class_stadium_a1c686d8c0cd2924d0b7d25bd2a420d42}{setEdges}}(edges);}
+\DoxyCodeLine{55     \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{//getter for Stadium}}
+\DoxyCodeLine{58     \mbox{\hyperlink{class_stadium}{Stadium}} \mbox{\hyperlink{class_team_aba45ad7533bb577242cb7fbee36acddf}{getStadium}}()}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} stadium;}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_team_a3b90dd35b801716c5ec0abcbd0c42c2c}{compareConference}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_team}{Team}}\& team1, \textcolor{keyword}{const} \mbox{\hyperlink{class_team}{Team}}\& team2) \{ \textcolor{keywordflow}{return} team1.teamConference < team2.teamConference; \}}
+\DoxyCodeLine{63     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_team_a3909871fa3bf4bf2d4221650dff9ff2d}{compareStadium}}( \mbox{\hyperlink{class_team}{Team}}\& team1,  \mbox{\hyperlink{class_team}{Team}}\& team2) \{ \textcolor{keywordflow}{return} team1.stadium.\mbox{\hyperlink{class_stadium_afe4fd68f22adc559e3cbc37d8819bbc9}{getStadiumName}}() < team2.stadium.\mbox{\hyperlink{class_stadium_afe4fd68f22adc559e3cbc37d8819bbc9}{getStadiumName}}(); \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \};}
+
+\end{DoxyCode}

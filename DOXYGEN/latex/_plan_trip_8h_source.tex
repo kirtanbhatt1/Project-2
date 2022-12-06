@@ -1,0 +1,76 @@
+\hypertarget{_plan_trip_8h_source}{}\doxysection{Plan\+Trip.\+h}
+\label{_plan_trip_8h_source}\index{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/PlanTrip.h@{C:/Users/nicho/Desktop/CS1D Proj2/Project-\/2/Project-\/2/NFLProject/PlanTrip.h}}
+\mbox{\hyperlink{_plan_trip_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ui\_PlanTrip.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_n_f_l_project_8h}{NFLProject.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_w___team_distance_list_8h}{W\_TeamDistanceList.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_w___add_team_souvenirs_8h}{W\_AddTeamSouvenirs.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_team_toggle_8h}{TeamToggle.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_database_8h}{Database.h}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{enum} \mbox{\hyperlink{_plan_trip_8h_a574531e89e9916f69b9fc4059951064b}{TripMode}} }
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{_plan_trip_8h_a574531e89e9916f69b9fc4059951064ba27e71c77047a263ec92386cd9041cad7}{shortest}} = 1,}
+\DoxyCodeLine{15     \mbox{\hyperlink{_plan_trip_8h_a574531e89e9916f69b9fc4059951064ba696330762bb8080a67d7ef4bd19db845}{custom}} = 2,}
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_plan_trip}{PlanTrip}} : \textcolor{keyword}{public} QWidget}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     Q\_OBJECT}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_plan_trip_a2af6a53a487583e28cc683b3551f2d8c}{PlanTrip}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_plan_trip_ae6a7198bf9faca413287acd7f147543a}{\string~PlanTrip}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{//void initializeEdges(QVector<Team> allCities);}}
+\DoxyCodeLine{28     \textcolor{comment}{//Graph getGraphCities();}}
+\DoxyCodeLine{29     \textcolor{comment}{//void depthFirstSearch();}}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plan_trip_a48374a2a0564162192ab2c0085220608}{open}}(\mbox{\hyperlink{_plan_trip_8h_a574531e89e9916f69b9fc4059951064b}{TripMode}} mode);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34     Ui::PlanTripClass ui;}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_graph}{Graph}} cities;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \mbox{\hyperlink{_plan_trip_8h_a574531e89e9916f69b9fc4059951064b}{TripMode}} tripMode;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     QVector<Stadium> stadiumsData;}
+\DoxyCodeLine{40     QVector<Distance> distancesData;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{comment}{// Both:}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} selectNumberOfTeams(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} teamSelected(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{45     QString startingTeam = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{46     QVector<W\_TeamDistanceList*> w\_teamsList;}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} beginPlan();}
+\DoxyCodeLine{48     \textcolor{keywordtype}{int} totalDistance;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Shortest Plan}}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} calculateShortestPlan(QString startingTeam, \textcolor{keywordtype}{int} teamsLeft);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} addToTeamList(QString team, \textcolor{keywordtype}{double} distance);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} numberOfTeams = 0;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// Custom Plan}}
+\DoxyCodeLine{56     QVector<TeamToggle*> w\_TeamToggles;}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} addToCustomTeamList(QString team, \textcolor{keywordtype}{double} distance);}
+\DoxyCodeLine{58     QStringList selectedTeams;}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} teamToggled(\textcolor{keywordtype}{bool} value, QString team);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} calculateCustomPlan(QString startingTeam, QVector<Distance>\& distances);}
+\DoxyCodeLine{61     QStringList remainingTeams;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{comment}{// 2nd Menu:}}
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} switch2nd();}
+\DoxyCodeLine{65     QStringList plannedTeams; \textcolor{comment}{// A list in order of teams to go to}}
+\DoxyCodeLine{66     QVector<W\_AddTeamSouvenirs*> addedTeams;}
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} totalPriceUpdated(\textcolor{keywordtype}{double} price); \textcolor{comment}{// Signal response for when a city's price for foods is updated.}}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} triggerBack();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \};}
+
+\end{DoxyCode}
