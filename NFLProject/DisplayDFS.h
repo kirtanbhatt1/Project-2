@@ -5,6 +5,7 @@
 #include "PlanTrip.h"
 #include "W_DFSList.h"
 #include "QFileDialog.h"
+#include "W_TotalCount.h"
 
 class DisplayDFS : public QMainWindow
 {
@@ -18,5 +19,6 @@ public:
 
 	Ui::DisplayDFSClass ui;
 	QVector<W_DFSList*> allWidgets;
+	QVector<W_TotalCount*> allCountWidgets;
 
 };

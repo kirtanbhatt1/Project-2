@@ -113,9 +113,14 @@ void DisplaySorted::sortOpenRoofType()
 	QVector<Team> allTeams = sortedDb.getTeams();
 	QVector<Team> newTeams;
 	int totalCount = 0;
+	int bermudaCount = 0;
 	
 	for (int i = 0; i < allTeams.size(); i++)
 	{
+		if (allTeams[i].getStadium().getSurface() == "Bermuda grass")
+		{
+			bermudaCount++;
+		}
 		if (allTeams[i].getStadium().getRoofType() == "Open")
 		{
 			newTeams.push_back(allTeams[i]);
@@ -123,6 +128,7 @@ void DisplaySorted::sortOpenRoofType()
 		}		
 	}
 	totalCount = removeDuplicateStadiums(newTeams, totalCount);
+	bermudaCount = removeDuplicateStadiums(newTeams, bermudaCount);
 
 	std::sort(newTeams.begin(), newTeams.end(), Team::compareStadium);
 	displayAllSortedTeams(newTeams);
@@ -130,8 +136,16 @@ void DisplaySorted::sortOpenRoofType()
 	//adding total number of open stadiums widget at bottom of display menu
 	W_TotalCount* count = new W_TotalCount(this);
 	count->setup(totalCount);
+	count->setLabelText("Total Open Stadiums: ");
 	ui.vertical_details_layout->addWidget(count);
 	allCountWidgets.push_back(count);
+
+	W_TotalCount* bCount = new W_TotalCount(this);
+	bCount->setup(bermudaCount);
+	bCount->setLabelText("Stadiums with Bermuda Grass:");
+	ui.vertical_details_layout->addWidget(bCount);
+	allCountWidgets.push_back(bCount);
+
 }
 void DisplaySorted::sortStadiumName()
 {

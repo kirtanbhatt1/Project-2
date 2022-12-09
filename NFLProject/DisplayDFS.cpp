@@ -19,7 +19,14 @@ void DisplayDFS::clearLayout()
 		ui.verticalLayout_2->layout()->removeWidget(allWidgets.at(i));
 		delete allWidgets[i];
 	}
+	for (int i = 0; i < allCountWidgets.size(); i++)
+	{
+		ui.verticalLayout_2->layout()->removeWidget(allCountWidgets.at(i));
+		delete allCountWidgets[i];
+	}
+
 	allWidgets.clear();
+	allCountWidgets.clear();
 }
 void DisplayDFS::showDFS()
 {
@@ -93,7 +100,12 @@ void DisplayDFS::showDFS()
 		ui.verticalLayout_2->addWidget(dfsText);
 		allWidgets.push_back(dfsText);
 	}
-		
+	W_TotalCount* totalDistanceWidget = new W_TotalCount(this);
+	totalDistanceWidget->setup(cities.returnTotalDistance());
+	totalDistanceWidget->setLabelText("Total Distance:");
+	ui.verticalLayout_2->addWidget(totalDistanceWidget);
+	allCountWidgets.push_back(totalDistanceWidget);
+	
 	cities.clear();
 		
 }

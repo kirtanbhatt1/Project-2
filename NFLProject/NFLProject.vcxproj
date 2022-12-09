@@ -90,6 +90,7 @@
     <ClCompile Include="DisplayBFS.cpp" />
     <ClCompile Include="DisplayDFS.cpp" />
     <ClCompile Include="DisplayDistances.cpp" />
+    <ClCompile Include="DisplayMST.cpp" />
     <ClCompile Include="DisplaySorted.cpp" />
     <ClCompile Include="DisplaySouvenirs.cpp" />
     <ClCompile Include="DisplayTeams.cpp" />
@@ -113,6 +114,7 @@
     <QtUic Include="DisplayBFS.ui" />
     <QtUic Include="DisplayDFS.ui" />
     <QtUic Include="DisplayDistances.ui" />
+    <QtUic Include="DisplayMST.ui" />
     <QtUic Include="DisplaySorted.ui" />
     <QtUic Include="DisplaySouvenirs.ui" />
     <QtUic Include="DisplayTeams.ui" />
@@ -158,11 +160,14 @@
     <QtMoc Include="DisplayDistances.h" />
     <QtMoc Include="DisplayDFS.h" />
     <QtMoc Include="DisplayBFS.h" />
+    <QtMoc Include="DisplayMST.h" />
+    <ClInclude Include="Dijkstra.h" />
     <ClInclude Include="Distance.h" />
     <ClInclude Include="Graph.h" />
     <QtMoc Include="login.h" />
     <ClInclude Include="Map.h" />
     <QtMoc Include="PlanTrip.h" />
+    <ClInclude Include="NewDistance.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Souvenir.h" />
     <ClInclude Include="Stadium.h" />

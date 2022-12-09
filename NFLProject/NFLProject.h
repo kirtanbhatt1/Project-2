@@ -5,7 +5,8 @@
 #include "DisplayTeams.h"
 #include "DisplaySorted.h"
 #include "DisplaySouvenirs.h"
-
+#include "DisplayMST.h"
+#include "NewDistance.h"
 
 class NFLProject : public QMainWindow
 {
@@ -29,6 +30,7 @@ public:
     void showShortestTrip();
     void showCustomTrip();
     void showMaintenance();
+    void displayMST();
 
 private:
     Ui::NFLProjectClass ui;

@@ -12,33 +12,35 @@ PlanTrip::PlanTrip(QWidget *parent)
 	ui.SA_TeamList->setAlignment(Qt::AlignTop);
 
 	// Get teams data to use for methods
+	
+	teamsData = database.getTeams();
 	stadiumsData = database.getAllStadiums();
-	distancesData = database.distances;
+	distancesData = database.newdistances;
 
 	ui.ScrollContents_TeamsList->setAlignment(Qt::AlignTop);
 	ui.S_NumOfTeams->setMinimum(0);
-	if (stadiumsData.length() > 0) 
+	if (teamsData.length() > 0)
 	{
 		// Setup UI
-		ui.S_NumOfTeams->setMaximum((stadiumsData.length() - 1));
-		ui.S_NumOfTeams->setValue((stadiumsData.length() - 1));
-		ui.L_NumOfTeams->setText(QString::number(stadiumsData.length() - 1));
-		numberOfTeams = stadiumsData.length() - 1;
+		ui.S_NumOfTeams->setMaximum((teamsData.length() - 1));
+		ui.S_NumOfTeams->setValue((teamsData.length() - 1));
+		ui.L_NumOfTeams->setText(QString::number(teamsData.length() - 1));
+		numberOfTeams = teamsData.length() - 1;
 
 		//change get team name to get stadium name
-		//startingTeam = stadiumsData[0].getTeamName();
-		startingTeam = stadiumsData[0].getStadiumName();
+		startingTeam = teamsData[0].getTeamName();
+	//	startingTeam = stadiumsData[0].getStadiumName();
 
-		for (int i = 0; i < stadiumsData.length(); i++) 
+		for (int i = 0; i < teamsData.length(); i++) 
 		{
 			//ui.CB_SelectTeam->addItem(stadiumsData[i].getTeamName());
 			//ui.CB_CustomStartingTeam->addItem(stadiumsData[i].getTeamName());
 			
-			ui.CB_SelectTeam->addItem(stadiumsData[i].getStadiumName());
-			ui.CB_CustomStartingTeam->addItem(stadiumsData[i].getStadiumName());
+			ui.CB_SelectTeam->addItem(teamsData[i].getTeamName());
+			ui.CB_CustomStartingTeam->addItem(teamsData[i].getTeamName());
 		}
-		if (stadiumsData.length() > 0) ui.CB_SelectTeam->setCurrentIndex(0);
-		if (stadiumsData.length() > 0) ui.CB_CustomStartingTeam->setCurrentIndex(0);
+		if (teamsData.length() > 0) ui.CB_SelectTeam->setCurrentIndex(0);
+		if (teamsData.length() > 0) ui.CB_CustomStartingTeam->setCurrentIndex(0);
 	}
 
 	// Connections
@@ -121,7 +123,7 @@ void PlanTrip::beginPlan()
 		plannedTeams.push_back(startingTeam);
 	
 	   // May have to repopulate the distances data
-		distancesData = database.distances;
+		distancesData = database.newdistances;
 		
 		// Begin recursive search:
 		calculateShortestPlan(startingTeam, numberOfTeams);
@@ -145,15 +147,15 @@ void PlanTrip::beginPlan()
 		w_TeamToggles.clear();
 
 		// Populate TeamToggles box (All teams except for the starting team)
-		for (int i = 0; i < stadiumsData.length(); i++) 
+		for (int i = 0; i < teamsData.length(); i++)
 		{
 			//changed get team name to get stadium name
 			//if (stadiumsData[i].getTeamName() == startingTeam) continue;
-			if (stadiumsData[i].getStadiumName() == startingTeam) continue;
+			if (teamsData[i].getTeamName() == startingTeam) continue;
 			
 			TeamToggle* w_toggleTeam = new TeamToggle(this);
 			//w_toggleTeam->setup(selectedTeams.contains(stadiumsData[i].getTeamName()), stadiumsData[i].getTeamName());
-			w_toggleTeam->setup(selectedTeams.contains(stadiumsData[i].getStadiumName()), stadiumsData[i].getStadiumName() );
+			w_toggleTeam->setup(selectedTeams.contains(teamsData[i].getTeamName()), teamsData[i].getTeamName() );
 			
 			QObject::connect(w_toggleTeam, &TeamToggle::stateChanged, this, &PlanTrip::teamToggled);
 			w_TeamToggles.push_back(w_toggleTeam);
@@ -168,7 +170,7 @@ void PlanTrip::beginPlan()
 		plannedTeams.push_back(startingTeam);
 
 		// Repopulate the data for recursive function
-		distancesData = database.distances;
+		distancesData = database.newdistances;
 		//for (int i = 0; i < distancesData.size(); i++)
 		//{
 		//	qInfo() << "RECURSIVE FUNCTION DISTANCES DATA INDEX " << i << distancesData[i].getStartingStadium(); 
@@ -182,13 +184,13 @@ void PlanTrip::beginPlan()
 		for (int i = 0; i < distancesData.length(); i++) 
 		{
 			//needs fixing
-			if (!selectedTeams.contains(distancesData[i].getStartingStadium()) || !selectedTeams.contains(distancesData[i].getEndingStadium())) {
+			if (!selectedTeams.contains(distancesData[i].getstartingTeam()) || !selectedTeams.contains(distancesData[i].getendingTeam())) {
 				distancesData.removeAt(i);
 				i--;
 			}
 		}
 		
-		for (Distance distance : distancesData)
+		for (NewDistance distance : distancesData)
 		{
 			qInfo() << distance.getDistance();
 		}
@@ -211,21 +213,21 @@ void PlanTrip::calculateShortestPlan(QString startingTeam, int teamsLeft)
 		// Look through the distances to find distances related to the team and 
 		
 		//needs fixing
-		if (distancesData[i].getStartingStadium() == startingTeam || distancesData[i].getEndingStadium() == startingTeam) 
+		if (distancesData[i].getstartingTeam() == startingTeam || distancesData[i].getendingTeam() == startingTeam) 
 		{
 			if (distancesData[i].getDistance() < shortestDistance) 
 			{
 				shortestDistance = distancesData[i].getDistance();
 
 				// Choose which team
-				if (distancesData[i].getStartingStadium() != startingTeam)
+				if (distancesData[i].getstartingTeam() != startingTeam)
 				{
-					nearestTeam = distancesData[i].getStartingStadium();
+					nearestTeam = distancesData[i].getstartingTeam();
 					qDebug() << "IF Statement on line 221 is hitting.";
 				}
 				else 
 				{
-					nearestTeam = distancesData[i].getEndingStadium();
+					nearestTeam = distancesData[i].getendingTeam();
 					qDebug() << "ELSE Statement on line 221 is hitting.";
 				}
 			}
@@ -283,7 +285,7 @@ void PlanTrip::teamSelected(int index)
 		}
 	}
 
-	startingTeam = stadiumsData[index].getStadiumName();
+	startingTeam = teamsData[index].getTeamName();
 	beginPlan();
 }
 
@@ -297,15 +299,15 @@ void PlanTrip::addToCustomTeamList(QString team, double distance)
 	plannedTeams.push_back(team);
 }
 
-void PlanTrip::calculateCustomPlan(QString startingTeam, QVector<Distance>& distances)
+void PlanTrip::calculateCustomPlan(QString startingTeam, QVector<NewDistance>& distances)
 {
 //	Database database;
 	//database.initializeMap();
 
-	for (int i = 0; i < distancesData.size(); i++)
-	{
-		qInfo() << distancesData[i].getDistance();
-	}
+	//for (int i = 0; i < distancesData.size(); i++)
+	//{
+	//	qInfo() << distancesData[i].getDistance();
+	//}
 
 	//qDebug() << "Calculating for " << startingTeam << " with " << distances.length() << " teams left.";
 	if (distances.length() == 0) return;
@@ -315,7 +317,7 @@ void PlanTrip::calculateCustomPlan(QString startingTeam, QVector<Distance>& dist
 	for (int i = 0; i < distances.length(); i++) 
 	{
 		// Look through the distances to find distances related to the team.
-		if (distances[i].getStartingStadium() == startingTeam || distances[i].getEndingStadium() == startingTeam) 
+		if (distances[i].getstartingTeam() == startingTeam || distances[i].getendingTeam() == startingTeam) 
 		{
 			if (distances[i].getDistance() < shortestDistance) 
 			{
@@ -323,13 +325,13 @@ void PlanTrip::calculateCustomPlan(QString startingTeam, QVector<Distance>& dist
 				shortestDistance = distances[i].getDistance();
 
 				// Choose which team
-				if (distances[i].getStartingStadium() != startingTeam)
+				if (distances[i].getstartingTeam() != startingTeam)
 				{
-					nearestTeam = distances[i].getStartingStadium();
+					nearestTeam = distances[i].getstartingTeam();
 				}
 				else
 				{
-					nearestTeam = distances[i].getEndingStadium();
+					nearestTeam = distances[i].getendingTeam();
 				}
 			}
 			// Remove distance data so it isn't searched for again
@@ -380,16 +382,28 @@ void PlanTrip::switch2nd()
 
 	ui.page_switcher->setCurrentIndex(0);
 	// Fill scroll box with teams & their foods
-	for (QString teamName : plannedTeams) 
+
+	for (int i = 0; i < teams.size(); i++)
 	{
 		W_AddTeamSouvenirs* teamWidget = new W_AddTeamSouvenirs(this);
 
-		Team teamData = database.getTeam(teamName);
+		Team teamData = database.getTeam(teams[i].getTeamName());
 		teamWidget->setup(teamData);
 		addedTeams.push_back(teamWidget);
 		ui.SA_TeamList->layout()->addWidget(teamWidget);
 		QObject::connect(teamWidget, &W_AddTeamSouvenirs::priceUpdated, this, &PlanTrip::totalPriceUpdated);
 	}
+
+	//for (QString teamName : plannedTeams) 
+	//{
+	//	W_AddTeamSouvenirs* teamWidget = new W_AddTeamSouvenirs(this);
+
+	//	Team teamData = database.getTeam(teamName);
+	//	teamWidget->setup(teamData);
+	//	addedTeams.push_back(teamWidget);
+	//	ui.SA_TeamList->layout()->addWidget(teamWidget);
+	//	QObject::connect(teamWidget, &W_AddTeamSouvenirs::priceUpdated, this, &PlanTrip::totalPriceUpdated);
+	//}
 }
 
 

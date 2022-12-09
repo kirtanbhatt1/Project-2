@@ -45,7 +45,7 @@ NFLProject::NFLProject(QWidget *parent)
     connect(ui.actionShortest_Trip, &QAction::triggered, this, &NFLProject::showShortestTrip); // Shortest Trip
     connect(ui.actionCustom_Trip, &QAction::triggered, this, &NFLProject::showCustomTrip); // Custom Trip
     connect(ui.actionModify, &QAction::triggered, this, &NFLProject::showMaintenance); // Maintenance Page
-
+    connect(ui.actionMST, &QAction::triggered, this, &NFLProject::displayMST);
 }
 
 void NFLProject::returnMain()
@@ -115,6 +115,12 @@ void NFLProject::showShortestTrip()
     PlanTrip* planTrip = new PlanTrip(this);
     setPage(planTrip);
     planTrip->open(shortest);
+}
+void NFLProject::displayMST()
+{
+    DisplayMST* mst = new DisplayMST(this);
+    setPage(mst);
+    mst->showMST();
 }
 
 void NFLProject::setPage(QWidget* page)

@@ -36,8 +36,9 @@ private:
 
 	TripMode tripMode;
 
+	QVector<Team> teamsData;
 	QVector<Stadium> stadiumsData;
-	QVector<Distance> distancesData;
+	QVector<NewDistance> distancesData;
 
 	// Both:
 	void selectNumberOfTeams(int value);
@@ -57,7 +58,7 @@ private:
 	void addToCustomTeamList(QString team, double distance);
 	QStringList selectedTeams;
 	void teamToggled(bool value, QString team);
-	void calculateCustomPlan(QString startingTeam, QVector<Distance>& distances);
+	void calculateCustomPlan(QString startingTeam, QVector<NewDistance>& distances);
 	QStringList remainingTeams;
 
 	// 2nd Menu:

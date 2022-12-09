@@ -9,6 +9,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QDebug>
+//#include "NewDistance.h"
 
 class Database
 {
@@ -16,6 +17,7 @@ public:
 	QSqlDatabase NFLDatabase;
 
 	QVector<Distance> distances;
+	QVector<NewDistance> newdistances;
 
 	//Map teams;
 	Database();

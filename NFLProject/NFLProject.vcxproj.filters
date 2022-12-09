@@ -92,6 +92,12 @@
     <Filter Include="Source Files\Widgets\TeamsList">
       <UniqueIdentifier>{c51ebb49-fe4a-4d01-bff5-3cdee055fb22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Menus\Plan\DisplayMST">
+      <UniqueIdentifier>{8be3070c-4756-456d-9fae-61be4426523d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menus\Plan\Dijkstra">
+      <UniqueIdentifier>{8351995b-4e0d-46c4-939e-fbcab79012e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -169,6 +175,9 @@
     <ClCompile Include="login.cpp">
       <Filter>Source Files\Menus\Maintenance</Filter>
     </ClCompile>
+    <ClCompile Include="DisplayMST.cpp">
+      <Filter>Source Files\Menus\Plan\DisplayMST</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="NFLProject.qrc">
@@ -242,6 +251,9 @@
     <QtUic Include="W_BFSList.ui">
       <Filter>Source Files\Widgets\BFSList</Filter>
     </QtUic>
+    <QtUic Include="DisplayMST.ui">
+      <Filter>Source Files\Menus\Plan\DisplayMST</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Team.h">
@@ -265,6 +277,12 @@
     </ClInclude>
     <ClInclude Include="Graph.h">
       <Filter>Source Files\Menus\Plan\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Dijkstra.h">
+      <Filter>Source Files\Menus\Plan\Dijkstra</Filter>
+    </ClInclude>
+    <ClInclude Include="NewDistance.h">
+      <Filter>Source Files\Structs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -333,6 +351,9 @@
     </QtMoc>
     <QtMoc Include="W_BFSList.h">
       <Filter>Source Files\Widgets\BFSList</Filter>
+    </QtMoc>
+    <QtMoc Include="DisplayMST.h">
+      <Filter>Source Files\Menus\Plan\DisplayMST</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

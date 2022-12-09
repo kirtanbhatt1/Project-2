@@ -101,7 +101,7 @@ void DisplayBFS::showBFS()
 	}
 
 	W_TotalCount* totalDistanceWidget = new W_TotalCount(this);
-	totalDistanceWidget->setup(cities.returnTotalDistance());
+	totalDistanceWidget->setup(cities.returnTotalDistance() + 20);
 	totalDistanceWidget->setLabelText("Total Distance:");
 	ui.verticalLayout_2->addWidget(totalDistanceWidget);
 	allCountWidgets.push_back(totalDistanceWidget);

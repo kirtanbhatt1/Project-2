@@ -303,6 +303,7 @@
     </property>
     <addaction name="actionDFS"/>
     <addaction name="actionBFS"/>
+    <addaction name="actionMST"/>
     <addaction name="separator"/>
     <addaction name="actionShortest_Trip"/>
     <addaction name="actionCustom_Trip"/>
@@ -369,6 +370,11 @@
   <action name="actionBFS">
    <property name="text">
     <string>BFS</string>
+   </property>
+  </action>
+  <action name="actionMST">
+   <property name="text">
+    <string>MST</string>
    </property>
   </action>
  </widget>

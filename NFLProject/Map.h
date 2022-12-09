@@ -1,6 +1,7 @@
 #pragma once
 #include "qvector.h"
 #include "Team.h"
+#include "NewDistance.h"
 
 class Map
 {
